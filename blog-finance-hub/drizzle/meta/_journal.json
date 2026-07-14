@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1772696697105,
+      "tag": "0000_calm_hellfire_club",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1772696774299,
+      "tag": "0001_narrow_masked_marvel",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1772702892416,
+      "tag": "0002_brief_vivisector",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1772704569770,
+      "tag": "0003_handy_morph",
+      "breakpoints": true
+    }
+  ]
+}

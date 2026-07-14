@@ -1,0 +1,8 @@
+{
+  "query": "SELECT COUNT(*) as total, SUM(CASE WHEN isActive = 1 THEN 1 ELSE 0 END) as active FROM newsletter_subscribers;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3timWHhKMa8P8nm.8c545aab70fd --database m9pkVfcN4EvvpQY2WF9XoU --execute SELECT COUNT(*) as total, SUM(CASE WHEN isActive = 1 THEN 1 ELSE 0 END) as active FROM newsletter_subscribers;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1146 (42S02) at line 1: Table 'm9pkvfcn4evvpqy2wf9xou.newsletter_subscribers' doesn't exist"
+  ]
+}
