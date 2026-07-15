@@ -10,6 +10,13 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://finbloghub.manus.space/post/under-the-hood-dad-taught-me-systems</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://finbloghub.manus.space/post/taking-reins-cloned-website-harvard-python</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>

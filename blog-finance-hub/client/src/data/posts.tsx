@@ -16,6 +16,63 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "under-the-hood-dad-taught-me-systems": {
+    slug: "under-the-hood-dad-taught-me-systems",
+    tag: "Finance Grind",
+    title: "How My Dad Made Me Curious About Machines, Maps, and Money",
+    date: "July 15, 2026",
+    description: "The first engineer I knew was my dad. His love of machines, maps, and explanation shaped how I now approach finance, technology, and systems.",
+    seoKeywords: ["finance student technology journey", "mechanical engineering inspiration", "learning systems thinking", "Python for finance", "finance and technology", "father daughter engineering inspiration", "understanding finance systems", "GitHub learning journey", "financial intermediaries explained", "DeCodes Life"],
+    seoDescription: "The first engineer I knew was my dad. A personal reflection on how his love of machines, maps, and explanation shaped the way I approach technology, finance, and learning what is happening underneath the hood.",
+    content: (
+      <>
+        <p><em>The First Engineer I Knew Was My Dad</em></p>
+        <p>Before I was trying to understand GitHub, Vercel, Python, databases, or financial systems, I was sitting somewhere near my dad while he explained how a car worked.</p>
+        <p>My dad's world was mechanical. Automobiles. Trucks. Engines. Gears. Machines that made noise, carried weight, broke down, got fixed, and moved people from one place to another.</p>
+        <p>He liked machinery, but more than that, he liked understanding machinery. He was never satisfied with just knowing that something worked. He wanted to know <em>why</em> it worked. What part moved first. What connected to what. What happened when one piece failed. Why the gear shifted the way it did. Why the engine responded the way it responded.</p>
+        <p>And when I was little, he would explain those things to me.</p>
+
+        <h2>Learning to Ask What Was Happening Underneath</h2>
+        <p>I do not think I realized at the time that those explanations were shaping how I approached school.</p>
+        <p>But they were.</p>
+        <p>I was never really the type of student who only wanted to memorize the answer. I wanted to understand what was underneath it. If I was learning a topic, I wanted to know the mechanism. The reason. The moving parts. The hidden structure behind the thing everyone else was just calling a fact.</p>
+        <p>That instinct came from him.</p>
+        <p>My dad made curiosity feel normal. He made it feel like the world was something you were supposed to inspect, not just accept.</p>
+
+        <h2>The Encyclopedia, the Globe, and the World Feeling Big</h2>
+        <p>When I was little, my dad always made me read the encyclopedia.</p>
+        <p>That sounds dramatic now, but it was real. He wanted me to know things. Not just school things. World things. History things. Geography things. The kind of information that made the world feel bigger than the block I lived on.</p>
+        <p>Even my toys were enrichment toys.</p>
+        <p>I had a globe that felt magical to me. You could click it, and it would stop over a country or a continent. It would make a little travel sound, like a plane landing somewhere new, and then it would tell me where I was. The country. The language people spoke. Additional facts about the place.</p>
+        <p>That toy did something to my brain.</p>
+        <p>It made the world feel connected. It made distance feel interesting instead of intimidating. It made me want to know what was happening in places I had never been. It made me want to understand how people, countries, economies, languages, histories, and systems related to each other.</p>
+
+        <h2>How That Became Finance</h2>
+        <p>When I got into finance, that same curiosity followed me.</p>
+        <p>I did not just want to know that markets moved. I wanted to know why they moved. I wanted to understand how finance impacts the global economy, how institutions make decisions, how money moves through intermediaries, and how risk travels from one part of the system to another.</p>
+        <p>My background exposed me to wealth management, insurance, consulting, tax, and analytics. At first, those areas can look separate. Different industries. Different job titles. Different vocabulary.</p>
+        <p>But the more I learned, the more I started to see them as connected parts of a larger machine.</p>
+        <p>Financial intermediaries move capital and risk. Consulting firms help organizations interpret problems and design responses. Insurance markets price uncertainty. Banks structure access to money. Data tools help people see patterns inside the noise.</p>
+        <p>Underneath the surface, it is all machinery.</p>
+
+        <h2>Following My Dad's Footsteps in My Own Way</h2>
+        <p>My dad's focus was mechanical engineering, automobiles, and trucks. Mine is finance, technology, data, and systems.</p>
+        <p>But I feel like I am in his footsteps more now than I realized before.</p>
+        <p>Learning Python, working with GitHub, deploying my website through Vercel, and trying to understand what happens behind the scenes of a financial system does not feel separate from what he taught me. It feels like a continuation of it.</p>
+        <p>He taught me to look underneath the hood.</p>
+        <p>Now I am doing that with finance.</p>
+        <p>I am trying to understand not just what firms do, but how they work. Not just what software produces, but how the code runs. Not just what data says, but how it was collected, structured, cleaned, interpreted, and used.</p>
+
+        <h2>The Machine Is Bigger Now</h2>
+        <p>The machine I am studying now is bigger than a car.</p>
+        <p>It is the global economy. It is financial infrastructure. It is technology. It is the relationship between institutions, markets, data, and people.</p>
+        <p>But the lesson is the same.</p>
+        <p>If you want to understand something, you have to be willing to open it up. You have to be willing to ask what each piece does, why it matters, and how it connects to everything else.</p>
+        <p>That is the way my dad taught me to learn.</p>
+        <p>And I think that is the way I am going to keep building.</p>
+      </>
+    )
+  },
   "taking-reins-cloned-website-harvard-python": {
     slug: "taking-reins-cloned-website-harvard-python",
     tag: "Finance Grind",

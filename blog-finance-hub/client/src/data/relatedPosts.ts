@@ -6,10 +6,15 @@
 
 export const relatedPostsMap: Record<string, string[]> = {
   // Portfolio infrastructure & learning in public
+  "under-the-hood-dad-taught-me-systems": [
+    "taking-reins-cloned-website-harvard-python",
+    "from-fashion-to-finance",
+    "what-finance-taught-me",
+  ],
   "taking-reins-cloned-website-harvard-python": [
+    "under-the-hood-dad-taught-me-systems",
     "r-for-finance",
     "ai-tax-diagram-tool",
-    "training-models-waiting-for-job",
   ],
 
   // AI & Finance Tools cluster
@@ -71,9 +76,9 @@ export const relatedPostsMap: Record<string, string[]> = {
 
   // Origin story & career journey
   "from-fashion-to-finance": [
+    "under-the-hood-dad-taught-me-systems",
     "aon-internship",
     "graduating-into-inflation",
-    "learning-mandarin-finance-major",
   ],
 
   // Language & Global perspective
