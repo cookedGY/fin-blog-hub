@@ -5,11 +5,18 @@
  */
 
 export const relatedPostsMap: Record<string, string[]> = {
+  // Portfolio infrastructure & learning in public
+  "taking-reins-cloned-website-harvard-python": [
+    "r-for-finance",
+    "ai-tax-diagram-tool",
+    "training-models-waiting-for-job",
+  ],
+
   // AI & Finance Tools cluster
   "ai-tax-diagram-tool": [
+    "taking-reins-cloned-website-harvard-python",
     "geopolitics-ai",
     "training-models-waiting-for-job",
-    "ai-environmental-discrimination",
   ],
   "geopolitics-ai": [
     "ai-tax-diagram-tool",
@@ -46,9 +53,9 @@ export const relatedPostsMap: Record<string, string[]> = {
 
   // R / Data / Tech cluster
   "r-for-finance": [
+    "taking-reins-cloned-website-harvard-python",
     "what-finance-taught-me",
     "training-models-waiting-for-job",
-    "ai-tax-diagram-tool",
   ],
 
   // Professional Experience cluster

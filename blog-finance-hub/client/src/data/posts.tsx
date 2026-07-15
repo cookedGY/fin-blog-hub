@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "wouter";
 
 import DataCenterMap from '@/components/DataCenterMap';
@@ -15,6 +16,50 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "taking-reins-cloned-website-harvard-python": {
+    slug: "taking-reins-cloned-website-harvard-python",
+    tag: "Finance Grind",
+    title: "Taking the Reins: Why I Cloned My Website Locally and Enrolled in Harvard Python",
+    date: "July 14, 2026",
+    description: "I started with AI-built portfolio sites. Now I am learning Git, databases, and Python so I can understand the code behind my finance projects.",
+    seoKeywords: ["finance portfolio website", "GitHub Desktop beginner", "Harvard Python course", "finance student coding", "AI website builder", "Manus AI portfolio", "Iomega Corporation analysis", "Wayback Machine financial data", "low code to developer", "Python for finance"],
+    seoDescription: "After using Manus AI to build a finance portfolio site, I cloned the repo locally, started learning Git and databases, and enrolled in Harvard's introductory Python course to move from AI prompting to hands-on development.",
+    content: (
+      <>
+        <p>If you have been following my journey, you know I have been building out a digital portfolio to showcase my finance projects. For my recent analysis of the now-defunct <strong>Iomega Corporation</strong>, I had to travel back in time using the Wayback Machine, scrape historical 1999 financial data, and run it through a custom scanner.</p>
+        <p>To host these insights, I used <strong>Manus AI</strong> to quickly spin up a series of project sites, tying them all together with a central blog portfolio. It was incredibly fast, and the UI was intuitive. Even my software engineering mentor complimented the design.</p>
+        <p>But as my mentor rightly pointed out during our last sync: <strong>Using AI to build a site is one thing; truly understanding <em>why</em> the code works is another.</strong></p>
+        <p>That piece of advice changed my entire approach. This week, I decided to take the training wheels off. Here is how I am transitioning from a no-code prompt engineer to a hands-on developer.</p>
+
+        <h2>Step 1: Taking Control of the Infrastructure</h2>
+        <p>When you rely entirely on an AI platform's interface to deploy your site, you are locked into its sandbox. I wanted to be able to write, edit, and push updates directly from my computer.</p>
+        <p>To do that, I needed to connect my website to <strong>GitHub</strong> and clone the repository locally.</p>
+        <p>I will admit, I tried tackling this through the command-line terminal first. As a finance major, staring at a blank terminal while trying to authenticate and clone directories was a steep learning curve, and I hit a few roadblocks. Instead of throwing in the towel, I adapted.</p>
+        <ul>
+          <li>I downloaded <strong>GitHub Desktop</strong>.</li>
+          <li>I used it to visually manage authentication and sync my online repository.</li>
+          <li>I successfully cloned the codebase directly to my local machine.</li>
+        </ul>
+        <p>Now, instead of waiting on the Manus web editor, I can manage and push my code updates more seamlessly.</p>
+
+        <h2>Step 2: Demystifying the Database</h2>
+        <p>As I began planning new features for this blog, including the ability to upload custom images alongside my posts, the AI kept prompting me with the same message: <em>To do this, you need to set up a database.</em></p>
+        <p>In finance, we look at completed datasets all the time. But building a database to house and structure data in real time is a completely different beast.</p>
+        <p>Mapping out how my blog posts, image file paths, and metadata will talk to each other is my next big technical milestone, and I am genuinely excited to sketch out my first schema.</p>
+
+        <h2>Step 3: Going Back to School, Virtually</h2>
+        <p>You cannot fully understand the why behind your code if you do not know the language.</p>
+        <p>To bridge the gap between prompting an AI and actually speaking the language of logic, I have officially enrolled in <strong>Harvard University's introductory Python course</strong>.</p>
+        <p>My goal is not just to make things that work. It is to write clean, intentional code, understand object-oriented programming, and bring a rigorous engineering mindset to the financial data analysis I love doing.</p>
+
+        <h2>The Road Ahead</h2>
+        <p>Bridging finance and software engineering is not about discarding one for the other. It is about combining them.</p>
+        <p>Understanding how a business operates financially, paired with the ability to build the actual tools that analyze its data, is a powerful combination.</p>
+        <p>There will be more bugs to squash, more command-line battles to fight, and plenty of Python syntax to memorize. But for the first time, I am the one writing the map.</p>
+        <p><em>Have you ever made the transition from low-code tools to manual development? Let's connect in the comments or on LinkedIn.</em></p>
+      </>
+    )
+  },
   "maritime-insurance": {
     slug: "maritime-insurance",
     tag: "Finance Grind",
