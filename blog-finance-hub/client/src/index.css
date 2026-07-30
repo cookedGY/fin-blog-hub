@@ -203,7 +203,7 @@
   /* HERO */
   .home-hero-stage {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     isolation: isolate;
     background:
       radial-gradient(circle at 82% 18%, rgba(249, 229, 237, 0.58), transparent 32%),
@@ -226,17 +226,19 @@
     position: absolute;
     inset: 0;
     width: 100%;
-    min-height: 620px;
     pointer-events: none;
   }
 
   .silk-cloth-background {
     z-index: 0;
     opacity: 0.9;
+    min-height: 620px;
   }
 
   .flower-animation-canvas {
     z-index: 1;
+    height: 175vh;
+    min-height: 1180px;
     mix-blend-mode: multiply;
   }
 

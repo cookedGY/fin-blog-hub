@@ -28,7 +28,7 @@ export default function FlowerAnimation() {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = Math.max(window.innerHeight * 0.86, 620);
+      canvas.height = Math.max(window.innerHeight * 1.75, 1180);
     };
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
@@ -44,8 +44,8 @@ export default function FlowerAnimation() {
           x: Math.random() * canvas.width,
           y: -140 - Math.random() * 220,
           type: Math.random() > 0.7 ? "lily" : "cherry",
-          duration: 14 + Math.random() * 8,
-          delay: Math.random() * 6,
+          duration: 8 + Math.random() * 4,
+          delay: Math.random() * 2,
           rotation: Math.random() * Math.PI * 2,
           size: 14 + Math.random() * 14,
           opacity: 0.22 + Math.random() * 0.24,
@@ -178,7 +178,7 @@ export default function FlowerAnimation() {
 
         // Reset flower when it reaches bottom
         if (progress > 0.95) {
-          flower.y = -50;
+          flower.y = -140 - Math.random() * 220;
           flower.x = Math.random() * canvas.width;
           flower.delay = timeRef.current;
           flower.opacity = 0.22 + Math.random() * 0.24;
