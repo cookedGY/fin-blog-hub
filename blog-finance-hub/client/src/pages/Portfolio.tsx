@@ -3,7 +3,6 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight, Bot, BriefcaseBusiness, Home } from "lucide-react";
-import BlogAmbientAudio from "@/components/BlogAmbientAudio";
 
 const financeWork = [
   {
@@ -118,7 +117,6 @@ export default function Portfolio() {
                   Home
                 </Button>
               </Link>
-              <BlogAmbientAudio />
             </div>
           </div>
           <p className="portfolio-intro-card text-lg text-muted-foreground max-w-3xl">

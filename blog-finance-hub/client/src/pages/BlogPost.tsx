@@ -7,7 +7,6 @@ import RelatedPosts from "@/components/RelatedPosts";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import SocialShareButtons from "@/components/SocialShareButtons";
 import AuthorBio from "@/components/AuthorBio";
-import BlogAmbientAudio from "@/components/BlogAmbientAudio";
 import { updateMetaTags, createBlogPostSchema, injectStructuredData } from "@/lib/seo";
 import NewsletterPopup from "@/components/NewsletterPopup";
 import { getReadingTime } from "@/lib/readingTime";
@@ -119,10 +118,6 @@ export default function BlogPost() {
             {/* Sidebar */}
             <aside className="editorial-sidebar">
               <div className="editorial-sidebar-inner">
-
-                <div className="sidebar-block">
-                  <BlogAmbientAudio />
-                </div>
 
                 {/* Category + tags */}
                 <div className="sidebar-block">

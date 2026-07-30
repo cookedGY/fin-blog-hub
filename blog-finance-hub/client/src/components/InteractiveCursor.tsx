@@ -5,7 +5,6 @@ const interactiveSelector = [
   "button",
   ".card",
   ".mini-card",
-  ".ambient-lotus-music-box",
   "[data-cursor-reactive]",
 ].join(",");
 
