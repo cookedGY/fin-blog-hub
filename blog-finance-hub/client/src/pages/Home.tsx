@@ -3,11 +3,57 @@ import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Globe } from "lucide-react";
+import { BarChart3, Cloud, Code2, Database, GitBranch, Globe, type LucideIcon } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FlowerAnimation from "@/components/FlowerAnimation";
 import { POSTS } from "@/data/posts";
+
+const learningPostPath = "/post/taking-reins-cloned-website-harvard-python";
+
+const learningSkills: Array<{
+  name: string;
+  focus: string;
+  progress: number;
+  Icon: LucideIcon;
+}> = [
+  {
+    name: "Python",
+    focus: "Harvard coursework, clean logic, and finance automation",
+    progress: 35,
+    Icon: Code2,
+  },
+  {
+    name: "Git & GitHub",
+    focus: "Version control, commits, pull/push flow, and repo hygiene",
+    progress: 48,
+    Icon: GitBranch,
+  },
+  {
+    name: "Databases",
+    focus: "Schemas for posts, images, metadata, and portfolio records",
+    progress: 22,
+    Icon: Database,
+  },
+  {
+    name: "Deployment",
+    focus: "Vercel, build settings, routing fixes, and analytics setup",
+    progress: 42,
+    Icon: Cloud,
+  },
+  {
+    name: "React & TypeScript",
+    focus: "Understanding the components that power this site",
+    progress: 28,
+    Icon: Code2,
+  },
+  {
+    name: "Financial Data Analysis",
+    focus: "Scraping, cleaning, and interpreting market history",
+    progress: 58,
+    Icon: BarChart3,
+  },
+];
 
 export default function Home() {
   // The userAuth hooks provides authentication state
@@ -87,6 +133,44 @@ export default function Home() {
         </div>
         </section>
       </div>
+
+      {/* LEARNING PROGRESS SECTION */}
+      <section className="section learning-section" id="learning">
+        <div className="container learning-grid">
+          <div className="learning-copy">
+            <p className="learning-kicker">Currently Learning</p>
+            <h2>Building the technical toolkit behind the finance work.</h2>
+            <p>
+              I am tracking the skills I am learning in public: the code, systems,
+              and data foundations that help me move from using AI tools to
+              understanding how my portfolio actually works.
+            </p>
+            <Link href={learningPostPath} className="btn btn-ghost learning-cta">
+              Why I am learning these skills
+            </Link>
+          </div>
+
+          <div className="learning-panel" aria-label="Skills learning progress">
+            {learningSkills.map(({ name, focus, progress, Icon }) => (
+              <Link key={name} href={learningPostPath} className="learning-row">
+                <div className="learning-row-top">
+                  <div className="learning-skill-title">
+                    <span className="learning-icon" aria-hidden="true">
+                      <Icon size={18} strokeWidth={1.8} />
+                    </span>
+                    <span>{name}</span>
+                  </div>
+                  <span className="learning-percent">{progress}%</span>
+                </div>
+                <p>{focus}</p>
+                <div className="learning-track" aria-hidden="true">
+                  <span style={{ width: `${progress}%` }} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* LATEST POSTS SECTION */}
       <section className="section section-alt" id="latest">
