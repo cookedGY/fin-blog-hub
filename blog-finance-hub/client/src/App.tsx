@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
+import InteractiveCursor from "@/components/InteractiveCursor";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -47,6 +48,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <InteractiveCursor />
           <Analytics />
         </TooltipProvider>
       </ThemeProvider>
