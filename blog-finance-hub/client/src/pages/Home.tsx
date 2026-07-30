@@ -7,6 +7,7 @@ import { BarChart3, Cloud, Code2, Database, GitBranch, Globe, type LucideIcon } 
 import { useAuth } from "@/_core/hooks/useAuth";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FlowerAnimation from "@/components/FlowerAnimation";
+import SilkClothBackground from "@/components/SilkClothBackground";
 import { POSTS } from "@/data/posts";
 
 const learningPostPath = "/post/taking-reins-cloned-website-harvard-python";
@@ -104,9 +105,10 @@ export default function Home() {
       <Header />
 
       {/* HERO SECTION */}
-      <div style={{ position: "relative", overflow: "hidden" }}>
+      <div className="home-hero-stage">
+        <SilkClothBackground />
         <FlowerAnimation />
-        <section className="hero" style={{ position: "relative", zIndex: 2 }}>
+        <section className="hero">
         <div className="hero-inner container">
           <div className="hero-text">
             <p className="hero-tag">Finance • Culture • Travel • Real Life</p>
@@ -312,16 +314,21 @@ export default function Home() {
               <li>Career prep & recruiting</li>
             </ul>
           </div>
-          <div className="section-cards">
+          <div className="section-cards finance-article-grid">
             {Object.values(POSTS)
               .filter(p => p.tag === "Finance Grind")
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
               .map(post => (
-                <article key={post.slug} className="mini-card">
-                  <h3>{post.title}</h3>
-                  <p>{post.description}</p>
-                  <Link href={`/post/${post.slug}`} className="mini-link">Read →</Link>
-                </article>
+                <Link key={post.slug} href={`/post/${post.slug}`} className="finance-expand-card">
+                  <article>
+                    <span className="finance-card-date">{post.date}</span>
+                    <h3>{post.title}</h3>
+                    <div className="finance-card-reveal">
+                      <p>{post.description}</p>
+                      <span className="mini-link">Read article →</span>
+                    </div>
+                  </article>
+                </Link>
               ))}
           </div>
         </div>

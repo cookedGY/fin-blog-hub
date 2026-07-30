@@ -9,6 +9,7 @@ interface Flower {
   delay: number;
   rotation: number;
   size: number;
+  opacity: number;
 }
 
 export default function FlowerAnimation() {
@@ -27,7 +28,7 @@ export default function FlowerAnimation() {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = Math.max(window.innerHeight * 0.86, 620);
     };
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
@@ -35,18 +36,19 @@ export default function FlowerAnimation() {
     // Initialize flowers
     const initializeFlowers = () => {
       flowersRef.current = [];
-      const flowerCount = Math.floor(window.innerWidth / 150);
+      const flowerCount = Math.max(12, Math.floor(window.innerWidth / 115));
 
       for (let i = 0; i < flowerCount; i++) {
         flowersRef.current.push({
           id: i,
           x: Math.random() * canvas.width,
-          y: -50,
+          y: -140 - Math.random() * 220,
           type: Math.random() > 0.7 ? "lily" : "cherry",
-          duration: 8 + Math.random() * 4,
-          delay: Math.random() * 2,
+          duration: 14 + Math.random() * 8,
+          delay: Math.random() * 6,
           rotation: Math.random() * Math.PI * 2,
-          size: 15 + Math.random() * 10,
+          size: 14 + Math.random() * 14,
+          opacity: 0.22 + Math.random() * 0.24,
         });
       }
     };
@@ -72,7 +74,7 @@ export default function FlowerAnimation() {
         // Petal shape (ellipse)
         ctx.beginPath();
         ctx.ellipse(0, 0, size * 0.4, size * 0.8, 0, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 182, 193, ${0.3 + Math.random() * 0.2})`;
+        ctx.fillStyle = "rgba(255, 182, 193, 0.62)";
         ctx.fill();
 
         ctx.restore();
@@ -107,7 +109,7 @@ export default function FlowerAnimation() {
         // Petal shape
         ctx.beginPath();
         ctx.ellipse(0, 0, size * 0.35, size * 0.75, 0, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(220, 20, 60, ${0.25 + Math.random() * 0.15})`; // Crimson red
+        ctx.fillStyle = "rgba(220, 20, 60, 0.42)";
         ctx.fill();
 
         ctx.restore();
@@ -137,7 +139,7 @@ export default function FlowerAnimation() {
     // Animation loop
     const animate = () => {
       // Clear canvas with semi-transparent background for trail effect
-      ctx.fillStyle = "rgba(253, 252, 251, 0.1)";
+      ctx.fillStyle = "rgba(253, 252, 251, 0.045)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       timeRef.current += 0.016; // ~60fps
@@ -155,14 +157,14 @@ export default function FlowerAnimation() {
 
         // X position (slight horizontal drift)
         const drift =
-          Math.sin(progress * Math.PI * 4 + flower.id) * canvas.width * 0.1;
+          Math.sin(progress * Math.PI * 3 + flower.id) * window.innerWidth * 0.12;
         const newX = flower.x + drift;
 
         // Rotation
-        const newRotation = flower.rotation + progress * Math.PI * 8;
+        const newRotation = flower.rotation + progress * Math.PI * 5;
 
         // Opacity (fade out near bottom)
-        const opacity = Math.max(0, 1 - Math.max(0, progress - 0.8) / 0.2);
+        const opacity = flower.opacity * Math.max(0, 1 - Math.max(0, progress - 0.84) / 0.16);
         ctx.globalAlpha = opacity;
 
         // Draw flower
@@ -179,6 +181,7 @@ export default function FlowerAnimation() {
           flower.y = -50;
           flower.x = Math.random() * canvas.width;
           flower.delay = timeRef.current;
+          flower.opacity = 0.22 + Math.random() * 0.24;
         }
       });
 
@@ -198,8 +201,7 @@ export default function FlowerAnimation() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      style={{ zIndex: 1 }}
+      className="flower-animation-canvas"
     />
   );
 }
