@@ -104,7 +104,7 @@ export default function Portfolio() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-2">
-                Portfolio
+                Portfolio at a Glance
               </h1>
               <p className="text-lg text-muted-foreground font-medium">
                 by Dekena Wade
@@ -127,16 +127,15 @@ export default function Portfolio() {
       {/* Recruiter Split Portfolio */}
       <section className="bg-gradient-to-b from-accent/5 to-transparent py-12 px-4 border-t border-border">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-end">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-foreground mb-2">Portfolio at a Glance</h2>
               <p className="text-muted-foreground max-w-2xl">
                 A half-and-half view of the work I want recruiters to understand first:
                 finance judgment, technical curiosity, and the bridge between both.
               </p>
             </div>
-            <div className="rounded-2xl border border-primary/15 bg-background/80 p-4 text-sm text-muted-foreground shadow-sm md:max-w-xs">
-              <p className="font-medium text-foreground mb-1">Recruiter blurb</p>
+            <div className="rounded-2xl border border-rose-200 bg-rose-50/95 p-4 text-sm text-rose-950 shadow-lg shadow-rose-100/80 motion-safe:animate-bounce md:max-w-xs md:-translate-y-2">
+              <p className="font-medium text-rose-900 mb-1">Recruiter blurb</p>
               <p>
                 I bring a finance foundation, applied AI curiosity, and hands-on portfolio building.
                 I am strongest where analysis, systems thinking, and communication meet.
