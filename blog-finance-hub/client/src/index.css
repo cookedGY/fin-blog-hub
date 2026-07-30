@@ -574,7 +574,7 @@
     }
 
     .finance-showcase .section-text {
-      min-height: 100%;
+      align-self: start;
       border: 1px solid rgba(15, 118, 110, 0.12);
       border-radius: 18px;
       background: rgba(255, 255, 255, 0.6);
@@ -637,7 +637,7 @@
   }
 
   .finance-expand-card {
-    min-height: 10rem;
+    min-height: 7.6rem;
     display: flex;
     color: var(--text-main);
     text-decoration: none;
@@ -655,7 +655,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.9rem 1rem;
   }
 
   .finance-expand-card:hover,
@@ -2166,6 +2166,123 @@
   background: rgba(249, 229, 237, 0.78);
   backdrop-filter: blur(8px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52);
+}
+
+.portfolio-split-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+  transition: grid-template-columns 0.32s ease;
+}
+
+@media (min-width: 768px) {
+  .portfolio-split-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .portfolio-split-grid.is-finance-active {
+    grid-template-columns: minmax(0, 1.65fr) minmax(14rem, 0.52fr);
+  }
+
+  .portfolio-split-grid.is-tech-active {
+    grid-template-columns: minmax(14rem, 0.52fr) minmax(0, 1.65fr);
+  }
+}
+
+.portfolio-pane {
+  align-self: start;
+  background: rgba(255, 255, 255, 0.34) !important;
+  box-shadow: 0 18px 42px rgba(4, 38, 28, 0.11);
+  backdrop-filter: blur(12px) saturate(1.08);
+  -webkit-backdrop-filter: blur(12px) saturate(1.08);
+}
+
+.portfolio-pane-finance {
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.42), rgba(255, 255, 255, 0.28)) !important;
+}
+
+.portfolio-pane-tech {
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.42), rgba(255, 255, 255, 0.26)) !important;
+}
+
+.portfolio-pane.is-active {
+  box-shadow: 0 26px 58px rgba(4, 38, 28, 0.15);
+}
+
+.portfolio-pane.is-inactive {
+  opacity: 0.82;
+}
+
+.portfolio-pane .rounded-2xl {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.portfolio-pane [data-slot="card"] {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+@media (min-width: 768px) {
+  .portfolio-pane.is-inactive .rounded-2xl:not(:first-child),
+  .portfolio-pane.is-inactive .mb-5.flex.flex-wrap {
+    display: none;
+  }
+
+  .portfolio-pane.is-inactive h3 {
+    font-size: 1.25rem;
+    line-height: 1.15;
+  }
+
+  .portfolio-pane.is-inactive p {
+    font-size: 0.8rem;
+  }
+}
+
+.portfolio-project-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 1024px) {
+  .portfolio-pane.is-active .portfolio-project-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.speaking-page {
+  position: relative;
+  background: transparent;
+}
+
+.speaking-hero {
+  background: linear-gradient(180deg, rgba(245, 237, 227, 0.28), rgba(255, 255, 255, 0.04));
+}
+
+.speaking-hero-card,
+.speaking-content-card {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(249, 229, 237, 0.34)),
+    rgba(255, 255, 255, 0.58);
+  box-shadow: 0 22px 48px rgba(4, 38, 28, 0.14);
+  backdrop-filter: blur(14px) saturate(1.12);
+  -webkit-backdrop-filter: blur(14px) saturate(1.12);
+}
+
+.speaking-hero-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.speaking-content-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.speaking-content-card [data-slot="card"] {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(15, 118, 110, 0.18);
+  box-shadow: 0 14px 32px rgba(4, 38, 28, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .ambient-lotus-music-box {

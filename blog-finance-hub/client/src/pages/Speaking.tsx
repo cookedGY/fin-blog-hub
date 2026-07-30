@@ -35,11 +35,12 @@ export default function Speaking() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="speaking-page min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-12 px-4">
+      <section className="speaking-hero py-12 px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center justify-between mb-6">
+          <div className="speaking-hero-card">
+          <div className="flex items-center justify-between gap-6 mb-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-2">
                 Speaking & Media
@@ -58,13 +59,14 @@ export default function Speaking() {
           <p className="text-lg text-muted-foreground max-w-2xl">
             Presentations, podcast appearances, and media features exploring finance, career development, and personal growth.
           </p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 py-12">
         {/* Speaking Engagements */}
-        <section className="mb-16">
+        <section className="speaking-content-card mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Mic className="w-6 h-6 text-primary" />
             <h2 className="text-3xl font-serif font-bold text-foreground">Speaking Engagements</h2>
@@ -99,7 +101,7 @@ export default function Speaking() {
         </section>
 
         {/* Media & Podcast */}
-        <section className="mb-16">
+        <section className="speaking-content-card mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Podcast className="w-6 h-6 text-primary" />
             <h2 className="text-3xl font-serif font-bold text-foreground">Media & Podcast</h2>
@@ -128,7 +130,7 @@ export default function Speaking() {
         </section>
 
         {/* Speaking Topics */}
-        <section className="mb-16">
+        <section className="speaking-content-card mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Award className="w-6 h-6 text-primary" />
             <h2 className="text-3xl font-serif font-bold text-foreground">Speaking Topics</h2>
@@ -157,7 +159,7 @@ export default function Speaking() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-8 text-center border border-border">
+        <section className="speaking-content-card text-center">
           <h3 className="text-2xl font-serif font-bold text-foreground mb-3">
             Interested in Having Me Speak?
           </h3>

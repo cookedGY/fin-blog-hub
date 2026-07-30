@@ -133,9 +133,11 @@ export default function Portfolio() {
       {/* Recruiter Split Portfolio */}
       <section className="portfolio-work-section py-12 px-4 border-t border-border">
         <div className="max-w-5xl mx-auto">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div
+            className={`portfolio-split-grid ${isFinanceActive ? "is-finance-active" : ""} ${isTechActive ? "is-tech-active" : ""}`}
+          >
             <div
-              className="group/column cursor-pointer rounded-3xl border border-sky-200/70 bg-sky-50/70 p-4 transition-all duration-300 hover:border-sky-400/60 hover:shadow-lg md:p-5"
+              className={`portfolio-pane portfolio-pane-finance ${isFinanceActive ? "is-active" : ""} ${isTechActive ? "is-inactive" : ""} group/column cursor-pointer rounded-3xl border border-sky-200/70 bg-sky-50/70 p-4 transition-all duration-300 hover:border-sky-400/60 hover:shadow-lg md:p-5`}
               onClick={() => setActivePane("finance")}
               onFocusCapture={() => setActivePane("finance")}
               onMouseEnter={() => setActivePane("finance")}
@@ -191,7 +193,7 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <div className="portfolio-project-list animate-in fade-in slide-in-from-top-2 duration-300">
                     {financeWork.map((project) => (
                       <a key={project.title} href={project.href} target="_blank" rel="noopener noreferrer" className="group/card block">
                         <Card className="overflow-hidden transition-all duration-300 group-hover/card:-translate-y-1 group-hover/card:border-sky-400/70 group-hover/card:shadow-md">
@@ -227,7 +229,7 @@ export default function Portfolio() {
             </div>
 
             <div
-              className="group/column cursor-pointer rounded-3xl border border-emerald-200/80 bg-emerald-50/75 p-4 transition-all duration-300 hover:border-emerald-500/50 hover:shadow-lg md:p-5"
+              className={`portfolio-pane portfolio-pane-tech ${isTechActive ? "is-active" : ""} ${isFinanceActive ? "is-inactive" : ""} group/column cursor-pointer rounded-3xl border border-emerald-200/80 bg-emerald-50/75 p-4 transition-all duration-300 hover:border-emerald-500/50 hover:shadow-lg md:p-5`}
               onClick={() => setActivePane("tech")}
               onFocusCapture={() => setActivePane("tech")}
               onMouseEnter={() => setActivePane("tech")}
@@ -286,7 +288,7 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  <div className="space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <div className="portfolio-project-list animate-in fade-in slide-in-from-top-2 duration-300">
                     {techWork.map((project) => (
                       <Link key={project.title} href={project.href} className="group/card block">
                         <Card className="overflow-hidden transition-all duration-300 group-hover/card:-translate-y-1 group-hover/card:border-emerald-500/60 group-hover/card:shadow-md">
