@@ -3,7 +3,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
 import InteractiveCursor from "@/components/InteractiveCursor";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Globe } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -41,6 +43,28 @@ function Router() {
   );
 }
 
+function RouteLoadingScreen() {
+  const [location] = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = window.setTimeout(() => setIsLoading(false), 720);
+    return () => window.clearTimeout(timer);
+  }, [location]);
+
+  if (!isLoading) return null;
+
+  return (
+    <div className="route-loading-screen" aria-live="polite" aria-label="Loading page">
+      <div className="route-loading-card">
+        <Globe className="route-loading-emblem animate-spin-slow" />
+        <p>DECODING...</p>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <ErrorBoundary>
@@ -48,6 +72,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <RouteLoadingScreen />
           <InteractiveCursor />
           <Analytics />
         </TooltipProvider>

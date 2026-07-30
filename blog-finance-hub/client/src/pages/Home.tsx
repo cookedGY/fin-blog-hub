@@ -1,13 +1,10 @@
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { Helmet } from "react-helmet";
-import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Code2, Database, GitBranch, Globe, type LucideIcon } from "lucide-react";
-import { useAuth } from "@/_core/hooks/useAuth";
+import { Code2, Database, GitBranch, type LucideIcon } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FlowerAnimation from "@/components/FlowerAnimation";
-import SilkClothBackground from "@/components/SilkClothBackground";
 import { POSTS } from "@/data/posts";
 
 const learningPostPath = "/post/taking-reins-cloned-website-harvard-python";
@@ -40,30 +37,6 @@ const learningSkills: Array<{
 ];
 
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  const { user, loading, error, isAuthenticated, logout } = useAuth();
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [location] = useLocation();
-
-  useEffect(() => {
-    setIsLoading(true);
-    const timer = setTimeout(() => setIsLoading(false), 800);
-    return () => clearTimeout(timer);
-  }, [location]);
-
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-background z-50 flex items-center justify-center">
-        <div className="flex flex-col items-center gap-4">
-          <Globe className="w-12 h-12 text-primary animate-spin-slow" />
-          <p className="text-sm font-serif tracking-widest text-muted-foreground">DECODING...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen flex flex-col animate-in fade-in duration-500">
       <Helmet>
@@ -89,7 +62,6 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <div className="home-hero-stage">
-        <SilkClothBackground />
         <FlowerAnimation />
         <section className="hero">
         <div className="hero-inner container">
