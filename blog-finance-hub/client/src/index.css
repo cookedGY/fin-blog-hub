@@ -1934,53 +1934,95 @@
 }
 
 .portfolio-cloud-bubble {
-  isolation: isolate;
-  border: 1px solid rgba(244, 114, 182, 0.3);
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.84) 0 18%, transparent 19%),
-    radial-gradient(circle at 77% 12%, rgba(255, 255, 255, 0.58) 0 16%, transparent 17%),
-    linear-gradient(135deg, rgba(253, 242, 248, 0.98), rgba(252, 231, 243, 0.96));
-  box-shadow: 0 18px 42px rgba(244, 114, 182, 0.22);
-  animation: portfolio-cloud-drift 7s ease-in-out infinite;
+  position: relative;
+  width: min(100%, 27rem);
+  min-height: 16.5rem;
+  display: grid;
+  place-items: center;
+  padding: 4.8rem 3.25rem 4rem;
+  line-height: 1.55;
+  animation: portfolio-cloud-float 8s ease-in-out infinite;
 }
 
-.portfolio-cloud-bubble::before,
-.portfolio-cloud-bubble::after {
-  content: "";
+.portfolio-cloud-art {
   position: absolute;
-  z-index: -1;
-  border-radius: 999px;
-  background: rgba(253, 242, 248, 0.98);
-  border: 1px solid rgba(244, 114, 182, 0.22);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 18px 28px rgba(125, 173, 211, 0.18));
 }
 
-.portfolio-cloud-bubble::before {
-  width: 46%;
-  height: 58%;
-  left: 10%;
-  top: -26%;
+.portfolio-cloud-main {
+  fill: #f2f5ff;
 }
 
-.portfolio-cloud-bubble::after {
-  width: 42%;
-  height: 54%;
-  right: 12%;
-  top: -22%;
+.portfolio-cloud-shadow {
+  fill: #c9def1;
 }
 
-@keyframes portfolio-cloud-drift {
+.portfolio-cloud-curl {
+  fill: none;
+  stroke: #b8d5ef;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.portfolio-cloud-copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 18.5rem);
+  text-align: center;
+}
+
+.portfolio-cloud-copy p {
+  margin: 0;
+}
+
+.portfolio-cloud-kicker {
+  color: #2f76a4;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.portfolio-cloud-headline {
+  color: #153f60;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 0.35rem !important;
+}
+
+.portfolio-cloud-body {
+  color: #315f7e;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-top: 0.45rem !important;
+}
+
+.portfolio-cloud-cta {
+  color: #236d9f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 0.65rem !important;
+}
+
+@keyframes portfolio-cloud-float {
   0%,
   100% {
-    transform: translate3d(0, -8px, 0) rotate(-1deg);
+    transform: translate3d(0, -6px, 0);
   }
 
-  35% {
-    transform: translate3d(-12px, -18px, 0) rotate(1deg);
+  45% {
+    transform: translate3d(-7px, -14px, 0);
   }
 
-  70% {
-    transform: translate3d(10px, -13px, 0) rotate(-0.5deg);
+  75% {
+    transform: translate3d(6px, -10px, 0);
   }
 }
 
@@ -1990,23 +2032,70 @@
   }
 }
 
-.ambient-audio-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.9rem;
+@media (max-width: 640px) {
+  .portfolio-cloud-bubble {
+    width: 100%;
+    min-height: 18rem;
+    padding: 5.2rem 2.45rem 4.4rem;
+  }
+}
+
+.ambient-lotus-music-box {
+  position: relative;
+  isolation: isolate;
   width: 100%;
-  border: 1px solid rgba(15, 118, 110, 0.16);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.56);
+  min-height: 10.5rem;
+  display: grid;
+  place-items: center;
+  padding: 1.8rem 1.35rem 1.15rem;
+}
+
+.ambient-lotus-music-shape {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 14px 28px rgba(244, 114, 182, 0.18));
+}
+
+.ambient-lotus-music-petal {
+  stroke: rgba(190, 24, 93, 0.14);
+  stroke-width: 2;
+}
+
+.ambient-lotus-music-petal-back {
+  fill: rgba(253, 242, 248, 0.95);
+}
+
+.ambient-lotus-music-petal-side {
+  fill: rgba(252, 231, 243, 0.96);
+}
+
+.ambient-lotus-music-petal-front {
+  fill: rgba(249, 168, 212, 0.84);
+}
+
+.ambient-lotus-music-leaf {
+  fill: rgba(20, 184, 166, 0.18);
+  stroke: rgba(15, 118, 110, 0.22);
+  stroke-width: 2;
+}
+
+.ambient-lotus-music-content {
+  width: min(100%, 13.25rem);
+  border: 1px solid rgba(244, 114, 182, 0.18);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.68);
   padding: 0.9rem;
-  box-shadow: 0 12px 30px rgba(15, 118, 110, 0.07);
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
 .ambient-audio-copy {
-  margin: 0.15rem 0 0;
+  margin: 0.15rem 0 0.7rem;
   color: var(--text-muted);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   line-height: 1.45;
 }
 
@@ -2015,14 +2104,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  flex: 0 0 auto;
   border: 1px solid rgba(244, 114, 182, 0.34);
   border-radius: 999px;
   background: linear-gradient(135deg, rgba(253, 242, 248, 0.92), rgba(240, 253, 250, 0.88));
   color: #9d174d;
   cursor: pointer;
   font: inherit;
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   font-weight: 500;
   padding: 0.5rem 0.78rem 0.5rem 0.62rem;
   box-shadow: 0 10px 24px rgba(244, 114, 182, 0.14);
@@ -2035,52 +2123,41 @@
   transform: translateY(-1px);
 }
 
-.ambient-lotus {
-  position: relative;
-  width: 1.35rem;
-  height: 1.18rem;
-  display: inline-block;
+.ambient-lotus-svg {
+  width: 1.75rem;
+  height: 1.45rem;
+  flex: 0 0 auto;
+  overflow: visible;
   animation: ambient-lotus-bloom 2.6s ease-in-out infinite;
 }
 
 .ambient-lotus-petal,
-.ambient-lotus-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  display: block;
-  background: rgba(244, 114, 182, 0.72);
-  border: 1px solid rgba(190, 24, 93, 0.16);
+.ambient-lotus-leaf {
+  stroke: rgba(157, 23, 77, 0.28);
+  stroke-width: 2;
 }
 
-.ambient-lotus-petal {
-  width: 0.62rem;
-  height: 0.9rem;
-  border-radius: 999px 999px 999px 999px;
-  transform-origin: 50% 82%;
+.ambient-lotus-petal-back {
+  fill: rgba(251, 207, 232, 0.92);
 }
 
-.ambient-lotus-petal-top {
-  transform: translate(-50%, -74%) rotate(0deg);
-  background: rgba(251, 207, 232, 0.98);
+.ambient-lotus-petal-side {
+  fill: rgba(249, 168, 212, 0.86);
 }
 
-.ambient-lotus-petal-left {
-  transform: translate(-78%, -35%) rotate(-42deg);
-  background: rgba(249, 168, 212, 0.9);
+.ambient-lotus-petal-front {
+  fill: rgba(244, 114, 182, 0.9);
 }
 
-.ambient-lotus-petal-right {
-  transform: translate(-22%, -35%) rotate(42deg);
-  background: rgba(249, 168, 212, 0.9);
+.ambient-lotus-leaf {
+  fill: rgba(20, 184, 166, 0.45);
 }
 
-.ambient-lotus-center {
-  width: 0.52rem;
-  height: 0.38rem;
-  border-radius: 999px;
-  transform: translate(-50%, -8%);
-  background: rgba(20, 184, 166, 0.65);
+.ambient-lotus-base {
+  fill: none;
+  stroke: rgba(15, 118, 110, 0.72);
+  stroke-width: 3;
+  stroke-linecap: round;
 }
 
 @keyframes ambient-lotus-bloom {
@@ -2095,7 +2172,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ambient-lotus {
+  .ambient-lotus-svg {
     animation: none;
   }
 }

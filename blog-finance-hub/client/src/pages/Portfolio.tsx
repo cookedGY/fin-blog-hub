@@ -138,15 +138,28 @@ export default function Portfolio() {
                 <BlogAmbientAudio />
               </div>
             </div>
-            <div className="portfolio-cloud-bubble relative p-5 text-sm text-rose-950 md:max-w-xs">
-              <p className="relative z-10 font-medium text-rose-900 mb-1">Recruiter blurb</p>
-              <p>
-                I bring a finance foundation, applied AI curiosity, and hands-on portfolio building to teams
-                that need clear analysis, stronger workflows, and thoughtful technology adoption.
-              </p>
-              <p className="relative z-10 mt-3 font-medium text-rose-900">
-                Hover or tap the project sections to reveal the deeper story.
-              </p>
+            <div className="portfolio-cloud-bubble text-sm text-sky-950">
+              <svg className="portfolio-cloud-art" viewBox="0 0 600 360" aria-hidden="true">
+                <path className="portfolio-cloud-shadow" d="M0 207c43 28 91 35 142 19 13 41 56 59 96 38 14 70 104 97 149 32 21 35 78 39 101 4 65 43 151 16 158-66 32 10 73-9 76-45-41 10-78 5-112-13-36 20-90 19-128-4-36 35-95 44-139 19-28 32-91 37-132 6-49 39-139 40-211 10Z" />
+                <path className="portfolio-cloud-main" d="M31 163c41-56 97-70 149-43 15-58 73-91 123-54 23-70 123-91 176-21 41-21 99-10 128 40 53-10 93 32 82 78 31 4 51 30 39 59-44 16-101 17-146-8-29 22-79 25-113 4-44 47-123 56-173 9-54 29-117 25-160-14-48 16-91 0-105-50Z" />
+                <path className="portfolio-cloud-curl" d="M56 169c-8-35 33-60 59-31" />
+                <path className="portfolio-cloud-curl" d="M139 205c12-35 56-45 80-17" />
+                <path className="portfolio-cloud-curl" d="M291 122c-5-53 75-61 79-7 9-35 51-49 75-22" />
+                <path className="portfolio-cloud-curl" d="M475 197c31-31 82-18 89 22" />
+              </svg>
+              <div className="portfolio-cloud-copy">
+                <p className="portfolio-cloud-kicker">For recruiters</p>
+                <p className="portfolio-cloud-headline">
+                  Finance judgment, applied AI curiosity, and hands-on building.
+                </p>
+                <p className="portfolio-cloud-body">
+                  I help teams turn messy information into clearer analysis, stronger workflows,
+                  and thoughtful technology adoption.
+                </p>
+                <p className="portfolio-cloud-cta">
+                  Hover or tap a section to reveal the project story.
+                </p>
+              </div>
             </div>
           </div>
 

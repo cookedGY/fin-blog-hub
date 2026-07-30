@@ -155,28 +155,40 @@ export default function BlogAmbientAudio() {
   }, []);
 
   return (
-    <div className="ambient-audio-card">
-      <div>
+    <div className="ambient-lotus-music-box">
+      <svg className="ambient-lotus-music-shape" viewBox="0 0 260 168" aria-hidden="true">
+        <path className="ambient-lotus-music-leaf" d="M48 113c28-17 61-13 79 20-31 18-65 12-79-20Z" />
+        <path className="ambient-lotus-music-leaf" d="M212 113c-28-17-61-13-79 20 31 18 65 12 79-20Z" />
+        <path className="ambient-lotus-music-petal ambient-lotus-music-petal-back" d="M130 12c37 35 44 76 0 130-44-54-37-95 0-130Z" />
+        <path className="ambient-lotus-music-petal ambient-lotus-music-petal-side" d="M71 42c48 11 74 43 64 98-54-16-76-47-64-98Z" />
+        <path className="ambient-lotus-music-petal ambient-lotus-music-petal-side" d="M189 42c-48 11-74 43-64 98 54-16 76-47 64-98Z" />
+        <path className="ambient-lotus-music-petal ambient-lotus-music-petal-front" d="M130 65c45 30 53 66 0 94-53-28-45-64 0-94Z" />
+      </svg>
+
+      <div className="ambient-lotus-music-content">
         <div className="sidebar-label">Reading sound</div>
         <p className="ambient-audio-copy">
           A soft Chinese-inspired instrumental for slow reading.
         </p>
+        <button
+          type="button"
+          className="ambient-lotus-button"
+          onClick={toggleAudio}
+          aria-pressed={isPlaying}
+          aria-label={isPlaying ? "Stop ambient music" : "Start ambient music"}
+        >
+          <svg className="ambient-lotus-svg" viewBox="0 0 64 52" aria-hidden="true">
+            <path className="ambient-lotus-leaf" d="M12 36c8-4 17-4 20 7-8 4-17 3-20-7Z" />
+            <path className="ambient-lotus-leaf" d="M52 36c-8-4-17-4-20 7 8 4 17 3 20-7Z" />
+            <path className="ambient-lotus-petal ambient-lotus-petal-back" d="M32 5c7 8 8 17 0 28-8-11-7-20 0-28Z" />
+            <path className="ambient-lotus-petal ambient-lotus-petal-side" d="M17 16c10 2 16 9 15 22-12-3-17-10-15-22Z" />
+            <path className="ambient-lotus-petal ambient-lotus-petal-side" d="M47 16c-10 2-16 9-15 22 12-3 17-10 15-22Z" />
+            <path className="ambient-lotus-petal ambient-lotus-petal-front" d="M32 18c8 6 10 14 0 25-10-11-8-19 0-25Z" />
+            <path className="ambient-lotus-base" d="M18 41c8 5 20 5 28 0" />
+          </svg>
+          <span>{isPlaying ? "Stop sound" : needsGesture ? "Start sound" : "Play sound"}</span>
+        </button>
       </div>
-      <button
-        type="button"
-        className="ambient-lotus-button"
-        onClick={toggleAudio}
-        aria-pressed={isPlaying}
-        aria-label={isPlaying ? "Stop ambient music" : "Start ambient music"}
-      >
-        <span className="ambient-lotus" aria-hidden="true">
-          <span className="ambient-lotus-petal ambient-lotus-petal-top" />
-          <span className="ambient-lotus-petal ambient-lotus-petal-left" />
-          <span className="ambient-lotus-petal ambient-lotus-petal-right" />
-          <span className="ambient-lotus-center" />
-        </span>
-        <span>{isPlaying ? "Stop" : needsGesture ? "Start" : "Play"}</span>
-      </button>
     </div>
   );
 }
