@@ -2151,8 +2151,19 @@
     gap: 0.3rem;
   }
 
+  .editorial-article {
+    background: linear-gradient(135deg, rgba(255, 244, 249, 0.86), rgba(249, 229, 237, 0.72));
+    border: 1px solid rgba(244, 177, 206, 0.42);
+    border-radius: 20px;
+    padding: 1.15rem 1rem;
+    box-shadow: 0 20px 45px rgba(45, 27, 34, 0.12);
+    backdrop-filter: blur(14px) saturate(1.08);
+    -webkit-backdrop-filter: blur(14px) saturate(1.08);
+  }
+
   .editorial-content {
     font-size: 1rem;
+    line-height: 1.78;
   }
 
   .editorial-sidebar-inner {
