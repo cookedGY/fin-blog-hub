@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight, Bot, BriefcaseBusiness, Home } from "lucide-react";
+import BlogAmbientAudio from "@/components/BlogAmbientAudio";
 
 const financeWork = [
   {
@@ -133,6 +134,9 @@ export default function Portfolio() {
                 A half-and-half view of the work I want recruiters to understand first:
                 finance judgment, technical curiosity, and the bridge between both.
               </p>
+              <div className="mt-4 max-w-sm">
+                <BlogAmbientAudio />
+              </div>
             </div>
             <div className="portfolio-cloud-bubble relative p-5 text-sm text-rose-950 md:max-w-xs">
               <p className="relative z-10 font-medium text-rose-900 mb-1">Recruiter blurb</p>
