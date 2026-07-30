@@ -134,11 +134,14 @@ export default function Portfolio() {
                 finance judgment, technical curiosity, and the bridge between both.
               </p>
             </div>
-            <div className="rounded-2xl border border-rose-200 bg-rose-50/95 p-4 text-sm text-rose-950 shadow-lg shadow-rose-100/80 motion-safe:animate-bounce md:max-w-xs md:-translate-y-2">
-              <p className="font-medium text-rose-900 mb-1">Recruiter blurb</p>
+            <div className="portfolio-cloud-bubble relative p-5 text-sm text-rose-950 md:max-w-xs">
+              <p className="relative z-10 font-medium text-rose-900 mb-1">Recruiter blurb</p>
               <p>
-                I bring a finance foundation, applied AI curiosity, and hands-on portfolio building.
-                I am strongest where analysis, systems thinking, and communication meet.
+                I bring a finance foundation, applied AI curiosity, and hands-on portfolio building to teams
+                that need clear analysis, stronger workflows, and thoughtful technology adoption.
+              </p>
+              <p className="relative z-10 mt-3 font-medium text-rose-900">
+                Hover or tap the project sections to reveal the deeper story.
               </p>
             </div>
           </div>
