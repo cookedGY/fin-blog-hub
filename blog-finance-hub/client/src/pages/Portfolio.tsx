@@ -111,16 +111,21 @@ export default function Portfolio() {
                 by Dekena Wade
               </p>
             </div>
-            <Link href="/">
-              <Button variant="outline" size="sm" className="gap-2">
-                <Home className="w-4 h-4" />
-                Home
-              </Button>
-            </Link>
+            <div className="portfolio-header-actions">
+              <Link href="/">
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Home className="w-4 h-4" />
+                  Home
+                </Button>
+              </Link>
+              <BlogAmbientAudio />
+            </div>
           </div>
           <p className="portfolio-intro-card text-lg text-muted-foreground max-w-3xl">
             A recruiter-friendly view of my work at the intersection of finance, analysis, and applied technology:
-            finance case studies on one side, technical builds on the other, and the skills connecting both.
+            finance case studies, technical builds, and the skills connecting both. These projects show how I
+            turn class-based analysis into visual storytelling, then build toward dashboards that can help flag
+            risk, anomalies, and operational signals in finance and AI workflows.
           </p>
         </div>
       </section>
@@ -128,18 +133,6 @@ export default function Portfolio() {
       {/* Recruiter Split Portfolio */}
       <section className="portfolio-work-section py-12 px-4 border-t border-border">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-end">
-            <div>
-              <p className="text-muted-foreground max-w-2xl">
-                A half-and-half view of the work I want recruiters to understand first:
-                finance judgment, technical curiosity, and the bridge between both.
-              </p>
-              <div className="mt-4 max-w-sm">
-                <BlogAmbientAudio />
-              </div>
-            </div>
-          </div>
-
           <div className="grid gap-6 md:grid-cols-2">
             <div
               className="group/column cursor-pointer rounded-3xl border border-sky-200/70 bg-sky-50/70 p-4 transition-all duration-300 hover:border-sky-400/60 hover:shadow-lg md:p-5"

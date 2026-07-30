@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BarChart3, Cloud, Code2, Database, GitBranch, Globe, type LucideIcon } from "lucide-react";
+import { Code2, Database, GitBranch, Globe, type LucideIcon } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FlowerAnimation from "@/components/FlowerAnimation";
@@ -15,44 +15,27 @@ const learningPostPath = "/post/taking-reins-cloned-website-harvard-python";
 const learningSkills: Array<{
   name: string;
   focus: string;
-  progress: number;
   Icon: LucideIcon;
 }> = [
   {
     name: "Python",
     focus: "Harvard coursework, clean logic, and finance automation",
-    progress: 35,
     Icon: Code2,
   },
   {
-    name: "Git & GitHub",
+    name: "Git",
     focus: "Version control, commits, pull/push flow, and repo hygiene",
-    progress: 48,
     Icon: GitBranch,
   },
   {
     name: "Databases",
     focus: "Schemas for posts, images, metadata, and portfolio records",
-    progress: 22,
     Icon: Database,
-  },
-  {
-    name: "Deployment",
-    focus: "Vercel, build settings, routing fixes, and analytics setup",
-    progress: 42,
-    Icon: Cloud,
   },
   {
     name: "React & TypeScript",
     focus: "Understanding the components that power this site",
-    progress: 28,
     Icon: Code2,
-  },
-  {
-    name: "Financial Data Analysis",
-    focus: "Scraping, cleaning, and interpreting market history",
-    progress: 58,
-    Icon: BarChart3,
   },
 ];
 
@@ -127,7 +110,7 @@ export default function Home() {
             <div className="hero-pill">Currently</div>
             <ul>
               <li>🎓 Finance degree: done. Now plotting my master's path</li>
-              <li>🌏 Next global move: China</li>
+              <li>🌏 Next trip: China</li>
               <li>📊 Building family + side businesses</li>
               <li>🧠 Balancing ambition, growth & what's next</li>
             </ul>
@@ -153,23 +136,23 @@ export default function Home() {
           </div>
 
           <div className="learning-panel" aria-label="Skills learning progress">
-            {learningSkills.map(({ name, focus, progress, Icon }) => (
-              <Link key={name} href={learningPostPath} className="learning-row">
-                <div className="learning-row-top">
+            <div className="learning-panel-header">
+              <span>Skill Stack</span>
+              <Link href={learningPostPath}>Read why →</Link>
+            </div>
+            <div className="learning-skill-grid">
+              {learningSkills.map(({ name, focus, Icon }) => (
+                <Link key={name} href={learningPostPath} className="learning-row">
                   <div className="learning-skill-title">
                     <span className="learning-icon" aria-hidden="true">
-                      <Icon size={18} strokeWidth={1.8} />
+                      <Icon size={16} strokeWidth={1.8} />
                     </span>
                     <span>{name}</span>
                   </div>
-                  <span className="learning-percent">{progress}%</span>
-                </div>
-                <p>{focus}</p>
-                <div className="learning-track" aria-hidden="true">
-                  <span style={{ width: `${progress}%` }} />
-                </div>
-              </Link>
-            ))}
+                  <p>{focus}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -300,7 +283,7 @@ export default function Home() {
       {/* CATEGORY SECTIONS */}
       {/* Finance Grind */}
       <section className="section" id="finance">
-        <div className="container section-split">
+        <div className="container section-split finance-showcase">
           <div className="section-text">
             <h2>Finance Grind</h2>
             <p>

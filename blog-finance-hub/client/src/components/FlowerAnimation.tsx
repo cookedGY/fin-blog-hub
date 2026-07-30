@@ -28,7 +28,7 @@ export default function FlowerAnimation() {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = Math.max(window.innerHeight * 1.75, 1180);
+      canvas.height = Math.max(window.innerHeight * 0.86, 620);
     };
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);

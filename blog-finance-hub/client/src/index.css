@@ -32,7 +32,10 @@
   body {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
-    background: var(--bg);
+    background:
+      radial-gradient(circle at 78% 18%, rgba(249, 229, 237, 0.3), transparent 34%),
+      linear-gradient(180deg, rgba(245, 237, 227, 0.22), rgba(249, 229, 237, 0.4) 42%, rgba(245, 237, 227, 0.9)),
+      url("/images/bamboo-clouds-portfolio.png") center top / cover fixed;
     color: var(--text-main);
     line-height: 1.6;
   }
@@ -53,10 +56,12 @@
 
   .section {
     padding: 4.5rem 0;
+    position: relative;
   }
 
   .section-alt {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(8px);
   }
 
   .section-header {
@@ -203,7 +208,7 @@
   /* HERO */
   .home-hero-stage {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     isolation: isolate;
     background:
       radial-gradient(circle at 82% 18%, rgba(249, 229, 237, 0.58), transparent 32%),
@@ -237,8 +242,7 @@
 
   .flower-animation-canvas {
     z-index: 1;
-    height: 175vh;
-    min-height: 1180px;
+    min-height: 620px;
     mix-blend-mode: multiply;
   }
 
@@ -349,7 +353,8 @@
 
   /* LEARNING PROGRESS */
   .learning-section {
-    background: var(--bg);
+    background: rgba(245, 237, 227, 0.72);
+    backdrop-filter: blur(8px);
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
@@ -404,17 +409,59 @@
   .learning-panel {
     display: grid;
     gap: 0.85rem;
+    border: 1px solid rgba(249, 168, 212, 0.24);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.62);
+    padding: 1rem;
+    box-shadow: 0 18px 38px rgba(15, 118, 110, 0.08);
+    backdrop-filter: blur(12px);
+  }
+
+  .learning-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(15, 118, 110, 0.1);
+    color: var(--jade-dark);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .learning-panel-header a {
+    color: var(--jade-dark);
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .learning-panel-header a:hover {
+    text-decoration: underline;
+  }
+
+  .learning-skill-grid {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  @media (min-width: 640px) {
+    .learning-skill-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   .learning-row {
     display: block;
     text-decoration: none;
     color: var(--text-main);
-    background: linear-gradient(145deg, #ffffff, rgba(249, 229, 237, 0.56));
-    border: 1px solid rgba(249, 229, 237, 0.9);
-    border-radius: var(--radius-md);
-    padding: 1rem;
-    box-shadow: 0 10px 26px rgba(15, 118, 110, 0.055);
+    background: rgba(255, 255, 255, 0.56);
+    border: 1px solid rgba(15, 118, 110, 0.1);
+    border-radius: 14px;
+    padding: 0.72rem 0.78rem;
     transition: transform 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s ease-out;
   }
 
@@ -445,38 +492,18 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 1.65rem;
+    height: 1.65rem;
     border-radius: 999px;
     background: rgba(15, 118, 110, 0.08);
     color: var(--jade-dark);
   }
 
-  .learning-percent {
-    flex: 0 0 auto;
-    color: var(--jade-dark);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
   .learning-row p {
-    margin: 0 0 0.6rem;
+    margin: 0.35rem 0 0;
     color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-
-  .learning-track {
-    height: 0.34rem;
-    overflow: hidden;
-    border-radius: 999px;
-    background: rgba(15, 118, 110, 0.1);
-  }
-
-  .learning-track span {
-    display: block;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(90deg, var(--jade), var(--gold));
+    font-size: 0.78rem;
+    line-height: 1.42;
   }
 
   /* CARDS */
@@ -537,6 +564,26 @@
     }
   }
 
+  .finance-showcase {
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 900px) {
+    .finance-showcase {
+      grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.58fr);
+    }
+
+    .finance-showcase .section-text {
+      min-height: 100%;
+      border: 1px solid rgba(15, 118, 110, 0.12);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 1.25rem;
+      box-shadow: 0 16px 34px rgba(15, 118, 110, 0.08);
+      backdrop-filter: blur(10px);
+    }
+  }
+
   .section-text h2 {
     font-family: "Cormorant Garamond", serif;
     font-size: 2rem;
@@ -578,12 +625,19 @@
   }
 
   .finance-article-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 900px) {
+    .finance-article-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   .finance-expand-card {
-    min-height: 9.4rem;
+    min-height: 10rem;
     display: flex;
     color: var(--text-main);
     text-decoration: none;
@@ -2100,6 +2154,14 @@
   backdrop-filter: blur(8px);
 }
 
+.portfolio-header-actions {
+  display: flex;
+  width: min(13rem, 42vw);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+
 .portfolio-work-section {
   background: rgba(249, 229, 237, 0.78);
   backdrop-filter: blur(8px);
@@ -2110,10 +2172,10 @@
   position: relative;
   isolation: isolate;
   width: 100%;
-  min-height: 10.5rem;
+  min-height: 5.6rem;
   display: grid;
   place-items: center;
-  padding: 1.8rem 1.35rem 1.15rem;
+  padding: 0.65rem 0.55rem 0.5rem;
 }
 
 .ambient-lotus-music-shape {
@@ -2149,16 +2211,17 @@
 }
 
 .ambient-lotus-music-content {
-  width: min(100%, 13.25rem);
+  width: min(100%, 9.75rem);
   border: 1px solid rgba(244, 114, 182, 0.18);
-  border-radius: 26px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.68);
-  padding: 0.9rem;
+  padding: 0.5rem;
   text-align: center;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
 .ambient-audio-copy {
+  display: none;
   margin: 0.15rem 0 0.7rem;
   color: var(--text-muted);
   font-size: 0.82rem;
@@ -2176,9 +2239,9 @@
   color: #9d174d;
   cursor: pointer;
   font: inherit;
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  padding: 0.5rem 0.78rem 0.5rem 0.62rem;
+  padding: 0.34rem 0.55rem 0.34rem 0.44rem;
   box-shadow: 0 10px 24px rgba(244, 114, 182, 0.14);
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
@@ -2190,8 +2253,8 @@
 }
 
 .ambient-lotus-svg {
-  width: 1.75rem;
-  height: 1.45rem;
+  width: 1.35rem;
+  height: 1.1rem;
   flex: 0 0 auto;
   overflow: visible;
   animation: ambient-lotus-bloom 2.6s ease-in-out infinite;
