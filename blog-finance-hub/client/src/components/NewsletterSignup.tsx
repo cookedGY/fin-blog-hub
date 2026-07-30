@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { trpc } from "@/lib/trpc";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Mail, Check, AlertCircle } from "lucide-react";
+import { Mail, Rss } from "lucide-react";
 
 interface NewsletterSignupProps {
   source?: string;
@@ -11,44 +9,9 @@ interface NewsletterSignupProps {
 }
 
 export default function NewsletterSignup({
-  source = "blog-post",
-  postSlug,
   className = "",
 }: NewsletterSignupProps) {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [message, setMessage] = useState("");
-
-  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
-    onSuccess: () => {
-      setStatus("success");
-      setMessage("Welcome! Check your email for confirmation.");
-      setEmail("");
-      setName("");
-      setTimeout(() => setStatus("idle"), 5000);
-    },
-    onError: (error: any) => {
-      setStatus("error");
-      setMessage(error.message || "Something went wrong. Please try again.");
-      setTimeout(() => setStatus("idle"), 5000);
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      setStatus("error");
-      setMessage("Please enter your email address.");
-      return;
-    }
-    subscribeMutation.mutate({
-      email,
-      name: name || undefined,
-      subscriptionSource: source,
-      postSlug,
-    });
-  };
+  const newsletterUrl = import.meta.env.VITE_NEWSLETTER_SUBSCRIBE_URL;
 
   return (
     <div className={`newsletter-signup ${className}`}>
@@ -58,57 +21,28 @@ export default function NewsletterSignup({
           <h3>Get New Posts in Your Inbox</h3>
         </div>
         <p className="newsletter-signup-description">
-          Subscribe to receive updates whenever I publish new articles about finance, business, and personal growth.
+          Get new articles about finance, business, technology, and personal growth delivered through my newsletter feed.
         </p>
 
-        <form onSubmit={handleSubmit} className="newsletter-signup-form">
-          <div className="form-group">
-            <Input
-              type="text"
-              placeholder="Your name (optional)"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              disabled={status === "loading"}
-              className="input-field"
-            />
-          </div>
-          <div className="form-group">
-            <Input
-              type="email"
-              placeholder="your.email@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={status === "loading"}
-              required
-              className="input-field"
-            />
-          </div>
-
-          {status === "success" && (
-            <div className="status-message success">
-              <Check className="w-5 h-5" />
-              <span>{message}</span>
-            </div>
+        <div className="newsletter-actions">
+          {newsletterUrl ? (
+            <Button asChild className="subscribe-button">
+              <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">
+                Subscribe for Email Updates
+              </a>
+            </Button>
+          ) : (
+            <Button asChild className="subscribe-button">
+              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+                <Rss className="w-4 h-4" />
+                Open RSS Feed
+              </a>
+            </Button>
           )}
-
-          {status === "error" && (
-            <div className="status-message error">
-              <AlertCircle className="w-5 h-5" />
-              <span>{message}</span>
-            </div>
-          )}
-
-          <Button
-            type="submit"
-            disabled={status === "loading" || status === "success"}
-            className="subscribe-button"
-          >
-            {status === "loading" ? "Subscribing..." : "Subscribe"}
-          </Button>
-        </form>
+        </div>
 
         <p className="newsletter-privacy">
-          No spam, unsubscribe anytime. Your email is safe with me.
+          No spam, unsubscribe anytime. The email signup link will connect here once the newsletter account is live.
         </p>
       </div>
     </div>

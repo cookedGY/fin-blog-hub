@@ -1101,19 +1101,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background:
-      radial-gradient(circle at 50% 42%, rgba(249, 229, 237, 0.72), transparent 32%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(245, 237, 227, 0.94));
+    background: #f5ede3;
     pointer-events: auto;
   }
 
   .route-loading-screen::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.58);
-    backdrop-filter: blur(18px) saturate(1.08);
-    -webkit-backdrop-filter: blur(18px) saturate(1.08);
+    display: none;
   }
 
   .route-loading-card {
@@ -1123,14 +1116,8 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    min-width: 12rem;
-    border: 1px solid rgba(255, 255, 255, 0.78);
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.62);
-    padding: 1.35rem 1.6rem;
-    box-shadow: 0 24px 60px rgba(4, 38, 28, 0.14);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    min-width: 10rem;
+    padding: 1rem;
   }
 
   .route-loading-emblem {
@@ -1142,10 +1129,10 @@
 
   .route-loading-card p {
     margin: 0;
-    color: var(--jade-dark);
+    color: var(--text-muted);
     font-family: "Cormorant Garamond", serif;
-    font-size: 0.92rem;
-    font-weight: 700;
+    font-size: 0.86rem;
+    font-weight: 600;
     letter-spacing: 0.22em;
   }
 
@@ -1286,6 +1273,12 @@
     gap: 1rem;
   }
 
+  .newsletter-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+
   .form-group {
     display: flex;
     flex-direction: column;
@@ -1345,6 +1338,16 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease-out;
+  }
+
+  .subscribe-button a,
+  a.subscribe-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
   }
 
   .subscribe-button:hover:not(:disabled) {
