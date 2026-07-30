@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, Rss } from "lucide-react";
+import { Mail } from "lucide-react";
 
 interface NewsletterSignupProps {
   source?: string;
@@ -11,7 +11,8 @@ interface NewsletterSignupProps {
 export default function NewsletterSignup({
   className = "",
 }: NewsletterSignupProps) {
-  const newsletterUrl = import.meta.env.VITE_NEWSLETTER_SUBSCRIBE_URL;
+  const followItAction =
+    "https://api.follow.it/subscription-form/eGtIdXJzdVkxRUlEM1FyVFVQNnVXdmJsWXlPcDR4bWN3RXRlMzFROXlkV0FlbG1kVHV5UVdmbmNCKyt1bkVJb09uK3NHK3Q5TUJFY3N6b2lQZmgxbkl6WkhqVjVaaVl5Y2NkYXdHYkVUZkJFTXJkZytqVW5RVldrMHJpVGgxRlB8QWQ0cTZId05Mc0F2OXQ5dSt6WEhLNDI3TlJ6SE9YeWkyaWx3Z0ZUZkZQdz0=/8";
 
   return (
     <div className={`newsletter-signup ${className}`}>
@@ -24,25 +25,25 @@ export default function NewsletterSignup({
           Get new articles about finance, business, technology, and personal growth delivered through my newsletter feed.
         </p>
 
-        <div className="newsletter-actions">
-          {newsletterUrl ? (
-            <Button asChild className="subscribe-button">
-              <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">
-                Subscribe for Email Updates
-              </a>
-            </Button>
-          ) : (
-            <Button asChild className="subscribe-button">
-              <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-                <Rss className="w-4 h-4" />
-                Open RSS Feed
-              </a>
-            </Button>
-          )}
-        </div>
+        <form action={followItAction} method="post" target="_blank" className="newsletter-signup-form">
+          <label className="sr-only" htmlFor="follow-it-email">
+            Email address
+          </label>
+          <input
+            id="follow-it-email"
+            type="email"
+            name="email"
+            placeholder="your.email@example.com"
+            required
+            className="input-field"
+          />
+          <Button type="submit" className="subscribe-button">
+            Subscribe for Email Updates
+          </Button>
+        </form>
 
         <p className="newsletter-privacy">
-          No spam, unsubscribe anytime. The email signup link will connect here once the newsletter account is live.
+          No spam, unsubscribe anytime. New posts will be sent through Follow.it.
         </p>
       </div>
     </div>
