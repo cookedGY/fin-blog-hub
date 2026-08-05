@@ -11,11 +11,91 @@ export interface Post {
   description?: string;
   thumbnail?: string;
   content: React.ReactNode;
+  seoTitle?: string;
   seoKeywords?: string[];
   seoDescription?: string;
 }
 
 export const POSTS: Record<string, Post> = {
+  "competing-without-the-pipeline-public-school": {
+    slug: "competing-without-the-pipeline-public-school",
+    tag: "Finance Grind",
+    title: "Competing Without the Pipeline: What Public School Taught Me About Building My Own Way In",
+    date: "August 4, 2026",
+    description: "Prestige opens doors, but it is not the same thing as potential. What attending public school taught me about hidden recruiting systems, building proof through projects, and competing without becoming someone else.",
+    seoTitle: "Competing Without the Pipeline | Public School & Career Access",
+    seoKeywords: ["public school career pipeline", "entry-level hiring", "finance recruiting", "first-generation career building", "college career access", "AI entry-level jobs", "underemployment recent graduates", "professional social capital", "finance student projects", "DeCodes Life"],
+    seoDescription: "A finance student's reflection on public school, hidden recruiting pipelines, entry-level hiring, projects, outreach, and building proof without inherited access.",
+    content: (
+      <>
+        <p>For a long time, I thought competing meant working harder or transferring to an Ivy League school for my final year.</p>
+        <p>Apply to more jobs. Add another certification. Rewrite the resume again. If someone else had an advantage, I assumed the answer was to close the gap through effort.</p>
+        <p>Effort matters. But the longer I spent trying to enter competitive finance, technology, and analytics roles, the more I realized that students are not only competing on effort. We are entering the market through different pipelines.</p>
+        <p>Some students attend schools where major employers recruit directly. Alumni explain which internships matter before applications open. Friends know the language used in interviews. Professors have relationships with firms. A referral might be one conversation away.</p>
+        <p>Other students learn those rules while already being judged by them.</p>
+        <p>That was one of the most important things public school taught me: talent may be widely distributed, but access to professional information, institutional credibility, and social capital is not.</p>
+
+        <h2>The Entry-Level Ladder Is Getting Harder to Reach</h2>
+        <p>A recent TikTok from Aaron Parnas captured an anxiety many college graduates already feel: entry-level opportunities appear to be disappearing just as students are trying to enter the workforce.</p>
+        <p>The exact numbers depend on what is being measured. A SignalFire analysis cited by <em>Forbes</em> found that new-graduate hiring in 2024 was 50% below pre-pandemic levels. Another 2026 <em>Forbes</em> report discussed research finding that, among firms adopting generative AI, entry-level hiring had fallen by roughly 80% per quarter since 2023. The Federal Reserve Bank of New York has also reported that 42% of recent college graduates were underemployed.</p>
+        <p>Those figures measure different populations and should not be collapsed into one dramatic statistic. Together, however, they describe a real problem: the first rung of the professional ladder is becoming less stable while employers expect new graduates to arrive with more experience, technical fluency, and a clearer professional identity.</p>
+        <p>That shift hurts students unevenly.</p>
+        <p>For students with strong recruiting pipelines, the market may be difficult but navigable. For students still learning that the pipeline exists, every missed deadline and unavailable connection compounds the disadvantage.</p>
+
+        <h2>The Hidden Curriculum of Professional Life</h2>
+        <p>In college, your major department teaches the official curriculum. The labor market often rewards a second curriculum that is rarely written down.</p>
+        <p>You are expected to know when recruiting begins, even when applications open months before the semester you associate with the internship. You should understand the difference between networking and asking a stranger for a job. You should know how to translate class assignments into business impact, speak about yourself without sounding rehearsed, and recognize which experiences signal potential to a recruiter.</p>
+        <p>One student may absorb it through family, alumni, private-school counseling, or an established campus pipeline. Another may discover it through rejection.</p>
+        <p>By the time I understood some of these rules, I had already transferred schools, changed directions, and spent years trying to work out where I belonged in finance. I was interested in markets, insurance, data, artificial intelligence, business strategy, and global systems. That range made sense to me, but it did not always fit the labels used by employers or even by some interns I met along the way.</p>
+        <p>I kept trying to make the story cleaner. The market seemed to want one answer: finance student, analyst, technologist, researcher, or business builder. I was still figuring out how those identities connected.</p>
+        <p>Students from prestigious institutions can struggle with the same uncertainty. An Ivy League name does not eliminate rejection, anxiety, debt, family pressure, or difficult career choices. The institutional advantage is a familiar signal for employers and more structured opportunities to convert uncertainty into experience.</p>
+        <p>Prestige reduces the amount of explaining some candidates have to do.</p>
+
+        <h2>When the School Name Cannot Tell the Story</h2>
+        <p>As a public college student, I often felt like I could not rely on a school name to communicate everything I wanted employers to see. I needed other forms of evidence.</p>
+        <p>Projects became one of them.</p>
+        <p>I analyzed companies such as Iomega, Nokia, and American Greetings. I built finance and AI projects involving retrieval, model evaluation, risk monitoring, workflow observability, and financial anomalies. I learned R and began working more seriously with Python, databases, and the code behind my portfolio.</p>
+        <p>Not every project was polished. Some began as coursework. Some were built with significant help from AI tools. Some forced me to confront the difference between producing an output and understanding how it worked.</p>
+        <p>But projects gave me something a line about being passionate could not: proof of curiosity, initiative, and judgment.</p>
+        <p>They showed how I approached messy problems, organized information, corrected misunderstandings, and explained complicated systems. They also helped me discover what kind of work genuinely held my attention.</p>
+        <p>Projects are not the same as professional experience, strong mentorship, or consequential work inside an organization. Students should not have to build an entire private curriculum to be considered for a role that is supposed to train beginners.</p>
+        <p>Still, when the traditional pipeline is weak, building visible evidence can create an alternative route.</p>
+
+        <h2>Outreach Became Part of the Education</h2>
+        <p>I also had to rethink networking.</p>
+        <p>At first, networking felt performative, and it still can. It felt like entering a room and pretending to be more confident or connected than I was. Eventually, I treated it less like collecting contacts and more like gathering useful context.</p>
+        <p>One thoughtful conversation could explain what a job description could not. Someone could tell me which skills mattered in practice, why a role was structured a certain way, or how their career changed after graduation. Those conversations did not guarantee opportunities, but they helped make the professional world more legible.</p>
+        <p>Students without inherited networks are often told to just network, as if social capital can be manufactured overnight. It cannot. Trust takes time, curiosity, reciprocity, and follow-through.</p>
+        <p>Outreach can still reduce the information gap. Specific questions, thoughtful follow-ups, and sustained contact can gradually build some of the context that formal pipelines provide automatically.</p>
+
+        <h2>Resourcefulness Is Real, but Inequality Is Not a Character-Building Exercise</h2>
+        <p>There is a temptation to turn every disadvantage into an inspirational story.</p>
+        <p>Public-school students are resourceful. We learn to search for information, navigate bureaucracy, combine opportunities, and make something useful from limited resources. Those skills matter. They have shaped how I work.</p>
+        <p>But resourcefulness should not become an excuse for unequal systems.</p>
+        <p>A student should not need extraordinary persistence to discover an ordinary internship timeline. A lack of alumni access should not be treated as a lack of ambition. Employers should not celebrate outreach while recruiting from the same narrow institutions and using the same definitions of readiness.</p>
+        <p>Colleges can do more than host occasional career fairs. Students need early exposure to recruiting calendars, role families, technical expectations, interview practice, alumni relationships, and paid experiential learning. This support should begin before senior year.</p>
+        <p>Employers also need to examine what they mean by entry level. If a job requires several internships, advanced technical skills, industry vocabulary, and the judgment of an experienced employee, the company is not hiring for potential. It is asking someone else to absorb the cost of training.</p>
+        <p>That model becomes especially damaging as AI automates routine tasks through which junior workers traditionally learned. If companies remove the beginner work and stop hiring beginners, they may also weaken their future pipeline of experienced talent.</p>
+
+        <h2>Competing Without Becoming Someone Else</h2>
+        <p>The hardest part of prestige comparison is not believing that another student has advantages. Sometimes they do. The harder part is beginning to believe that their path is the only legitimate one.</p>
+        <p>But my path has given me a different kind of range. Fashion taught me about branding and consumer behavior. Finance taught me to think about risk and incentives. Insurance showed me how institutions manage uncertainty. Data and AI taught me to examine systems, outputs, and assumptions. My family's business projects showed me that strategy becomes real when someone has to execute it.</p>
+        <p>The goal is not to imitate the resume of someone who entered through a different door. The goal is to understand what I bring through mine and make that value visible without pretending the structural differences do not exist.</p>
+        <p>Public school did not teach me that prestige is meaningless. Institutional access has real economic value. It taught me something more useful: prestige is not the same thing as potential.</p>
+        <p>When you do not inherit the pipeline, you may have to study it and build around it. Projects can demonstrate what a recruiter cannot infer from your school. Outreach can uncover rules other students learned earlier. A career assembled from seemingly unrelated experiences can become coherent once you learn to explain the system underneath it.</p>
+        <p>That is not an argument that everyone should have to struggle their way in.</p>
+        <p>It is an argument for recognizing what people build when the door was never designed to open automatically. It is also an argument for creating a labor market where the next student does not have to prove this much before being allowed to begin.</p>
+
+        <h2>Sources and Reporting Notes</h2>
+        <ul>
+          <li>Aaron Parnas, TikTok reference on the contraction of entry-level opportunities, August 4, 2026: <a href="https://www.tiktok.com/t/ZP8n6HL4T/" target="_blank" rel="noopener noreferrer">TikTok reference</a></li>
+          <li>Larry English, "AI and the Vanishing Entry-Level Job: The Changing Future of Work," <em>Forbes</em>, August 12, 2025: <a href="https://www.forbes.com/sites/larryenglish/2025/08/12/ai-and-the-vanishing-entry-level-job-the-changing-future-of-work/" target="_blank" rel="noopener noreferrer">Forbes</a></li>
+          <li>Caroline Castrillon, "Why Entry-Level Hiring Is Down 80% at Companies Adopting AI," <em>Forbes</em>, May 29, 2026, updated June 15, 2026: <a href="https://www.forbes.com/sites/carolinecastrillon/2026/05/29/why-entry-level-hiring-is-down-80-at-companies-adopting-ai/" target="_blank" rel="noopener noreferrer">Forbes</a></li>
+          <li>Michael T. Nietzel, "Unemployment and Underemployment Rates Among Recent College Graduates," <em>Forbes</em>, February 23, 2026: <a href="https://www.forbes.com/sites/michaeltnietzel/2026/02/23/unemployment-and-underemployment-rates-among-recent-college-graduates/" target="_blank" rel="noopener noreferrer">Forbes</a></li>
+        </ul>
+      </>
+    )
+  },
   "under-the-hood-dad-taught-me-systems": {
     slug: "under-the-hood-dad-taught-me-systems",
     tag: "Finance Grind",

@@ -46,7 +46,7 @@ export default function Home() {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://finbloghub.manus.space/" />
+        <meta property="og:url" content="https://finbloghub.space/" />
         <meta property="og:title" content="FinBlogHub | Dekena Wade: Finance, AI & Guyanese Heritage" />
         <meta property="og:description" content="Dekena Wade's finance blog exploring AI, business strategy, and Guyanese heritage. Finance student insights on internships, global travel, and building purpose-driven careers for young professionals." />
         <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663195299521/gbPCcanLrCwSoRTK.png" />

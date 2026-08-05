@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://finbloghub.manus.space/</loc>
+    <loc>https://finbloghub.space/</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,119 +10,126 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://finbloghub.manus.space/post/under-the-hood-dad-taught-me-systems</loc>
+    <loc>https://finbloghub.space/post/competing-without-the-pipeline-public-school</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://finbloghub.space/post/under-the-hood-dad-taught-me-systems</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/taking-reins-cloned-website-harvard-python</loc>
+    <loc>https://finbloghub.space/post/taking-reins-cloned-website-harvard-python</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/paper-review-ai</loc>
+    <loc>https://finbloghub.space/post/paper-review-ai</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/ai-tax-diagram-tool</loc>
+    <loc>https://finbloghub.space/post/ai-tax-diagram-tool</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/american-greeting-card</loc>
+    <loc>https://finbloghub.space/post/american-greeting-card</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/aon-internship</loc>
+    <loc>https://finbloghub.space/post/aon-internship</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/ghana-changed-me</loc>
+    <loc>https://finbloghub.space/post/ghana-changed-me</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/kofi-trucking</loc>
+    <loc>https://finbloghub.space/post/kofi-trucking</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/wang-tours</loc>
+    <loc>https://finbloghub.space/post/wang-tours</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/room-glow-up</loc>
+    <loc>https://finbloghub.space/post/room-glow-up</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/cdrama-comfort</loc>
+    <loc>https://finbloghub.space/post/cdrama-comfort</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/grief-and-grind</loc>
+    <loc>https://finbloghub.space/post/grief-and-grind</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/strong-one</loc>
+    <loc>https://finbloghub.space/post/strong-one</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/finance-lessons</loc>
+    <loc>https://finbloghub.space/post/finance-lessons</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/mandarin-journey</loc>
+    <loc>https://finbloghub.space/post/mandarin-journey</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/guyanese-chinese-fusion</loc>
+    <loc>https://finbloghub.space/post/guyanese-chinese-fusion</loc>
     <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://finbloghub.manus.space/post/maritime-insurance</loc>
+    <loc>https://finbloghub.space/post/maritime-insurance</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -130,7 +137,7 @@
 
   <!-- Portfolio -->
   <url>
-    <loc>https://finbloghub.manus.space/portfolio</loc>
+    <loc>https://finbloghub.space/portfolio</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

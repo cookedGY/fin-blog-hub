@@ -7,7 +7,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Specify sitemap location
-Sitemap: https://finbloghub.manus.space/sitemap.xml
+Sitemap: https://finbloghub.space/sitemap.xml
 
 # Crawl delay (optional - set to 1 second to be respectful)
 Crawl-delay: 1

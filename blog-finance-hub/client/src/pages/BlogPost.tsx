@@ -31,7 +31,10 @@ export default function BlogPost() {
   useEffect(() => {
     if (!post || !post.seoKeywords) return;
 
-    const canonicalUrl = `https://finbloghub.manus.space/post/${slug}`;
+    const canonicalUrl = `https://finbloghub.space/post/${slug}`;
+    const metaTitle = post.seoTitle || post.title;
+    const metaDescription = post.seoDescription || post.description || '';
+    const metaImage = post.thumbnail || 'https://finbloghub.space/og-image.png';
     let canonicalTag = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!canonicalTag) {
       canonicalTag = document.createElement('link');
@@ -41,16 +44,16 @@ export default function BlogPost() {
     (canonicalTag as HTMLLinkElement).href = canonicalUrl;
 
     updateMetaTags(
-      post.title,
-      post.seoDescription || post.description || '',
-      post.thumbnail || '',
+      metaTitle,
+      metaDescription,
+      metaImage,
       post.seoKeywords
     );
 
     const schema = createBlogPostSchema(
       post.title,
-      post.seoDescription || post.description || '',
-      post.thumbnail || '',
+      metaDescription,
+      metaImage,
       post.date,
       post.seoKeywords
     );
@@ -159,7 +162,7 @@ export default function BlogPost() {
                   <div className="sidebar-label">Share</div>
                   <div className="sidebar-share-links">
                     <a
-                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://finbloghub.manus.space/post/${post.slug}`)}`}
+                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://finbloghub.space/post/${post.slug}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="sidebar-share-btn"
@@ -167,7 +170,7 @@ export default function BlogPost() {
                       𝕏 Twitter
                     </a>
                     <a
-                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://finbloghub.manus.space/post/${post.slug}`)}`}
+                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://finbloghub.space/post/${post.slug}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="sidebar-share-btn"
