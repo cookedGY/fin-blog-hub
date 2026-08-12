@@ -17,6 +17,98 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "from-tumblr-html-to-financial-technology": {
+    slug: "from-tumblr-html-to-financial-technology",
+    tag: "Finance Grind",
+    title: "From Tumblr HTML to Financial Technology: What Building My Website Is Teaching Me",
+    date: "August 11, 2026",
+    description: "Building my finance portfolio changed how I see the industry, from a linear career path to a connected world of fintech, quantitative finance, PropTech, AI, data, and financial infrastructure.",
+    seoTitle: "From Tumblr HTML to Financial Technology | DeCodes Life",
+    seoKeywords: ["finance technology portfolio", "Tumblr HTML", "financial technology learning", "PropTech", "quantitative finance", "Bloomberg software engineering", "finance student coding", "GitHub Vercel portfolio", "AI in finance", "market data platforms"],
+    seoDescription: "A finance graduate reflects on moving from Tumblr HTML to building a GitHub and Vercel-powered portfolio while discovering fintech, quantitative finance, PropTech, AI, data, and financial infrastructure.",
+    content: (
+      <>
+        <p>For years, I thought finance was linear.</p>
+        <p>Many of the professionals I had the pleasure of working with described finance as a field divided into four distinct areas. The path appeared relatively straightforward: choose an area, learn its principles, earn the necessary credentials, and build your career within that lane.</p>
+        <p>I understood that technology supported the industry, but I did not initially see it as part of finance itself.</p>
+        <p>That perspective began to change when I started paying closer attention to fintech companies, financial platforms, and the technology used within banks and other financial institutions. It changed even more when I began building my own finance portfolio.</p>
+        <p>What started as a place to publish my work has become a much larger technical learning project. It has also introduced me to a layer of finance that I did not know existed.</p>
+
+        <h2>From Tumblr Themes to Building My Own Platform</h2>
+        <p>I have always been a little tech savvy.</p>
+        <p>My earliest memories of building anything online come from the Tumblr era. I would change layouts, edit pieces of HTML, experiment with colors, and rearrange pages until they felt like mine.</p>
+        <p>At the time, I did not think of that as programming. I was simply curious about how websites worked and willing to keep changing things until I got the result I wanted.</p>
+        <p>When I decided to create a finance portfolio, I expected the experience to feel somewhat similar.</p>
+        <p>It was not similar.</p>
+        <p>This time, I was working with GitHub, Vercel, React, TypeScript, RSS feeds, SEO metadata, crawlers, deployment logs, static pages, and firewall traffic. Instead of customizing a template provided by a website builder, I was beginning to learn about the structure underneath the site.</p>
+        <p>I had to understand how changes moved from my computer to GitHub, how Vercel turned those changes into a live website, and why something could work correctly in one environment but fail in another.</p>
+        <p>I also had to think about questions I had never considered before. Could search engines understand my articles? Were my titles and descriptions appearing correctly? Could AI tools read the structure of my pages? Which bots were visiting the site? Was the firewall protecting the site or accidentally blocking legitimate traffic?</p>
+        <p>Each question led to another part of the internet that I had previously used without understanding.</p>
+
+        <h2>The Technical Layer of Finance</h2>
+        <p>Building the website changed more than my understanding of web development. It also made me reconsider what I thought I knew about finance.</p>
+        <p>Finance had always been presented to me through recognizable functions and career paths. Technology appeared to sit outside those paths as a support service.</p>
+        <p>The more I studied financial technology, however, the more difficult it became to maintain that separation.</p>
+        <p>Financial institutions do not simply use technology to host websites or store documents. Their operations depend on systems that process transactions, organize market data, calculate risk, detect fraud, price financial products, and help professionals make decisions.</p>
+        <p>That realization led me to quantitative finance.</p>
+        <p>I had always known that finance involved formulas and calculations. We use financial models to organize information, evaluate performance, estimate value, and support decisions. What I did not understand was how much deeper the relationship between finance, mathematics, data, and computer science could go.</p>
+        <p>I had mainly associated quantitative analysts with hedge funds, trading, and algorithmic trading. As I continued learning, I discovered that quantitative professionals also work throughout banks and other financial institutions. They contribute to risk management, pricing, forecasting, portfolio construction, model development, and many other functions.</p>
+        <p>Many people entering these careers have backgrounds in mathematics, computer science, statistics, engineering, or other highly quantitative disciplines. Graduate education is also common in parts of the field.</p>
+        <p>This completely threw me for a loop.</p>
+        <p>Here was an entire technical world within finance that I had barely encountered. It made me wonder how many students develop an incomplete picture of the industry simply because they are only introduced to its most visible career paths.</p>
+
+        <h2>Learning Before I Feel Completely Ready</h2>
+        <p>Once I became aware of that world, I did not want to wait until graduate school to begin exploring it.</p>
+        <p>Over the past year, I have been learning more about R, Python, databases, machine learning, deep learning, neural networks, cybersecurity, and the infrastructure behind financial systems.</p>
+        <p>I am still at the beginning of that process. I am not claiming to be a software engineer, data scientist, or quantitative analyst.</p>
+        <p>What I am developing is technical fluency.</p>
+        <p>There is value in understanding how a system works even if you are not the person engineering every component. A finance professional who understands data structures, automation, model limitations, and technical infrastructure may be better prepared to work with the people building those systems.</p>
+        <p>Learning to code has also changed the way I solve problems.</p>
+        <p>When something on my website fails, I have to identify what changed, isolate the source of the problem, test a possible solution, and evaluate the result. That process is not completely different from financial analysis. Both require patience, attention to detail, and the ability to work through uncertainty without immediately knowing the answer.</p>
+        <p>AI tools have helped me build faster, but they have not eliminated the need to understand what I am building. If an AI-generated solution causes another part of the website to break, I still have to recognize the problem. I have to ask better questions, examine the output, and decide whether the proposed solution makes sense.</p>
+        <p>That is one of the most important lessons this project has taught me: access to AI does not remove the need for judgment. It makes judgment even more important.</p>
+
+        <h2>Learning Through Mentorship</h2>
+        <p>My curiosity about this intersection has grown through conversations with one of my newer mentors, a software engineer at Bloomberg with more than 20 years of experience building algorithmic systems.</p>
+        <p>His experience began long before today's excitement surrounding generative AI. That perspective has helped me understand that modern AI did not appear out of nowhere. It developed from decades of work involving algorithms, data, mathematics, computing infrastructure, and increasingly sophisticated models.</p>
+        <p>Our conversations have made me more curious about the systems behind financial reporting, market data, analytics platforms, and the tools financial professionals rely on every day.</p>
+        <p>Bloomberg has always fascinated me because it sits at the intersection of information, financial markets, data, and technology. Learning from someone who understands that infrastructure has encouraged me to look beyond the visible interface of a financial product and ask what is happening underneath it.</p>
+        <p>Who designed the system? Where does the information come from? How is it organized? What models are being used? How does the platform help someone make a better decision?</p>
+        <p>Those questions are now shaping the way I think about my own career.</p>
+
+        <h2>Discovering PropTech</h2>
+        <p>One of the areas I have recently begun exploring is PropTech, or property technology.</p>
+        <p>PropTech brings together real estate, finance, data, and technology. Although the field itself is not new, advances in artificial intelligence and machine learning are creating additional ways to improve real estate and financial processes.</p>
+        <p>These technologies can support property valuation, market research, lending, underwriting, investment analysis, due diligence, building operations, and risk assessment.</p>
+        <p>This was especially interesting to me because it demonstrated that the intersection of finance and technology is not limited to trading or traditional fintech platforms. It can also influence how people evaluate properties, manage buildings, structure investments, and make lending decisions.</p>
+        <p>Companies are developing both independent products and internal tools to improve specific business functions. Some tools help professionals organize information faster. Others assist with forecasting, automate repetitive processes, or identify patterns within large collections of data.</p>
+        <p>These systems do not eliminate the need for financial or industry expertise. Someone must still interpret the output, question the assumptions, recognize missing context, and determine whether a recommendation is appropriate.</p>
+        <p>That is where I believe people with finance backgrounds can contribute.</p>
+        <p>The goal is not for every finance student to become a full-time engineer. The goal is to become capable of participating in conversations about how financial tools are designed, used, and evaluated.</p>
+
+        <h2>A Wider Definition of Finance</h2>
+        <p>Building my website has made me question the boundaries I once placed around finance.</p>
+        <p>I started the project because I wanted somewhere to publish my essays, showcase my work, and document what I was learning. I did not expect it to change the way I thought about the industry.</p>
+        <p>Now, every part of the process feels connected.</p>
+        <p>Writing articles teaches me how to communicate complex ideas. Studying finance gives me the domain knowledge to understand business problems. Learning about data and AI helps me see how those problems might be approached differently. Building the website gives me a practical environment where I can test ideas, make mistakes, and learn how technical systems behave.</p>
+        <p>The result is not a perfectly defined career path. In many ways, I am moving further away from the linear path I once expected.</p>
+        <p>That no longer feels like a problem.</p>
+        <p>Finance is still grounded in established principles, but the systems surrounding it are changing. Financial professionals are increasingly working alongside engineers, data scientists, cybersecurity specialists, product teams, and quantitative researchers.</p>
+        <p>Understanding those connections can create opportunities that do not fit neatly within one traditional category.</p>
+
+        <h2>Still Building</h2>
+        <p>My website is still evolving, and so is my understanding of where I belong within finance and technology.</p>
+        <p>There are still deployment errors I do not immediately understand. There are still technical concepts I have to research several times before they make sense. There are still moments when one small change creates a completely different problem somewhere else.</p>
+        <p>But every challenge teaches me something.</p>
+        <p>Tumblr taught me that I could change a digital space and make it feel like mine. Building this portfolio is teaching me how much work happens beneath the surface of that space.</p>
+        <p>More importantly, it is teaching me that finance may not be as linear as I once believed.</p>
+        <p>There is an entire world where finance, data, engineering, artificial intelligence, and industry expertise meet. I am still learning what role I may eventually play within it, but I no longer feel that I have to choose between being interested in finance and being interested in technology.</p>
+        <p>They are already connected.</p>
+        <p>Still learning. Still debugging. Still building.</p>
+        <p>Every commit makes the site feel more like mine.</p>
+      </>
+    )
+  },
   "competing-without-the-pipeline-public-school": {
     slug: "competing-without-the-pipeline-public-school",
     tag: "Finance Grind",

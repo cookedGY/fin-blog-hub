@@ -10,6 +10,13 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://finbloghub.space/post/from-tumblr-html-to-financial-technology</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://finbloghub.space/post/competing-without-the-pipeline-public-school</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
