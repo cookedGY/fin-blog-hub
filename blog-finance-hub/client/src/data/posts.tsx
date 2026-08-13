@@ -115,6 +115,13 @@ export const POSTS: Record<string, Post> = {
         <p>My position is not that the market will definitely rise. It is that this period is worth studying carefully because it reveals where capital is moving, which industries are adapting, and how deeply connected the global economy has become.</p>
         <p>For now, I am observing, learning, and remaining cautiously optimistic.</p>
 
+        <h2>Update: August 13, 2026</h2>
+        <p>New economic releases continue to present a mixed picture.</p>
+        <p>The Producer Price Index was unchanged in July as falling energy prices offset increases in services and construction. However, producer prices remained 4.7% higher than they were a year earlier. Prices excluding food, energy, and trade services increased 0.4% during July, suggesting that underlying business-cost pressures remain elevated.</p>
+        <p>Real average hourly earnings declined 0.1% from June to July and 0.2% over the previous year. This indicates that moderating consumer inflation has not yet produced meaningful purchasing-power growth for many workers.</p>
+        <p>Initial unemployment claims also increased by 9,000 to 209,000 for the week ending August 8, while continuing claims declined by 22,000 to 1.777 million. These figures do not indicate a sudden surge in layoffs, but they reinforce the view that the labor market is producing uneven signals.</p>
+        <p>Together, these releases support the article's original conclusion. The outlook cannot be described as entirely bullish or bearish; inflation, employment, energy markets, and technological investment continue to move in different directions.</p>
+
         <h2>Sources</h2>
         <ol>
           <li>U.S. Bureau of Labor Statistics, "The Employment Situation, July 2026," August 7, 2026: <a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank" rel="noopener noreferrer">BLS Employment Situation</a></li>
@@ -126,6 +133,9 @@ export const POSTS: Record<string, Post> = {
           <li>Sam Potter, "Here's (Almost) Everything Wall Street Expects in 2026," <em>Bloomberg</em>, January 1, 2026: <a href="https://www.bloomberg.com/graphics/2026-investment-outlooks/" target="_blank" rel="noopener noreferrer">Bloomberg Investment Outlooks</a></li>
           <li>Hillary Remy, "Goldman Sachs Doubles Down on Oil Price Forecast for 2026," <em>Yahoo Finance</em>, July 24, 2026: <a href="https://finance.yahoo.com/energy/articles/goldman-sachs-doubles-down-oil-020300577.html" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></li>
           <li><em>The Wall Street Journal</em>, "U.S. Lost 23,000 Jobs in July, While Unemployment Ticked Lower," August 7, 2026. A stable public link was unavailable when this article was prepared.</li>
+          <li>U.S. Bureau of Labor Statistics, "Producer Price Indexes, July 2026," August 13, 2026: <a href="https://www.bls.gov/news.release/ppi.nr0.htm" target="_blank" rel="noopener noreferrer">BLS Producer Price Indexes</a></li>
+          <li>U.S. Bureau of Labor Statistics, "Real Earnings, July 2026," August 13, 2026: <a href="https://www.bls.gov/news.release/realer.nr0.htm" target="_blank" rel="noopener noreferrer">BLS Real Earnings</a></li>
+          <li>U.S. Department of Labor, "Unemployment Insurance Weekly Claims," August 13, 2026: <a href="https://www.dol.gov/ui/data.pdf" target="_blank" rel="noopener noreferrer">DOL Unemployment Insurance Weekly Claims</a></li>
         </ol>
       </>
     )
