@@ -17,6 +17,148 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "career-path-not-linear-never-random": {
+    slug: "career-path-not-linear-never-random",
+    tag: "Finance Grind",
+    title: "My Career Path Has Not Been Linear, but It Has Never Been Random",
+    date: "August 15, 2026",
+    description: "A reflection on connecting participatory budgeting, asset management, international tax, nonprofit consulting, AI, and industrial real estate into one finance story.",
+    seoTitle: "My Career Path Has Not Been Linear | Finance, AI, and Global Systems",
+    seoKeywords: ["finance career path", "nonlinear career", "J.P. Morgan internship", "EY international tax", "PwC nonprofit consulting", "AI in finance", "industrial real estate", "PropTech", "finance student journey", "global economy"],
+    seoDescription: "A finance student's reflection on connecting asset management, international tax, nonprofit consulting, AI, and industrial real estate into one coherent career story.",
+    content: (
+      <>
+        <p>During one of my internships, I attended a lunch with a client and another intern.</p>
+        <p>He asked me about my previous experience, so I explained that my first exposure to finance came through J.P. Morgan, where I worked around asset management and investments. After that, I pursued an opportunity with EY in International Tax and Transaction Services.</p>
+        <p>His reaction surprised me.</p>
+        <p>"How did you get from J.P. Morgan to EY?"</p>
+        <p>The question made it sound as though those experiences could not belong to the same career story.</p>
+        <p>I tried to explain the connection, but I remember feeling as though I had to defend my own path. From the outside, my decisions may have appeared scattered. I had moved from asset management to international tax and transactions. I would later work in nonprofit consulting and eventually begin exploring artificial intelligence, machine learning, and industrial real estate.</p>
+        <p>To me, these opportunities were never disconnected.</p>
+        <p>They were different ways of pursuing a question I had been asking since high school: How does the global economy actually work?</p>
+
+        <h2>Entering Finance Without a Family Blueprint</h2>
+        <p>Even when each opportunity made sense to me, landing it often felt improbable.</p>
+        <p>Sometimes, I felt like a unicorn.</p>
+        <p>I do not mean that I believed I was uniquely qualified or somehow more talented than everyone else. I mean that I had no personal reference point for someone with my background entering these institutions.</p>
+        <p>My mother was a nurse, and my father worked in engineering and information technology. Their careers taught me discipline, technical problem-solving, and the importance of building useful skills. However, I did not grow up hearing conversations about asset management, investment divisions, recruiting cycles, client-service expectations, or the differences among financial institutions. My parents knew nothing about finance.</p>
+        <p>I was learning finance while simultaneously learning the unwritten rules surrounding finance.</p>
+        <p>Before entering a major bank, one of my most important experiences was participating in Participatory Budgeting through my local government office focusing on the distribution of state and city funds. That experience introduced me to questions about how communities allocate money, how residents communicate their needs, and how public decisions affect neighborhoods.</p>
+        <p>It became part of the story recruiters noticed.</p>
+        <p>Participatory Budgeting demonstrated that my interest in finance did not begin with stocks, banking titles, or the prestige associated with working in a large office. It began with an interest in how money is distributed, who participates in financial decisions, and how those choices influence people's lives.</p>
+        <p>That visibility helped recruiters imagine me working inside a large bank or a corporate office in the middle of the city, even when I was still learning how to imagine myself there.</p>
+        <p>Every opportunity felt like a major breakthrough.</p>
+        <p>I would sometimes look around and think, "Wow, I actually landed something like this."</p>
+        <p>For someone raised around corporate finance, these environments may have felt familiar. They may have already known the differences among investment banking, asset management, corporate finance, consulting, taxation, and financial technology.</p>
+        <p>I did not.</p>
+        <p>I had to learn the industry and its internal structure while also trying to perform well enough to remain inside it.</p>
+        <p>That difference matters.</p>
+        <p>Someone unfamiliar with an inner-city, immigrant, working-class, or non-finance background may look at my resume and question the connection among my experiences. They may see changes in companies, industries, or functions and assume I lacked a clear direction.</p>
+        <p>From my perspective, every opportunity exposed me to a professional world I had not previously known existed.</p>
+
+        <h2>The Experience That Led Me to Finance</h2>
+        <p>My first experience around asset management and investments intimidated me.</p>
+        <p>I was still learning how a large bank operated. There were financial concepts and institutional structures that I had heard of but not yet encountered in real world scenarios. However, that experience also made me curious.</p>
+        <p>Instead of deciding that I did not belong, I wanted to understand more. I changed my major and decided to study finance.</p>
+        <p>That decision was not about chasing a prestigious title. It was about gaining the vocabulary and technical foundation to understand what I had witnessed.</p>
+        <p>How was capital being invested? How were professionals evaluating companies and markets? What information did they use to make decisions? How did those decisions affect businesses and the larger economy?</p>
+        <p>Asset management gave me an entry point into those questions.</p>
+        <p>It did not give me every answer.</p>
+
+        <h2>Discovering the Structure Behind Global Companies</h2>
+        <p>My next opportunity was with EY in International Tax and Transaction Services.</p>
+        <p>At the time, I had always been interested in international business, but my understanding was limited.</p>
+        <p>I thought operating globally meant that a company had stores, offices, or customers in multiple countries that reported to the head office in the US. I did not understand the financial and operational systems required to support that presence.</p>
+        <p>A multinational company may have its headquarters in one country, manufacturing operations in another, warehouses across several regions, and employees working under different tax and regulatory systems.</p>
+        <p>Behind those operations are payroll records, accounting systems, transactions, ownership structures, tax requirements, reporting standards, and cross-border financial decisions.</p>
+        <p>My experience at EY introduced me to the complexity behind the phrase "global company."</p>
+        <p>It helped me understand that international business was not only about where a company sold its products. It was also about how the company organized information, moved capital, reported its activity, and complied with requirements across different jurisdictions.</p>
+        <p>This connected directly to a goal I had shared with my economics teacher during my senior year of high school.</p>
+        <p>I wanted to understand the global market. I also wanted to understand how decisions made in one country affected companies, workers, and consumers somewhere else.</p>
+        <p>International tax and transaction work allowed me to see part of the machinery behind that system.</p>
+
+        <h2>The Mentor Who Helped Me Trust My Direction</h2>
+        <p>One of the most valuable outcomes of my EY experience was finding a mentor who has remained in my life for several years.</p>
+        <p>I can still contact him when I have questions about where I should position myself, how an industry is changing, or whether a particular opportunity fits the direction I am trying to build.</p>
+        <p>He has never treated my curiosity as a problem.</p>
+        <p>Instead, he has helped me recognize the connection among my interests, even when I have struggled to explain that connection to other people.</p>
+        <p>That type of mentorship is especially important when your career does not follow a familiar template.</p>
+        <p>When a path is linear, there are visible steps to follow. When a path crosses industries, functions, and technologies, it can be harder to know whether you are progressing or simply moving.</p>
+        <p>A good mentor can help you tell the difference.</p>
+        <p>His guidance has repeatedly reminded me that a career can be coherent without being narrow.</p>
+        <p>The relationships I developed through these opportunities made navigating unfamiliar spaces easier. Several mentors and colleagues remain people I value and contact today.</p>
+        <p>The titles mattered, but the relationships, exposure, and confidence I gained mattered more.</p>
+
+        <h2>Why Nonprofit Consulting Was Personal</h2>
+        <p>I later worked in nonprofit consulting through PwC.</p>
+        <p>On the surface, this may have looked like another change. In practice, I approached the opportunity using a framework I had developed during my earlier experiences.</p>
+        <p>What decision was the team trying to make? What information had the client provided? How would that information support the organization's next action?</p>
+        <p>That framework connected finance, consulting, and problem-solving.</p>
+        <p>The work also carried personal meaning.</p>
+        <p>Growing up as an inner-city New York student, I depended on nonprofit organizations for exposure to opportunities that were not always visible in my immediate environment.</p>
+        <p>My family's experiences introduced me to nursing, engineering, and information technology. However, careers in asset management, international taxation, consulting, and corporate finance were not part of my everyday vocabulary.</p>
+        <p>Nonprofits helped close that exposure gap.</p>
+        <p>They introduced me to industries, educational opportunities, and professional environments that I may not have discovered through my immediate network. They showed me that there were more ways to build a career than the paths I already understood.</p>
+        <p>Working with organizations similar to those that had expanded my view of the world felt like an honor.</p>
+        <p>It was not a departure from finance or international business. It was another opportunity to understand how organizations use information, manage resources, and make decisions.</p>
+        <p>It also allowed me to contribute to institutions serving students whose professional exposure may be as limited as mine once was.</p>
+
+        <h2>Why AI and Industrial Real Estate Fit the Story</h2>
+        <p>My current exploration of AI, machine learning, and industrial real estate may look like another unexpected turn.</p>
+        <p>I understand why.</p>
+        <p>Someone looking only at job titles might struggle to connect asset management, international taxation, nonprofit consulting, website development, AI, and real estate.</p>
+        <p>I do not look at them as individual titles.</p>
+        <p>I look at the questions connecting them.</p>
+        <p>How is capital invested? How do global companies operate? How do organizations use financial information? How does infrastructure support economic activity? How is technology changing the decisions people make?</p>
+        <p>AI is influencing each of those questions.</p>
+        <p>Companies are investing in models, data centers, software, cybersecurity, cloud infrastructure, and workforce training. Financial institutions are developing AI-supported systems for research, risk management, underwriting, fraud detection, customer service, and internal operations.</p>
+        <p>Real estate is also part of that transformation.</p>
+        <p>Data centers require land, energy, construction, financing, and ongoing operations. Industrial real estate connects warehouses, manufacturing facilities, transportation networks, and the movement of goods. PropTech is changing how properties are valued, financed, managed, and analyzed.</p>
+        <p>Learning about AI within industrial and commercial real estate is therefore not separate from my interest in finance.</p>
+        <p>It is helping me understand how technology, capital, infrastructure, and the physical economy connect.</p>
+        <p>The <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/" target="_blank" rel="noopener noreferrer">World Economic Forum</a> identifies fintech engineers, big-data specialists, and AI and machine-learning specialists among the fastest-growing roles expected through 2030.</p>
+        <p>The <a href="https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf" target="_blank" rel="noopener noreferrer">International Monetary Fund</a> has also identified AI-related capital spending as an important force influencing the global economic outlook.</p>
+        <p>A <a href="https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html" target="_blank" rel="noopener noreferrer">PwC analysis of AI-exposed industries</a> also found faster productivity growth and a wage premium in jobs with AI skills, which reinforces why technical fluency matters even for people who begin in finance rather than computer science.</p>
+        <p>The technology is not developing in isolation. It is affecting investment, productivity, energy demand, employment, real estate, and international competition.</p>
+        <p>Understanding that transformation is connected to the goal I have carried since high school.</p>
+        <p>I still want to understand how the economy works.</p>
+        <p>The difference is that I now understand how many systems must be examined to answer that question.</p>
+
+        <h2>Do Not Let Someone Else Narrow Your Curiosity</h2>
+        <p>If you are a finance student interested in AI or technology, do not let someone convince you that your interests are incompatible simply because the opportunity is not located inside a traditional bank.</p>
+        <p>Finance exists inside technology companies, real estate organizations, nonprofits, manufacturers, healthcare systems, retailers, governments, and multinational corporations.</p>
+        <p>Every organization must allocate resources, evaluate risk, interpret information, and make decisions about the future.</p>
+        <p>The institution may change, but the financial questions remain.</p>
+        <p>Asking how AI can affect finance within a company that is not a bank is not evidence that you lack direction. It may mean that you understand how widely finance operates.</p>
+        <p>Students should still develop expertise. Curiosity should not become an excuse for avoiding depth or moving from one trend to another without learning anything meaningful.</p>
+        <p>However, specialization and curiosity do not have to oppose each other.</p>
+        <p>A person can build a strong financial foundation while exploring how that knowledge applies across industries. In a workforce being reshaped by technology, the ability to connect disciplines may become an advantage.</p>
+
+        <h2>The Bigger Picture</h2>
+        <p>When I consider my experiences together, I do not see a collection of unrelated internships.</p>
+        <p>Participatory budgeting introduced me to how communities allocate public resources and make collective financial decisions.</p>
+        <p>Asset management introduced me to how capital is invested.</p>
+        <p>International tax and transaction work exposed me to the structures behind multinational companies.</p>
+        <p>Nonprofit consulting showed me how financial and operational information can support organizations with a social mission.</p>
+        <p>Building my website taught me about digital infrastructure and the systems underneath the platforms we use.</p>
+        <p>My AI fellowship is helping me examine how technology may change industrial real estate, commercial real estate, and financial decision-making.</p>
+        <p>Each experience has given me another piece of the same picture.</p>
+        <p>I am still assembling that picture. I am still learning how finance, technology, infrastructure, international business, and economic development connect.</p>
+        <p>But I no longer believe that I need to force every interest into one traditional career label before it becomes valid.</p>
+        <p>My goal has never been to collect titles for the sake of prestige.</p>
+        <p>My goal is to understand how organizations and economies work, then use that understanding to contribute wherever finance, technology, and decision-making meet.</p>
+        <p>My career path has not been linear.</p>
+        <p>It has never been random.</p>
+
+        <h2>Sources</h2>
+        <ol>
+          <li>International Monetary Fund, "World Economic Outlook Update: Global Economy in Crosscurrents of War and Technology," July 2026: <a href="https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf" target="_blank" rel="noopener noreferrer">IMF World Economic Outlook Update</a></li>
+          <li>World Economic Forum, "The Future of Jobs Report 2025," January 2025: <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/" target="_blank" rel="noopener noreferrer">World Economic Forum</a></li>
+          <li>PwC, "AI Linked to a Fourfold Increase in Productivity Growth and 56% Wage Premium," June 3, 2025: <a href="https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html" target="_blank" rel="noopener noreferrer">PwC</a></li>
+        </ol>
+      </>
+    )
+  },
   "reading-crosscurrents-ai-oil-inflation-q4-2026": {
     slug: "reading-crosscurrents-ai-oil-inflation-q4-2026",
     tag: "Finance Grind",

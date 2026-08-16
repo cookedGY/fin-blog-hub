@@ -10,6 +10,13 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://finbloghub.space/post/career-path-not-linear-never-random</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://finbloghub.space/post/reading-crosscurrents-ai-oil-inflation-q4-2026</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
