@@ -8,6 +8,18 @@ const interactiveSelector = [
   "[data-cursor-reactive]",
 ].join(",");
 
+const reactiveSelector = [
+  "[data-cursor-reactive]",
+  ".card",
+  ".hero-inner",
+  ".hero-card",
+  ".learning-panel",
+  ".portfolio-intro-card",
+  ".portfolio-pane",
+  ".speaking-hero-card",
+  ".speaking-content-card",
+].join(",");
+
 function getCursorLabel(target: EventTarget | null) {
   if (!(target instanceof Element)) return "";
 
@@ -42,8 +54,16 @@ export default function InteractiveCursor() {
     let currentY = targetY;
     let previousX = targetX;
     let previousY = targetY;
+    let reactiveElements: HTMLElement[] = [];
+
+    const refreshReactiveElements = () => {
+      reactiveElements = Array.from(document.querySelectorAll(reactiveSelector)).filter(
+        (element): element is HTMLElement => element instanceof HTMLElement,
+      );
+    };
 
     document.documentElement.classList.add("has-interactive-cursor");
+    refreshReactiveElements();
 
     const updateCursor = () => {
       const cursor = cursorRef.current;
@@ -77,15 +97,57 @@ export default function InteractiveCursor() {
 
       const nextLabel = getCursorLabel(event.target);
       setLabel((currentLabel) => (currentLabel === nextLabel ? currentLabel : nextLabel));
+
+      reactiveElements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const deltaX = event.clientX - centerX;
+        const deltaY = event.clientY - centerY;
+        const distance = Math.hypot(deltaX, deltaY);
+        const range = Math.max(rect.width, rect.height) * 0.95;
+        const pull = Math.max(0, 1 - distance / range);
+
+        if (pull < 0.05) {
+          element.classList.remove("cursor-reactive-near");
+          element.style.removeProperty("--reactive-x");
+          element.style.removeProperty("--reactive-y");
+          element.style.removeProperty("--reactive-scale");
+          return;
+        }
+
+        const divisor = Math.max(distance, 1);
+        const moveX = (deltaX / divisor) * pull * 7;
+        const moveY = (deltaY / divisor) * pull * 5 - pull * 5;
+
+        element.classList.toggle("cursor-reactive-near", pull > 0.22);
+        element.style.setProperty("--reactive-x", `${moveX.toFixed(2)}px`);
+        element.style.setProperty("--reactive-y", `${moveY.toFixed(2)}px`);
+        element.style.setProperty("--reactive-scale", `${(1 + pull * 0.01).toFixed(3)}`);
+      });
+    };
+
+    const handlePointerLeave = () => {
+      reactiveElements.forEach((element) => {
+        element.classList.remove("cursor-reactive-near");
+        element.style.removeProperty("--reactive-x");
+        element.style.removeProperty("--reactive-y");
+        element.style.removeProperty("--reactive-scale");
+      });
     };
 
     window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerleave", handlePointerLeave);
+    window.addEventListener("resize", refreshReactiveElements);
     frame = window.requestAnimationFrame(updateCursor);
 
     return () => {
       window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerleave", handlePointerLeave);
+      window.removeEventListener("resize", refreshReactiveElements);
       window.cancelAnimationFrame(frame);
       document.documentElement.classList.remove("has-interactive-cursor");
+      handlePointerLeave();
     };
   }, []);
 

@@ -11,9 +11,9 @@ import { Loader2, Trash2, Download, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 
 const PROJECT_CATEGORIES = [
-  "Finance Grind",
+  "De's Financial Takes",
   "Global De",
-  "Business Builder",
+  "AI + Audit",
   "Life & Growth",
   "Fun Stuff",
 ];

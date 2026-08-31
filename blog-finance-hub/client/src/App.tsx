@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
+import FlowerAnimation from "@/components/FlowerAnimation";
 import InteractiveCursor from "@/components/InteractiveCursor";
 import NotFound from "@/pages/NotFound";
 import { Globe } from "lucide-react";
@@ -68,10 +69,12 @@ function RouteLoadingScreen() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
+      <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
           <Toaster />
           <Router />
+          <FlowerAnimation layer="back" scope="site" />
+          <FlowerAnimation layer="front" scope="site" />
           <RouteLoadingScreen />
           <InteractiveCursor />
           <Analytics />

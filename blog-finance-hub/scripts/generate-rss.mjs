@@ -65,7 +65,7 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>
     <title>DeCodes Life by Dekena Wade</title>
     <link>${siteUrl}/</link>
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
-    <description>Finance, AI, culture, career growth, and personal essays from Dekena Wade.</description>
+    <description>Finance takes, applied AI, audit-minded analysis, culture, career growth, and personal essays from Dekena Wade.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}

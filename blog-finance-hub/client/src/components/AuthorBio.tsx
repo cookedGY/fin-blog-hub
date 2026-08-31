@@ -9,10 +9,10 @@ export default function AuthorBio() {
         </div>
         <div className="author-bio-content">
           <h3 className="author-bio-name">Dekena Wade</h3>
-          <p className="author-bio-title">Finance Student & Business Builder</p>
+          <p className="author-bio-title">Finance Graduate, Applied AI Learner & Audit-Minded Builder</p>
           <p className="author-bio-description">
-            Brooklyn-based, Guyanese-rooted finance major exploring AI, business strategy, and personal growth. 
-            I write about internships, family businesses, grief, and the messy reality of building a career while figuring out life.
+            Brooklyn-based, Guyanese-rooted finance graduate exploring applied AI, audit-minded systems, global perspective, and personal growth.
+            I write about internships, technology, financial institutions, grief, and the messy reality of building a career while figuring out life.
           </p>
           <div className="author-bio-links">
             <a 

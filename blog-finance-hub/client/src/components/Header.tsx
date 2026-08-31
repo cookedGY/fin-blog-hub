@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Search, X } from "lucide-react";
+import { Moon, Search, Sun, X } from "lucide-react";
 import { POSTS } from "@/data/posts";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -10,6 +11,7 @@ export default function Header() {
   const [searchResults, setSearchResults] = useState<typeof POSTS[string][]>([]);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [location] = useLocation();
+  const { theme, toggleTheme, switchable } = useTheme();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -69,6 +71,17 @@ export default function Header() {
             <Search size={20} />
           </button>
 
+          {switchable && toggleTheme && (
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle"
+              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            >
+              {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+            </button>
+          )}
+
           <button 
             className="nav-toggle" 
             id="navToggle" 
@@ -80,10 +93,9 @@ export default function Header() {
         </div>
 
         <nav className={`nav-links ${isNavOpen ? 'nav-open' : ''}`} id="navLinks">
-          <a href="/#finance" onClick={closeNav}>Finance Grind</a>
+          <a href="/#finance" onClick={closeNav}>De's Financial Takes</a>
           <a href="/#global" onClick={closeNav}>Global De</a>
-          <a href="/#business" onClick={closeNav}>Business Builder</a>
-          <Link href="/portfolio" onClick={closeNav}>Portfolio</Link>
+          <Link href="/portfolio" onClick={closeNav}>About Me</Link>
           <Link href="/speaking" onClick={closeNav}>Speaking</Link>
           <Link href="/contact" onClick={closeNav}>Contact</Link>
           <a href="/#life" onClick={closeNav}>Life & Growth</a>

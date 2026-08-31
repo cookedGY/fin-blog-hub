@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Code2, Database, GitBranch, type LucideIcon } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import FlowerAnimation from "@/components/FlowerAnimation";
 import { POSTS } from "@/data/posts";
 
 const learningPostPath = "/post/taking-reins-cloned-website-harvard-python";
@@ -37,41 +36,56 @@ const learningSkills: Array<{
 ];
 
 export default function Home() {
+  const sortedPosts = Object.values(POSTS).sort((a, b) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return dateB - dateA;
+  });
+  const financialPosts = sortedPosts.filter((post) => post.tag === "De's Financial Takes");
+  const lifePosts = sortedPosts.filter((post) => post.tag === "Life & Growth");
+  const spotlightPosts = [
+    "career-path-not-linear-never-random",
+    "reading-crosscurrents-ai-oil-inflation-q4-2026",
+    "from-tumblr-html-to-financial-technology",
+  ]
+    .map((slug) => POSTS[slug])
+    .filter(Boolean);
+
   return (
     <div className="min-h-screen flex flex-col animate-in fade-in duration-500">
       <Helmet>
-        <title>FinBlogHub | Dekena Wade: Finance, AI & Guyanese Heritage</title>
-        <meta name="description" content="Dekena Wade's finance blog exploring AI, business strategy, and Guyanese heritage. Finance student insights on internships, global travel, and building purpose-driven careers for young professionals." />
-        <meta name="keywords" content="finance blog, AI finance, Guyanese heritage, finance student, career advice, business strategy, study abroad, Mandarin learning, immigrant stories, personal growth" />
+        <title>DeCodes Life | Dekena Wade on Finance, AI, Audit & Building</title>
+        <meta name="description" content="DeCodes Life is Dekena Wade's ideas portfolio: finance takes, applied AI, audit-minded analysis, career reflections, travel, business strategy, and what she is learning next." />
+        <meta name="keywords" content="DeCodes Life, Dekena Wade, Dcodes, finance takes, applied AI, audit, risk analysis, AI implementation, career reflections, business strategy, Mandarin learning, Guyanese heritage" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://finbloghub.space/" />
-        <meta property="og:title" content="FinBlogHub | Dekena Wade: Finance, AI & Guyanese Heritage" />
-        <meta property="og:description" content="Dekena Wade's finance blog exploring AI, business strategy, and Guyanese heritage. Finance student insights on internships, global travel, and building purpose-driven careers for young professionals." />
+        <meta property="og:title" content="DeCodes Life | Dekena Wade on Finance, AI, Audit & Building" />
+        <meta property="og:description" content="A personal ideas portfolio covering finance, applied AI, audit-minded analysis, career growth, travel, business strategy, and the systems Dekena Wade is learning to build." />
         <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663195299521/gbPCcanLrCwSoRTK.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://decodeslife.com/" />
-        <meta property="twitter:title" content="DeCodes Life | Finance, Travel & Culture by Dekena Wade" />
-        <meta property="twitter:description" content="DeCodes Life by Dekena Wade — a finance lifestyle blog exploring internships, global travel, Mandarin learning, study abroad journeys, immigrant family stories, and personal growth. For students and young professionals building their future with purpose." />
+        <meta property="twitter:title" content="DeCodes Life | Dekena Wade on Finance, AI, Audit & Building" />
+        <meta property="twitter:description" content="DeCodes Life by Dekena Wade: finance takes, applied AI, audit-minded analysis, career growth, travel, business strategy, and learning in public." />
         <meta property="twitter:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663195299521/gbPCcanLrCwSoRTK.png" />
       </Helmet>
       <Header />
 
       {/* HERO SECTION */}
       <div className="home-hero-stage">
-        <FlowerAnimation />
         <section className="hero">
         <div className="hero-inner container">
           <div className="hero-text">
-            <p className="hero-tag">Finance • Culture • Travel • Real Life</p>
-            <h1>Finance Blog by Dekena Wade: AI, Business Strategy & Guyanese Heritage</h1>
+            <p className="hero-tag">Finance • AI • Audit • Culture • Building</p>
+            <h1>DeCodes Life: Finance, AI, Business Strategy & Guyanese Heritage</h1>
             <p className="hero-subtitle">Hi, I'm De — decoding life one spreadsheet and passport stamp at a time.</p>
             <p className="hero-sub">
-              Brooklyn-based, Guyanese-rooted, finance major juggling DCF models, Mandarin,
-              family business, grief, and growth. This is my corner of the internet to track it all.
+              Brooklyn-based, Guyanese-rooted, finance graduate exploring applied AI,
+              audit-minded systems, Mandarin, global perspective,
+              and what it means to keep changing on purpose.
             </p>
             <div className="hero-actions">
               <a href="#latest" className="btn btn-primary">Read the latest</a>
@@ -81,10 +95,10 @@ export default function Home() {
           <div className="hero-card">
             <div className="hero-pill">Currently</div>
             <ul>
-              <li>🎓 Finance degree: done. Now plotting my master's path</li>
-              <li>🌏 Next trip: China</li>
-              <li>📊 Building family + side businesses</li>
-              <li>🧠 Balancing ambition, growth & what's next</li>
+              <li>🎓 Finance degree: done. Now shaping the next learning chapter</li>
+              <li>🌏 Next global move: China</li>
+              <li>🤖 Studying AI implementation, data, and automation</li>
+              <li>🧾 Connecting finance, audit, risk, and AI implementation</li>
             </ul>
           </div>
         </div>
@@ -138,12 +152,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-3">
-            {Object.values(POSTS)
-              .sort((a, b) => {
-                const dateA = new Date(a.date).getTime();
-                const dateB = new Date(b.date).getTime();
-                return dateB - dateA;
-              })
+            {sortedPosts
               .slice(0, 3)
               .map((post) => (
                 <article key={post.slug} className="card">
@@ -245,34 +254,33 @@ export default function Home() {
             <article className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', background: 'var(--accent)', border: '2px dashed var(--primary)' }}>
               <div className="text-3xl mb-3">📁</div>
               <h3>View All Projects</h3>
-              <p>Explore the full portfolio — case studies, business plans, financial models, and more.</p>
-              <Link href="/portfolio" className="card-link">Go to Portfolio →</Link>
+              <p>Explore the full portfolio: case studies, applied AI tools, financial models, and strategy work.</p>
+              <Link href="/portfolio" className="card-link">Go to About Me & Portfolio →</Link>
             </article>
           </div>
         </div>
       </section>
 
       {/* CATEGORY SECTIONS */}
-      {/* Finance Grind */}
+      {/* De's Financial Takes */}
       <section className="section" id="finance">
         <div className="container section-split finance-showcase">
           <div className="section-text">
-            <h2>Finance Grind</h2>
+            <h2>De's Financial Takes</h2>
             <p>
-              Real finance internship tips and lessons from a young finance student building a career. 
-              Practical advice for college interns and early-career professionals.
+              Essays on markets, economic signals, internships, financial systems, and the
+              career lessons I keep collecting as I move between finance, AI, and business strategy.
             </p>
             <ul className="tag-list">
-              <li>Investments & markets</li>
+              <li>Markets & macro signals</li>
               <li>Internship breakdowns</li>
-              <li>Study hacks & cheat sheets</li>
-              <li>Career prep & recruiting</li>
+              <li>Financial institutions</li>
+              <li>Career prep & recruiting lessons</li>
             </ul>
           </div>
           <div className="section-cards finance-article-grid">
-            {Object.values(POSTS)
-              .filter(p => p.tag === "Finance Grind")
-              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            {financialPosts
+              .slice(0, 4)
               .map(post => (
                 <Link key={post.slug} href={`/post/${post.slug}`} className="finance-expand-card">
                   <article>
@@ -285,6 +293,18 @@ export default function Home() {
                   </article>
                 </Link>
               ))}
+            {financialPosts.length > 4 && (
+              <Link href="/files" className="finance-expand-card finance-archive-card">
+                <article>
+                  <span className="finance-card-date">Archive</span>
+                  <h3>Browse the full finance writing library</h3>
+                  <div className="finance-card-reveal">
+                    <p>See the rest of the markets, AI, insurance, inflation, and finance systems essays in one organized place.</p>
+                    <span className="mini-link">Open archive →</span>
+                  </div>
+                </article>
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -295,8 +315,8 @@ export default function Home() {
           <div className="section-text">
             <h2>Global De</h2>
             <p>
-              Guyanese roots, Brooklyn hustle, Ghana lessons, and a growing love for Chinese language
-              and culture. This is where my passport and my major collide.
+              Guyanese roots, Brooklyn hustle, Ghana lessons, China plans, and a growing love
+              for Mandarin and global systems. This is where my passport, curiosity, and career collide.
             </p>
             <ul className="tag-list">
               <li>Study abroad reflections</li>
@@ -304,7 +324,7 @@ export default function Home() {
               <li>Culture, food & identity</li>
             </ul>
           </div>
-          <div className="section-cards">
+          <div className="section-cards category-article-stack">
             {Object.values(POSTS)
               .filter(p => p.tag === "Global De")
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -315,39 +335,6 @@ export default function Home() {
                   <Link href={`/post/${post.slug}`} className="mini-link">Read →</Link>
                 </article>
               ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Business Builder */}
-      <section className="section" id="business">
-        <div className="container section-split">
-          <div className="section-text">
-            <h2>Business Builder</h2>
-            <p>
-              Family trucking, travel concepts, gym ideas, invoices, brand kits — the behind-the-scenes of
-              projects I’m building while still finishing undergrad.
-            </p>
-            <ul className="tag-list">
-              <li>Family business strategy</li>
-              <li>Branding & systems</li>
-              <li>Side project blueprints</li>
-            </ul>
-          </div>
-          <div className="section-cards">
-            {Object.values(POSTS)
-              .filter(p => p.tag === "Business Builder")
-              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-              .map(post => (
-                <article key={post.slug} className="mini-card">
-                  <h3>{post.title}</h3>
-                  <p>{post.description}</p>
-                  <Link href={`/post/${post.slug}`} className="mini-link">Read →</Link>
-                </article>
-              ))}
-            {Object.values(POSTS).filter(p => p.tag === "Business Builder").length === 0 && (
-              <p className="text-muted-foreground text-sm">Coming soon — posts in progress.</p>
-            )}
           </div>
         </div>
       </section>
@@ -367,10 +354,8 @@ export default function Home() {
               <li>Growing up in real time</li>
             </ul>
           </div>
-          <div className="section-cards">
-            {Object.values(POSTS)
-              .filter(p => p.tag === "Life & Growth")
-              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          <div className="section-cards category-article-stack">
+            {lifePosts
               .map(post => (
                 <article key={post.slug} className="mini-card">
                   <h3>{post.title}</h3>
@@ -378,7 +363,7 @@ export default function Home() {
                   <Link href={`/post/${post.slug}`} className="mini-link">Read →</Link>
                 </article>
               ))}
-            {Object.values(POSTS).filter(p => p.tag === "Life & Growth").length === 0 && (
+            {lifePosts.length === 0 && (
               <p className="text-muted-foreground text-sm">Coming soon — posts in progress.</p>
             )}
           </div>
@@ -399,7 +384,7 @@ export default function Home() {
               <li>Room & aesthetic projects</li>
             </ul>
           </div>
-          <div className="section-cards">
+          <div className="section-cards category-article-stack">
             {Object.values(POSTS)
               .filter(p => p.tag === "Fun Stuff")
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -417,46 +402,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LATEST UPDATES SECTION */}
+      {/* ARTICLE SPOTLIGHT SECTION */}
       <section className="section section-alt">
         <div className="container">
           <div className="section-header">
-            <h2>Latest Updates</h2>
-            <p>Recent blog posts, presentations, and speaking engagements</p>
+            <h2>Have You Read These?</h2>
+            <p>A smaller starting point for the essays that best explain what I am building, learning, and thinking through.</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {/* Recent Blog Post */}
-            <Link href="/post/training-models-waiting-for-job" className="block">
-              <div className="p-6 rounded-lg border border-border hover:border-primary hover:shadow-md transition-all duration-300 bg-muted/30 h-full cursor-pointer">
-                <div className="text-3xl mb-3">🤖</div>
-                <h3 className="font-serif font-bold text-lg text-foreground mb-2">Training the Models, Still Waiting for the Job</h3>
-                <p className="text-sm text-muted-foreground mb-4">The strange reality of entry-level AI work — and what it means for the next generation of finance professionals.</p>
-                <p className="text-xs font-medium text-primary">Finance Grind • June 2026</p>
-              </div>
-            </Link>
-
-            {/* Recent Presentation */}
-            <a href="https://nvdapresen-cehp3wfn.manus.space" target="_blank" rel="noopener noreferrer" className="block">
-              <div className="p-6 rounded-lg border border-border hover:border-primary hover:shadow-md transition-all duration-300 bg-muted/30 h-full cursor-pointer">
-                <div className="text-3xl mb-3">🎯</div>
-                <h3 className="font-serif font-bold text-lg text-foreground mb-2">NVDA Investor Presentation</h3>
-                <p className="text-sm text-muted-foreground mb-4">Professional presentation on market insights and strategic analysis for NVIDIA investor relations.</p>
-                <p className="text-xs font-medium text-primary">Speaking • April 2026</p>
-              </div>
-            </a>
-
-            {/* Speaking Page CTA */}
-            <Link href="/speaking" className="block">
-              <div className="p-6 rounded-lg border border-border hover:border-primary hover:shadow-md transition-all duration-300 bg-gradient-to-br from-primary/10 to-accent/10 h-full cursor-pointer flex flex-col justify-between">
-                <div>
-                  <div className="text-3xl mb-3">🎤</div>
-                  <h3 className="font-serif font-bold text-lg text-foreground mb-2">Speaking & Media</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Explore all presentations, podcast appearances, and speaking engagements.</p>
-                </div>
-                <p className="text-xs font-medium text-primary">View All →</p>
-              </div>
-            </Link>
+            {spotlightPosts.map((post) => (
+              <Link key={post.slug} href={`/post/${post.slug}`} className="block">
+                <article className="spotlight-card h-full">
+                  <p className="card-pill">{post.tag}</p>
+                  <h3>{post.title}</h3>
+                  <p>{post.description}</p>
+                  <span className="card-link">Read this →</span>
+                </article>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -472,24 +436,22 @@ export default function Home() {
       <section className="section section-alt" id="about">
         <div className="container about-grid">
           <div className="about-text">
-            <h2 className="about-title">About Me: Finance, AI & Guyanese Heritage</h2>
+            <h2 className="about-title">About Me</h2>
             <p className="about-intro">
-              I'm Dekena — a Brooklyn-based, Guyanese-rooted finance graduate decoding life in real time.
+              For anyone curious about my background: I'm Dekena Wade, a Brooklyn-based finance graduate building toward applied AI, audit-minded systems, and clearer ways to explain complex work.
             </p>
             <p className="about-body">
-              I've worked across wealth management, insurance, tax, and analytics. I've studied in Ghana, visited Taiwan, and I'm leveling up my Mandarin as I plan my next move to China. Asia is calling — and I'm answering. I'm also helping build my family's businesses and figuring out my master's degree path.
+              Shout out to the recruiters, mentors, and curious people who want the longer version.
             </p>
-            <p className="about-body">
-              This blog is my portfolio, journal, and receipts all in one place — for the grind, the growth, and the chaos in between.
-            </p>
+            <Link href="/portfolio" className="btn btn-primary about-cta">See About Me & Portfolio</Link>
           </div>
           <div className="about-card">
-            <h3>Quick stats</h3>
+            <h3>Quick background</h3>
             <ul>
               <li>🎓 Finance graduate, class of 2026 — master's path next</li>
-              <li>🌍 Guyanese-American, Brooklyn-based, Asia-bound</li>
-              <li>📈 Internships: Aon, EY, JPMorgan, Beats & more</li>
-              <li>🧾 Family biz consultant by default</li>
+              <li>🌍 Guyanese-American, Brooklyn-based, China-curious</li>
+              <li>📈 Experience: JPMorgan, EY, PwC, Aon, Handshake & more</li>
+              <li>🤖 Learning: Python, Git, databases, React, TypeScript, and AI systems</li>
             </ul>
           </div>
         </div>

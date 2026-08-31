@@ -19,7 +19,7 @@ export interface Post {
 export const POSTS: Record<string, Post> = {
   "career-path-not-linear-never-random": {
     slug: "career-path-not-linear-never-random",
-    tag: "Finance Grind",
+    tag: "Life & Growth",
     title: "My Career Path Has Not Been Linear, but It Has Never Been Random",
     date: "August 15, 2026",
     description: "A reflection on connecting participatory budgeting, asset management, international tax, nonprofit consulting, AI, and industrial real estate into one finance story.",
@@ -161,7 +161,7 @@ export const POSTS: Record<string, Post> = {
   },
   "reading-crosscurrents-ai-oil-inflation-q4-2026": {
     slug: "reading-crosscurrents-ai-oil-inflation-q4-2026",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Reading the Crosscurrents: AI, Oil, Inflation, and the Outlook for Q4 2026",
     date: "August 12, 2026",
     description: "A finance student's Q4 2026 outlook connecting July jobs data, CPI, oil disruptions, AI investment, Federal Reserve policy, and why uncertainty still leaves room for cautious optimism.",
@@ -284,7 +284,7 @@ export const POSTS: Record<string, Post> = {
   },
   "from-tumblr-html-to-financial-technology": {
     slug: "from-tumblr-html-to-financial-technology",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "From Tumblr HTML to Financial Technology: What Building My Website Is Teaching Me",
     date: "August 11, 2026",
     description: "Building my finance portfolio changed how I see the industry, from a linear career path to a connected world of fintech, quantitative finance, PropTech, AI, data, and financial infrastructure.",
@@ -376,7 +376,7 @@ export const POSTS: Record<string, Post> = {
   },
   "competing-without-the-pipeline-public-school": {
     slug: "competing-without-the-pipeline-public-school",
-    tag: "Finance Grind",
+    tag: "Life & Growth",
     title: "Competing Without the Pipeline: What Public School Taught Me About Building My Own Way In",
     date: "August 4, 2026",
     description: "Prestige opens doors, but it is not the same thing as potential. What attending public school taught me about hidden recruiting systems, building proof through projects, and competing without becoming someone else.",
@@ -455,7 +455,7 @@ export const POSTS: Record<string, Post> = {
   },
   "under-the-hood-dad-taught-me-systems": {
     slug: "under-the-hood-dad-taught-me-systems",
-    tag: "Finance Grind",
+    tag: "Life & Growth",
     title: "How My Dad Made Me Curious About Machines, Maps, and Money",
     date: "July 15, 2026",
     description: "The first engineer I knew was my dad. His love of machines, maps, and explanation shaped how I now approach finance, technology, and systems.",
@@ -512,7 +512,7 @@ export const POSTS: Record<string, Post> = {
   },
   "taking-reins-cloned-website-harvard-python": {
     slug: "taking-reins-cloned-website-harvard-python",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Taking the Reins: Why I Cloned My Website Locally and Enrolled in Harvard Python",
     date: "July 14, 2026",
     description: "I started with AI-built portfolio sites. Now I am learning Git, databases, and Python so I can understand the code behind my finance projects.",
@@ -556,7 +556,7 @@ export const POSTS: Record<string, Post> = {
   },
   "maritime-insurance": {
     slug: "maritime-insurance",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Could the U.S. Replace Lloyd's of London in Maritime Insurance?",
     date: "March 6, 2026",
     description: "War, trade tensions, and geopolitical risk are reshaping global insurance markets. Could governments step in to replace private insurers like Lloyd's of London?",
@@ -646,7 +646,7 @@ export const POSTS: Record<string, Post> = {
   },
   "geopolitics-ai": {
     slug: "geopolitics-ai",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "The World Economy During War: While Agentic AI Watches Everything",
     date: "March 5, 2026",
     description: "Something strange is happening in the global economy right now. On one side, geopolitics feels increasingly unstable. On the other, agentic AI is quietly watching the entire system move in real time.",
@@ -732,7 +732,7 @@ export const POSTS: Record<string, Post> = {
   },
   "aon-internship": {
     slug: "aon-internship",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Inside My Aon FSG Internship: What I Actually Did",
     date: "March 4, 2026",
     seoKeywords: ["Aon FSG internship experience", "D&O insurance explained", "directors and officers liability", "insurance broking internship", "finance internship Wall Street", "corporate insurance career", "underwriting internship", "Aon financial services group", "finance student internship", "insurance career advice"],
@@ -859,7 +859,7 @@ export const POSTS: Record<string, Post> = {
   },
   "ai-tax-diagram-tool": {
     slug: "ai-tax-diagram-tool",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "What Jason Yen's Tax Tool Reveals About the Future of Finance Work",
     date: "March 10, 2026",
     description: "Jason Yen built a tax structure diagram tool in 2 hours using ChatGPT Codex with zero coding experience. His story reveals something bigger about how AI is reshaping professional hierarchies and what it means for firms like EY.",
@@ -932,7 +932,7 @@ export const POSTS: Record<string, Post> = {
   },
   "training-models-waiting-for-job": {
     slug: "training-models-waiting-for-job",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Training the Models, Still Waiting for the Job: The Strange Reality of Entry-Level AI Work",
     date: "June 11, 2026",
     description: "I have been doing the work companies say they want: LLM evaluation, prompt engineering, workflow testing. So why is it still so hard to land a full-time role in AI?",
@@ -1032,7 +1032,7 @@ export const POSTS: Record<string, Post> = {
   },
   "graduating-into-inflation": {
     slug: "graduating-into-inflation",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Graduating Into 4.2% Inflation: What 20 Years of Data Tell Us About Opportunity",
     date: "June 11, 2026",
     description: "The U.S. inflation rate in May 2026 matches exactly what it was in May 2006. The economy surrounding that number is not the same. Here is what the comparison actually tells us.",
@@ -1186,7 +1186,7 @@ export const POSTS: Record<string, Post> = {
   },
   "ai-environmental-discrimination": {
     slug: "ai-environmental-discrimination",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Has AI Made Environmental Degradation and Job Discrimination Worse?",
     date: "June 14, 2026",
     description: "Two viral videos — a sound meter held up to a data center in Michigan, and a Black IT professional with 13 years of experience saying racism cost her a better job — raise the same uncomfortable question: is AI making old problems worse?",
@@ -1278,7 +1278,7 @@ export const POSTS: Record<string, Post> = {
   'warsh-fed-chair': {
     slug: 'warsh-fed-chair',
     title: 'The New Fed Chair Wants Rates Low. His Own Standard Says Otherwise.',
-    tag: 'Finance Grind',
+    tag: "De's Financial Takes",
     date: 'June 16, 2026',
     description: 'Kevin Warsh replaced Jerome Powell as Fed Chair on May 22, 2026. He wants lower rates. But his own definition of price stability might keep them high longer than anyone expects.',
     seoKeywords: ['Kevin Warsh Fed Chair', 'Jerome Powell replacement', 'Federal Reserve 2026', 'interest rates 2026', 'Fed inflation policy', 'Kevin Warsh price stability', 'Fed independence Trump', 'mortgage rates 2026', 'Fed balance sheet', 'rate cuts 2026'],
@@ -1322,7 +1322,7 @@ export const POSTS: Record<string, Post> = {
   'safety-nets-middle-class': {
     slug: 'safety-nets-middle-class',
     title: 'I Argued With My Professor About Safety Nets Two Years Ago. The Data Proved Me Right.',
-    tag: 'Finance Grind',
+    tag: "De's Financial Takes",
     date: 'June 16, 2026',
     description: 'Two years ago I argued in my microeconomics class that safety nets for working-class families are an extreme necessity. My professor pushed back. Here is what the data says now.',
     seoKeywords: ['shrinking middle class 2024', 'safety nets working class', 'NYC cost of living 2026', 'commercial rent NYC small business', 'cost of living domino effect', 'housing cost burden renters', 'middle class income share', 'Pew Research middle class', 'affordable housing shortage', 'Brooklyn cost of living'],
@@ -1370,7 +1370,7 @@ export const POSTS: Record<string, Post> = {
   },
   "from-fashion-to-finance": {
     slug: "from-fashion-to-finance",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "What Learning Finance Has Actually Taught Me So Far",
     date: "December 2025",
     description: "My path into finance didn't start with stock charts or investment textbooks. It started at a fashion event in New York City — and a realization that changed everything.",
@@ -1416,7 +1416,7 @@ export const POSTS: Record<string, Post> = {
   },
   "r-for-finance": {
     slug: "r-for-finance",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Learning R for Finance Without Crying",
     date: "December 2025",
     description: "Bootstrapping, yield curves, Nelson\u2013Siegel models \u2014 and a career crisis I didn't see coming. What an R class taught me about data, finance, and where I actually want to go.",
@@ -1479,7 +1479,7 @@ export const POSTS: Record<string, Post> = {
   },
   "war-risk-insurance-lloyds": {
     slug: "war-risk-insurance-lloyds",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "How War-Risk Insurance Actually Works (Inside the Lloyd's Market)",
     date: "March 2026",
     description: "Why ships need war-risk insurance, why premiums spike during conflict, and how Lloyd's of London became the center of global maritime risk.",
@@ -1533,7 +1533,7 @@ export const POSTS: Record<string, Post> = {
   },
   "what-finance-taught-me": {
     slug: "what-finance-taught-me",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "What Learning Finance Has Actually Taught Me So Far",
     date: "December 2025",
     description: "I thought finance was mostly about money. The deeper I go, the more I realize it's really about understanding how people make decisions under uncertainty.",
@@ -1621,7 +1621,7 @@ export const POSTS: Record<string, Post> = {
   },
   "how-search-changed": {
     slug: "how-search-changed",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "How Search Changed — And What It Cost Us",
     date: "June 24, 2026",
     description: "From my dad's Dell laptop in 2009 to AI prompts in 2026 — three eras of finding things on the internet, and what the shift from searching to prompting means for information literacy.",
@@ -1676,7 +1676,7 @@ export const POSTS: Record<string, Post> = {
   },
   "who-is-documenting-this": {
     slug: "who-is-documenting-this",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "Who Is Documenting This?",
     date: "June 24, 2026",
     description: "The early 1900s had Lewis Hine and Jacob Riis to document the human cost of industrialization. The AI data center boom has TikTok, Reddit, and a Fortune reporter in muddy cornfields. The structural pattern is the same.",
@@ -1731,7 +1731,7 @@ export const POSTS: Record<string, Post> = {
   },
   "when-ai-builds-itself": {
     slug: "when-ai-builds-itself",
-    tag: "Finance Grind",
+    tag: "De's Financial Takes",
     title: "When AI Starts Building Itself: What Three Research Papers Say About the Future of Finance Work",
     date: "June 30, 2026",
     description: "Three papers from Meta, Anthropic, and Tauric Research describe AI moving up the value chain — from data labeling to trading firm decision-making. What does that mean for finance careers?",

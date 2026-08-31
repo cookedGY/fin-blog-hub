@@ -4,7 +4,7 @@ interface Flower {
   id: number;
   x: number;
   y: number;
-  type: "cherry" | "lily";
+  type: "cherry" | "lily" | "plum";
   duration: number;
   delay: number;
   rotation: number;
@@ -12,7 +12,12 @@ interface Flower {
   opacity: number;
 }
 
-export default function FlowerAnimation() {
+interface FlowerAnimationProps {
+  layer?: "back" | "front";
+  scope?: "hero" | "site";
+}
+
+export default function FlowerAnimation({ layer = "back", scope = "hero" }: FlowerAnimationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const flowersRef = useRef<Flower[]>([]);
   const animationIdRef = useRef<number | undefined>(undefined);
@@ -28,7 +33,9 @@ export default function FlowerAnimation() {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = Math.max(window.innerHeight * 0.86, 620);
+      canvas.height = scope === "site"
+        ? window.innerHeight
+        : Math.max(window.innerHeight * 0.86, 620);
     };
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
@@ -36,19 +43,23 @@ export default function FlowerAnimation() {
     // Initialize flowers
     const initializeFlowers = () => {
       flowersRef.current = [];
-      const flowerCount = Math.max(12, Math.floor(window.innerWidth / 115));
+      const flowerCount =
+        layer === "front"
+          ? Math.max(6, Math.floor(window.innerWidth / 240))
+          : Math.max(scope === "site" ? 10 : 12, Math.floor(window.innerWidth / (scope === "site" ? 150 : 115)));
 
       for (let i = 0; i < flowerCount; i++) {
+        const typeRoll = Math.random();
         flowersRef.current.push({
           id: i,
           x: Math.random() * canvas.width,
           y: -140 - Math.random() * 220,
-          type: Math.random() > 0.7 ? "lily" : "cherry",
-          duration: 8 + Math.random() * 4,
+          type: typeRoll > 0.82 ? "plum" : typeRoll > 0.62 ? "lily" : "cherry",
+          duration: layer === "front" ? 10 + Math.random() * 5 : 8 + Math.random() * 4,
           delay: Math.random() * 2,
           rotation: Math.random() * Math.PI * 2,
-          size: 14 + Math.random() * 14,
-          opacity: 0.22 + Math.random() * 0.24,
+          size: layer === "front" ? 10 + Math.random() * 10 : 14 + Math.random() * 14,
+          opacity: layer === "front" ? 0.16 + Math.random() * 0.14 : 0.22 + Math.random() * 0.24,
         });
       }
     };
@@ -136,11 +147,36 @@ export default function FlowerAnimation() {
       ctx.restore();
     };
 
+    const drawPlumPetal = (
+      x: number,
+      y: number,
+      size: number,
+      rotation: number
+    ) => {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rotation);
+
+      ctx.beginPath();
+      ctx.moveTo(0, -size * 0.9);
+      ctx.bezierCurveTo(size * 0.55, -size * 0.58, size * 0.62, size * 0.28, 0, size * 0.72);
+      ctx.bezierCurveTo(-size * 0.62, size * 0.28, -size * 0.55, -size * 0.58, 0, -size * 0.9);
+      ctx.closePath();
+      ctx.fillStyle = "rgba(255, 214, 230, 0.58)";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.ellipse(size * 0.05, -size * 0.16, size * 0.12, size * 0.45, -0.35, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.28)";
+      ctx.fill();
+
+      ctx.restore();
+    };
+
     // Animation loop
     const animate = () => {
       // Clear canvas with semi-transparent background for trail effect
-      ctx.fillStyle = "rgba(253, 252, 251, 0.045)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       timeRef.current += 0.016; // ~60fps
 
@@ -170,8 +206,10 @@ export default function FlowerAnimation() {
         // Draw flower
         if (flower.type === "cherry") {
           drawCherryBlossom(newX, newY, flower.size, newRotation);
-        } else {
+        } else if (flower.type === "lily") {
           drawGuyaneseLily(newX, newY, flower.size, newRotation);
+        } else {
+          drawPlumPetal(newX, newY, flower.size, newRotation);
         }
 
         ctx.globalAlpha = 1;
@@ -181,7 +219,7 @@ export default function FlowerAnimation() {
           flower.y = -140 - Math.random() * 220;
           flower.x = Math.random() * canvas.width;
           flower.delay = timeRef.current;
-          flower.opacity = 0.22 + Math.random() * 0.24;
+          flower.opacity = layer === "front" ? 0.16 + Math.random() * 0.14 : 0.22 + Math.random() * 0.24;
         }
       });
 
@@ -196,12 +234,12 @@ export default function FlowerAnimation() {
         cancelAnimationFrame(animationIdRef.current);
       }
     };
-  }, []);
+  }, [layer, scope]);
 
   return (
     <canvas
       ref={canvasRef}
-      className="flower-animation-canvas"
+      className={`flower-animation-canvas flower-animation-canvas-${layer} flower-animation-canvas-${scope}`}
     />
   );
 }

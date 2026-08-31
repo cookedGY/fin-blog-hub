@@ -91,6 +91,39 @@ const techWork = [
   },
 ];
 
+const experienceHighlights = [
+  {
+    title: "JPMorgan",
+    subtitle: "Wealth management and investment exposure",
+    description: "Early finance experience that helped me understand asset management, client-facing work, and how large financial institutions organize capital and relationships.",
+  },
+  {
+    title: "EY",
+    subtitle: "Core business services, international tax, and transactions",
+    description: "Exposure to professional services, global business structure, tax strategy, and the way multinational work connects accounting, finance, regulation, and operations.",
+  },
+  {
+    title: "PwC",
+    subtitle: "Consulting and financial analysis",
+    description: "Consulting experience that strengthened how I organize messy information, communicate recommendations, and translate analysis into practical next steps.",
+  },
+  {
+    title: "Aon",
+    subtitle: "Financial Services Group",
+    description: "Insurance and risk experience that shaped how I think about institutions, liability, governance, and the systems companies use to protect themselves.",
+  },
+  {
+    title: "Handshake",
+    subtitle: "AI evaluation and platform thinking",
+    description: "Hands-on exposure to AI evaluation, workflow review, and the practical side of building tools people can trust and use at scale.",
+  },
+  {
+    title: "Blackstone, Link Logistics & McKinsey-style case work",
+    subtitle: "Design sprints, fellowship work, and strategic problem solving",
+    description: "Project-based work that connects real estate, business strategy, data, and structured recommendations for complex organizations.",
+  },
+];
+
 export default function Portfolio() {
   const [activePane, setActivePane] = useState<"finance" | "tech" | null>(null);
   const isFinanceActive = activePane === "finance";
@@ -104,7 +137,7 @@ export default function Portfolio() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-2">
-                Portfolio at a Glance
+                About Me & Portfolio
               </h1>
               <p className="text-lg text-muted-foreground font-medium">
                 by Dekena Wade
@@ -120,11 +153,29 @@ export default function Portfolio() {
             </div>
           </div>
           <p className="portfolio-intro-card text-lg text-muted-foreground max-w-3xl">
-            A recruiter-friendly view of my work at the intersection of finance, analysis, and applied technology:
-            finance case studies, technical builds, and the skills connecting both. These projects show how I
-            turn class-based analysis into visual storytelling, then build toward dashboards that can help flag
-            risk, anomalies, and operational signals in finance and AI workflows.
+            For anyone curious about my background, here is the fuller picture: I am Dekena Wade, a finance
+            graduate building toward applied AI, audit-minded systems, and better ways to explain complex work.
+            My portfolio connects class-based finance analysis, technical builds, and the skills I am developing
+            to help teams spot risk, anomalies, and operational signals with clearer tools.
           </p>
+        </div>
+      </section>
+
+      <section className="portfolio-experience-section px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="section-header portfolio-section-header">
+            <h2>Experience Snapshot</h2>
+            <p>The roles, sprints, and projects that shaped how I connect finance, audit, AI, and strategy.</p>
+          </div>
+          <div className="experience-grid">
+            {experienceHighlights.map((item) => (
+              <article key={item.title} className="experience-card">
+                <p>{item.subtitle}</p>
+                <h3>{item.title}</h3>
+                <span>{item.description}</span>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
