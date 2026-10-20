@@ -1,0 +1,35 @@
+name: Website checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: blog-finance-hub
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.4.1
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: blog-finance-hub/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - name: Content and security regression tests
+        run: pnpm test -- server/blog-posts.test.ts client/src/data/relatedPosts.test.ts server/sessionKey.test.ts server/upload-payload.test.ts server/security.test.ts server/files.upload.test.ts server/newsletter.test.ts server/audit.test.ts server/auth.logout.test.ts
+      - run: pnpm run build
+      - name: Check production dependency advisories
+        run: pnpm audit --prod --audit-level high

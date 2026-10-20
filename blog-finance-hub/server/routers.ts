@@ -44,7 +44,7 @@ export const appRouter = router({
     upload: protectedProcedure
       .input(z.object({
         filename: z.string().min(1).max(255),
-        fileData: z.string(),
+        fileData: z.string().max(Math.ceil(MAX_FILE_SIZE / 3) * 4),
         mimeType: z.string(),
         fileSize: z.number().positive().max(MAX_FILE_SIZE),
         projectCategory: z.string().min(1),
@@ -76,6 +76,18 @@ export const appRouter = router({
         }
 
         const buffer = Buffer.from(input.fileData, 'base64');
+        // Validate the decoded payload, not only the client-supplied metadata.
+        if (
+          buffer.length === 0 ||
+          buffer.length > MAX_FILE_SIZE ||
+          buffer.length !== input.fileSize ||
+          buffer.toString('base64') !== input.fileData
+        ) {
+          throw new TRPCError({
+            code: 'BAD_REQUEST',
+            message: 'Invalid file data or file size mismatch',
+          });
+        }
         const fileKey = `projects/${ctx.user.id}/${Date.now()}-${input.filename}`;
         
         try {

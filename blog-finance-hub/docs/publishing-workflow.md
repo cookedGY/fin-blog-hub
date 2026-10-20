@@ -9,7 +9,7 @@ Send a message like:
 ```text
 Publish this as a new post:
 Title: ...
-Category: Finance Grind
+Category: De's Financial Takes
 Date: July 14, 2026
 Slug: optional-custom-slug
 Description: ...
@@ -46,7 +46,7 @@ Search engines discover post URLs from:
 
 Use one of these category labels:
 
-- `Finance Grind`
+- `De's Financial Takes`
 - `Global De`
 - `Business Builder`
 - `Life & Growth`

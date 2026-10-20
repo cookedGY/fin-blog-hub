@@ -116,7 +116,7 @@ export default function Header() {
 
         {/* Search Overlay */}
         {isSearchOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-b border-border shadow-lg p-4 animate-in slide-in-from-top-2 z-50">
+          <div className="search-overlay absolute top-full left-0 right-0 bg-white border-b border-border shadow-lg p-4 animate-in slide-in-from-top-2 z-50">
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
               <input

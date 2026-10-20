@@ -1,8 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
+    color-scheme: light;
     --jade: #0f766e;
     --jade-dark: #115e57;
     --blush: #f9e5ed;
@@ -17,15 +20,16 @@
   }
 
   .dark {
-    --jade: #0f766e;
-    --jade-dark: #115e57;
-    --blush: #f4d6e2;
+    color-scheme: dark;
+    --jade: #71d6c4;
+    --jade-dark: #a1e5d8;
+    --blush: #422e3a;
     --gold: #f5c76f;
-    --bg: #f3e9e5;
-    --text-main: #191716;
-    --text-muted: #5f5a58;
-    --border-subtle: rgba(15, 118, 110, 0.14);
-    --shadow-soft: 0 18px 46px rgba(70, 44, 58, 0.12);
+    --bg: #101c1b;
+    --text-main: #f2f4ef;
+    --text-muted: #bccbc5;
+    --border-subtle: #40554e;
+    --shadow-soft: 0 18px 46px rgba(0, 0, 0, 0.3);
   }
 
   /* RESET LITE */
@@ -58,8 +62,8 @@
 
   .dark body {
     background:
-      radial-gradient(circle at 78% 18%, rgba(249, 229, 237, 0.32), transparent 34%),
-      linear-gradient(180deg, rgba(255, 245, 249, 0.22), rgba(245, 237, 227, 0.42) 42%, rgba(249, 229, 237, 0.58)),
+      radial-gradient(circle at 78% 18%, rgba(93, 43, 69, 0.3), transparent 34%),
+      linear-gradient(180deg, rgba(8, 23, 21, 0.92), rgba(19, 29, 27, 0.94)),
       url("/images/bamboo-clouds-portfolio.png");
     background-position: center center, center center, center center;
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -292,8 +296,8 @@
 
   .dark .home-hero-stage {
     background:
-      radial-gradient(circle at 82% 18%, rgba(249, 229, 237, 0.5), transparent 32%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(245, 237, 227, 0.3) 48%, rgba(249, 229, 237, 0.38));
+      radial-gradient(circle at 82% 18%, rgba(93, 43, 69, 0.3), transparent 32%),
+      linear-gradient(135deg, rgba(16, 28, 27, 0.8), rgba(25, 40, 36, 0.6));
   }
 
   .home-hero-stage::after {
@@ -2810,4 +2814,47 @@
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
+}
+
+/* Dark surfaces must override the light glass treatments, including mobile rules. */
+.dark .home-hero-stage::after {
+  background: linear-gradient(180deg, transparent, rgba(8, 23, 21, 0.5));
+}
+.dark .portfolio-page { background: transparent; }
+.dark :is(.nav, .nav-links.nav-open, .search-overlay, .hero-inner, .hero-card,
+  .learning-panel, .learning-row, .card, .mini-card, .section-header, .section-text,
+  .finance-expand-card, .finance-archive-card, .spotlight-card, .editorial-article,
+  .editorial-sidebar-inner, .editorial-header-wrap, .portfolio-intro-card,
+  .experience-card, .speaking-hero-card, .speaking-content-card, .route-loading-card,
+  .about-card, .footer,
+  [data-slot="card"]) {
+  background: linear-gradient(135deg, rgba(28, 47, 42, 0.96), rgba(34, 29, 40, 0.96));
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+.dark :is(.section-alt, .learning-section, .category-article-stack,
+  .portfolio-experience-section, .portfolio-work-section, .portfolio-hero,
+  .speaking-hero) { background: rgba(16, 28, 27, 0.7); }
+.dark :is(.theme-toggle, .tag-list li, .hero-pill, .card-pill) {
+  background: #263b34;
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+.dark :is(.portfolio-pane, .portfolio-pane .rounded-2xl) {
+  background: #1c2f2a !important;
+}
+.dark :is(input, textarea, select) {
+  background-color: #14251f;
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+.dark .btn-primary { color: #10231e; }
+.dark .nav-links a:hover { background: #263b34; }
+.dark .search-overlay { background: #1c2f2a; }
+.dark .route-loading-screen { background: var(--bg); }
+.dark .portfolio-page :is(.text-slate-900, .text-slate-800, .text-gray-900) {
+  color: var(--text-main);
+}
+.dark .portfolio-page :is(.text-slate-700, .text-slate-600, .text-gray-600) {
+  color: var(--text-muted);
 }

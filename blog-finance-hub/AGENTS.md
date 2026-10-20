@@ -11,7 +11,7 @@ When the user asks Codex to publish a post, update these files:
 Post objects must include:
 
 - `slug`: lowercase kebab-case, matching the object key and URL path.
-- `tag`: one of `Finance Grind`, `Global De`, `Business Builder`, `Life & Growth`, or `Fun Stuff`.
+- `tag`: one of `De's Financial Takes`, `Global De`, `Business Builder`, `Life & Growth`, or `Fun Stuff`.
 - `title`
 - `date`
 - `description`

@@ -7,6 +7,7 @@ import { SignJWT, jwtVerify } from "jose";
 import type { User } from "../../drizzle/schema";
 import * as db from "../db";
 import { ENV } from "./env";
+import { sessionSigningKey } from "./sessionKey";
 import type {
   ExchangeTokenRequest,
   ExchangeTokenResponse,
@@ -155,8 +156,7 @@ class SDKServer {
   }
 
   private getSessionSecret() {
-    const secret = ENV.cookieSecret;
-    return new TextEncoder().encode(secret);
+    return sessionSigningKey(ENV.cookieSecret);
   }
 
   /**
