@@ -1102,6 +1102,57 @@
     line-height: 1.8;
   }
 
+  .post-content .article-table-scroll {
+    margin: 1.5rem 0 2rem;
+    overflow-x: auto;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+  }
+
+  .article-table-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .article-table-scroll :is(th, td) {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  .article-table-scroll :is(th, td):first-child {
+    width: 32%;
+    border-right: 1px solid var(--border-subtle);
+  }
+
+  .article-table-scroll th {
+    background: var(--blush);
+    color: var(--text-main);
+    font-weight: 700;
+  }
+
+  .article-table-scroll td {
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .article-table-scroll tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--blush) 45%, transparent);
+  }
+
+  @media (max-width: 600px) {
+    .article-table-scroll :is(th, td) {
+      padding: 0.7rem;
+    }
+
+    .article-table-scroll :is(th, td):first-child {
+      width: 38%;
+    }
+  }
+
   .post-content p {
     margin-bottom: 1.2rem;
   }
