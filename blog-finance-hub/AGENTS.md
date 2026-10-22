@@ -34,3 +34,9 @@ Publishing checklist:
 7. Commit and push after the user approves the final content.
 
 Keep the author's voice direct, personal, analytical, and grounded in finance, culture, work, and lived experience. Preserve existing formatting patterns in `posts.tsx`.
+
+For every new or revised article, hyperlink key factual claims, reports, advisories,
+and definitions inline to their relevant primary sources. Use descriptive linked
+phrases, preserve the author's wording, and retain a sources list at the end.
+Verify that each source supports the linked claim; do not invent source URLs.
+For links opening a new tab, use `target="_blank"` and `rel="noopener noreferrer"`.

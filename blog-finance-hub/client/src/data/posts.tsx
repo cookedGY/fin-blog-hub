@@ -31,7 +31,7 @@ export const POSTS: Record<string, Post> = {
         <p><strong>Before you begin:</strong> This is a longer read, about 10 to 12 minutes, written for people without a technical background. We’ll unpack the warning, follow a request through a website, and explore how AI is changing the work of finding security flaws.</p>
         <h3>What happened inside widely used web software and why it matters beyond the technical team</h3>
         <p><em>This article discusses the PHP security disclosures and updates released on October 21, 2026. Release information below reflects that announcement; check the linked advisories and your vendor for subsequent guidance.</em></p>
-        <p>The <strong>National Security Agency (NSA)</strong>, a U.S. intelligence agency whose cybersecurity mission includes protecting national security systems, issued an urgent warning about critical vulnerabilities affecting PHP. Affected organizations were advised to update immediately or take systems offline if updating was not feasible.</p>
+        <p>The <a href="https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4630238/nsa-advisory-critical-patches-recommended-for-php-vulnerabilities/" target="_blank" rel="noopener noreferrer"><strong>National Security Agency (NSA)</strong></a>, a U.S. intelligence agency whose cybersecurity mission includes protecting national security systems, issued an urgent warning about critical vulnerabilities affecting PHP. Affected organizations were advised to update immediately or take systems offline if updating was not feasible.</p>
         <p>For someone maintaining an affected system, that calls for immediate attention. For everyone else, it raises a question worth unpacking:</p>
         <p><strong>What is PHP, and why could a problem in it affect so many different organizations?</strong></p>
         <p>For the past month, I have been following cybersecurity discussions more closely, watching researchers describe weaknesses, organizations assess their exposure, and technical discoveries develop into public warnings.</p>
@@ -55,7 +55,7 @@ export const POSTS: Record<string, Post> = {
         <p>PHP is one possible technology in that process. Other websites use different languages, and some primarily deliver prepared files without running PHP.</p>
         <p>The important distinction here is between <strong>application code</strong> and <strong>the runtime executing it</strong>. Both are software. Both need maintenance.</p>
         <h2>Why has PHP been around so long?</h2>
-        <p>PHP began in 1994, when Rasmus Lerdorf created tools for his personal website. Those early tools evolved into a language for generating web content on a server.</p>
+        <p><a href="https://www.php.net/manual/en/history.php.php" target="_blank" rel="noopener noreferrer">PHP began in 1994</a>, when Rasmus Lerdorf created tools for his personal website. Those early tools evolved into a language for generating web content on a server.</p>
         <p>Over time, PHP became part of an extensive ecosystem of applications, hosting services, development tools, and technical expertise.</p>
         <p>It is used by websites of many sizes, from small sites to large institutions and businesses with enterprise infrastructure.</p>
         <p>Large organizations can, however, face a particularly complicated maintenance challenge. They may operate applications built at different times, maintained by different teams, and purchased from different vendors.</p>
@@ -75,12 +75,12 @@ export const POSTS: Record<string, Post> = {
         <p>The danger arises when error handling or cleanup acts on invalid internal data.</p>
         <h2>Before the technical details: what is a CVE?</h2>
         <p>Security alerts give vulnerabilities identifiers such as <strong>CVE-2026-109618</strong>.</p>
-        <p><strong>CVE</strong> stands for <strong>Common Vulnerabilities and Exposures</strong>. Its identifiers help researchers, vendors, and organizations refer to the same vulnerability.</p>
+        <p><strong>CVE</strong> stands for <a href="https://www.cve.org/Resources/Media/Archives/OldWebsite/about/faqs.html" target="_blank" rel="noopener noreferrer"><strong>Common Vulnerabilities and Exposures</strong></a>. Its identifiers help researchers, vendors, and organizations refer to the same vulnerability.</p>
         <p>Think of one as a case number.</p>
         <div className="article-table-scroll"><table><thead><tr><th scope="col">Part</th><th scope="col">What it tells you</th></tr></thead><tbody><tr><td><strong>CVE</strong></td><td>The identification system</td></tr><tr><td><strong>2026</strong></td><td>The identifier’s year component, associated with assignment or public disclosure, not necessarily when the flaw first existed</td></tr><tr><td><strong>109618</strong></td><td>The sequence number identifying the record</td></tr></tbody></table></div>
         <p>The final number is <strong>not a severity rating, a count of attacks, or a reliable publication order</strong>. A larger number does not mean a more dangerous flaw.</p>
         <h3>What about the “9.2 out of 10” rating?</h3>
-        <p>PHP rated both vulnerabilities <strong>9.2 under CVSS version 4.0</strong>. <strong>CVSS</strong> stands for <strong>Common Vulnerability Scoring System</strong> and is separate from the CVE identifier.</p>
+        <p>PHP rated both vulnerabilities <a href="https://www.php.net/archive/2026.php" target="_blank" rel="noopener noreferrer"><strong>9.2 under CVSS version 4.0</strong></a>. <strong>CVSS</strong> stands for <a href="https://www.first.org/cvss/v4.0/specification-document" target="_blank" rel="noopener noreferrer"><strong>Common Vulnerability Scoring System</strong></a> and is separate from the CVE identifier.</p>
         <p>CVSS describes a vulnerability’s severity using characteristics such as the conditions required for exploitation and its potential impact. A score of <strong>9.2 falls in the Critical range</strong>.</p>
         <p>It does not mean there is a 92% chance of being hacked.</p>
         <p><strong>CVE identifies the issue. CVSS describes its severity.</strong></p>
@@ -104,11 +104,11 @@ export const POSTS: Record<string, Post> = {
         <p>The hosting provider supplies the environment. The shell is a command interface. Neither describes the location of this memory handling failure.</p>
         <h2>Why can’t the login page prevent it?</h2>
         <p>A login page protects particular application features. It cannot necessarily protect the underlying software that processes a request before those features run.</p>
-        <p>PHP reports a demonstrated attack against <strong>Apache with mod_php</strong>, which runs PHP inside the Apache web server. In that configuration, the attack can trigger before application code executes. Other PHP configurations serving web requests are also identified as at risk.</p>
+        <p><a href="https://www.php.net/archive/2026.php" target="_blank" rel="noopener noreferrer">PHP reports a demonstrated attack</a> against <strong>Apache with mod_php</strong>, which runs PHP inside the Apache web server. In that configuration, the attack can trigger before application code executes. Other PHP configurations serving web requests are also identified as at risk.</p>
         <p>An organization can therefore have passwords, account permissions, and carefully written application code while still needing an urgent runtime update.</p>
         <p>This is one reason security involves several layers.</p>
         <h2>Was AI involved in finding these flaws?</h2>
-        <p>Yes. According to OpenAI, security firm <strong>Calif</strong> identified a critical PHP flaw using <strong>GPT‑5.6 Sol</strong> through its Patch the Planet initiative. <strong>Wiz independently discovered and reported both vulnerabilities</strong>, and PHP’s maintainers led the fixes and release.</p>
+        <p>Yes. <a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/" target="_blank" rel="noopener noreferrer">According to OpenAI</a>, security firm <strong>Calif</strong> identified a critical PHP flaw using <strong>GPT‑5.6 Sol</strong> through its Patch the Planet initiative. <strong>Wiz independently discovered and reported both vulnerabilities</strong>, and PHP’s maintainers led the fixes and release.</p>
         <p>OpenAI describes roughly two months of coordinated response work before disclosure.</p>
         <p>This was research by people using AI tools, followed by validation and work to prepare corrections.</p>
         <p>The public conversation may have felt sudden. The investigation and response behind it took longer.</p>
@@ -126,7 +126,7 @@ export const POSTS: Record<string, Post> = {
         <p>Some organizations offer <strong>bug bounties</strong>: financial rewards for eligible vulnerability reports. Researchers must follow each program’s scope and rules, and payment is not guaranteed for every finding.</p>
         <p>Responsible research includes permission where required, careful validation, and reporting through an appropriate process.</p>
         <h2>What should affected organizations do?</h2>
-        <p>A <strong>patch</strong> is a software update that corrects a problem. In its October 21 announcement, PHP listed fixes in:</p>
+        <p>A <strong>patch</strong> is a software update that corrects a problem. <a href="https://www.php.net/archive/2026.php" target="_blank" rel="noopener noreferrer">In its October 21 announcement</a>, PHP listed fixes in:</p>
         <ul><li><strong>PHP 8.5.12</strong></li><li><strong>PHP 8.4.27</strong></li><li><strong>PHP 8.3.36</strong></li><li><strong>PHP 8.2.35</strong></li></ul>
         <p>Operators can also obtain corrected packages through relevant software vendors. Some vendors apply fixes to older releases, so confirm the corrected package with your vendor rather than relying only on the displayed version number. PHP warns that temporary measures do not completely resolve the vulnerabilities.</p>
         <p>The organizational task extends beyond downloading an update:</p>
