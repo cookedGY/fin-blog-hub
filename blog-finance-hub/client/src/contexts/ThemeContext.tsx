@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { syncAudioWidgetTheme } from "@/lib/audioWidgetTheme";
 
 type Theme = "light" | "dark";
 
@@ -49,6 +50,8 @@ export function ThemeProvider({
       }
     }
   }, [theme, switchable]);
+
+  useEffect(() => syncAudioWidgetTheme(theme), [theme]);
 
   const toggleTheme = switchable
     ? () => {
