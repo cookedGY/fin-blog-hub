@@ -5,6 +5,11 @@
  */
 
 export const relatedPostsMap: Record<string, string[]> = {
+  "when-nsa-says-update-php-security-alert": [
+    "from-tumblr-html-to-financial-technology",
+    "taking-reins-cloned-website-harvard-python",
+    "when-ai-builds-itself",
+  ],
   // Portfolio infrastructure & learning in public
   "under-the-hood-dad-taught-me-systems": [
     "taking-reins-cloned-website-harvard-python",

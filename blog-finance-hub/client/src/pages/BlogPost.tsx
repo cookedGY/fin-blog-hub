@@ -9,11 +9,14 @@ import SocialShareButtons from "@/components/SocialShareButtons";
 import AuthorBio from "@/components/AuthorBio";
 import { updateMetaTags, createBlogPostSchema, injectStructuredData } from "@/lib/seo";
 import NewsletterPopup from "@/components/NewsletterPopup";
-import { getReadingTime } from "@/lib/readingTime";
+import { calculateReadingTime, formatReadingTime } from "@/lib/readingTime";
+import { articleText } from "@/lib/articleText";
 
 function ReadingTime({ content }: { content: React.ReactNode }) {
-  const contentString = typeof content === 'string' ? content : '';
-  const { formatted: readingTime } = useMemo(() => getReadingTime(contentString), [contentString]);
+  const readingTime = useMemo(
+    () => formatReadingTime(calculateReadingTime(articleText(content))),
+    [content]
+  );
   return <>{readingTime}</>;
 }
 
