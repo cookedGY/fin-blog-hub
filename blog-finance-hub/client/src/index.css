@@ -342,6 +342,23 @@
     min-height: 100vh;
   }
 
+  /* Keep both flower layers outside the 1120px article reading area.
+     With no outer margins, the mask hides them entirely. Leaving an
+     article removes the mask immediately, without an inactivity timer. */
+  body:has(.editorial-main) .flower-animation-canvas-site {
+    --flower-reading-edge: max(0px, calc((100% - 1120px) / 2));
+    mask-image: linear-gradient(to right,
+      #000 var(--flower-reading-edge),
+      transparent var(--flower-reading-edge),
+      transparent calc(100% - var(--flower-reading-edge)),
+      #000 calc(100% - var(--flower-reading-edge)));
+    -webkit-mask-image: linear-gradient(to right,
+      #000 var(--flower-reading-edge),
+      transparent var(--flower-reading-edge),
+      transparent calc(100% - var(--flower-reading-edge)),
+      #000 calc(100% - var(--flower-reading-edge)));
+  }
+
   .flower-animation-canvas-back.flower-animation-canvas-site {
     z-index: 1;
     opacity: 0.48;
