@@ -153,10 +153,12 @@ export default function Portfolio() {
             </div>
           </div>
           <p className="portfolio-intro-card text-lg text-muted-foreground max-w-3xl">
-            For anyone curious about my background, here is the fuller picture: I am Dekena Wade, a finance
-            graduate building toward applied AI, audit-minded systems, and better ways to explain complex work.
-            My portfolio connects class-based finance analysis, technical builds, and the skills I am developing
-            to help teams spot risk, anomalies, and operational signals with clearer tools.
+            I’m Dekena Wade. I’m interested in identifying risk, understanding how systems work,
+            and turning complex information into useful decisions. That curiosity spans business and
+            financial risk, cybersecurity, and IT—and it can travel across banking, audit, tech, and beyond.
+            My finance degree and experience in analysis, insurance, consulting, and AI evaluation
+            give me a foundation. I’m now building my technical skills to ask better questions,
+            investigate signals, and explain what I find.
           </p>
         </div>
       </section>
@@ -165,7 +167,7 @@ export default function Portfolio() {
         <div className="max-w-5xl mx-auto">
           <div className="section-header portfolio-section-header">
             <h2>Experience Snapshot</h2>
-            <p>The roles, sprints, and projects that shaped how I connect finance, audit, AI, and strategy.</p>
+            <p>The experiences that shaped how I approach risk, evidence, business decisions, and technology.</p>
           </div>
           <div className="experience-grid">
             {experienceHighlights.map((item) => (
@@ -197,13 +199,13 @@ export default function Portfolio() {
                   <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-sky-100 text-sky-700">
                     <BriefcaseBusiness className="h-5 w-5" />
                   </div>
-                  <h3 className="text-2xl font-serif font-bold text-foreground">Finance Case Studies & Work</h3>
+                  <h3 className="text-2xl font-serif font-bold text-foreground">Business Analysis & Case Studies</h3>
                   <p className="text-sm text-muted-foreground">
                     Company analysis, financial storytelling, market context, and business strategy.
                   </p>
                 </div>
                 <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-700">
-                  Finance
+                  Business analysis
                 </span>
               </div>
 

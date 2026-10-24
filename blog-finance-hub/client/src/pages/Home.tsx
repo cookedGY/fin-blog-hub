@@ -1,3 +1,4 @@
+import { categoryLabel } from "@/lib/categoryLabel";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
@@ -15,7 +16,7 @@ const learningSkills: Array<{
 }> = [
   {
     name: "Python",
-    focus: "Harvard coursework, clean logic, and finance automation",
+    focus: "Harvard coursework, clear logic, and practical automation",
     Icon: Code2,
   },
   {
@@ -54,22 +55,22 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col animate-in fade-in duration-500">
       <Helmet>
-        <title>DeCodes Life | Dekena Wade on Finance, AI, Audit & Building</title>
-        <meta name="description" content="DeCodes Life is Dekena Wade's ideas portfolio: finance takes, applied AI, audit-minded analysis, career reflections, travel, business strategy, and what she is learning next." />
-        <meta name="keywords" content="DeCodes Life, Dekena Wade, Dcodes, finance takes, applied AI, audit, risk analysis, AI implementation, career reflections, business strategy, Mandarin learning, Guyanese heritage" />
+        <title>DeCodes Life | Risk, Technology & Everyday Observations</title>
+        <meta name="description" content="DeCodes Life is Dekena Wade's ideas portfolio: observations on risk, business, technology, culture, and the skills she is building along the way." />
+        <meta name="keywords" content="DeCodes Life, Dekena Wade, Dcodes, observations, applied AI, audit, risk analysis, AI implementation, career reflections, business strategy, Mandarin learning, Guyanese heritage" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://finbloghub.space/" />
-        <meta property="og:title" content="DeCodes Life | Dekena Wade on Finance, AI, Audit & Building" />
-        <meta property="og:description" content="A personal ideas portfolio covering finance, applied AI, audit-minded analysis, career growth, travel, business strategy, and the systems Dekena Wade is learning to build." />
+        <meta property="og:title" content="DeCodes Life | Risk, Technology & Everyday Observations" />
+        <meta property="og:description" content="Observations on business, technology, risk, culture, and the systems Dekena Wade is learning to understand and build." />
         <meta property="og:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663195299521/gbPCcanLrCwSoRTK.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://decodeslife.com/" />
-        <meta property="twitter:title" content="DeCodes Life | Dekena Wade on Finance, AI, Audit & Building" />
-        <meta property="twitter:description" content="DeCodes Life by Dekena Wade: finance takes, applied AI, audit-minded analysis, career growth, travel, business strategy, and learning in public." />
+        <meta property="twitter:title" content="DeCodes Life | Risk, Technology & Everyday Observations" />
+        <meta property="twitter:description" content="DeCodes Life by Dekena Wade: risk analysis, applied AI, audit-minded analysis, career growth, travel, business strategy, and learning in public." />
         <meta property="twitter:image" content="https://files.manuscdn.com/user_upload_by_module/session_file/310519663195299521/gbPCcanLrCwSoRTK.png" />
       </Helmet>
       <Header />
@@ -79,13 +80,13 @@ export default function Home() {
         <section className="hero">
         <div className="hero-inner container">
           <div className="hero-text">
-            <p className="hero-tag">Finance • AI • Audit • Culture • Building</p>
-            <h1>DeCodes Life: Finance, AI, Business Strategy & Guyanese Heritage</h1>
-            <p className="hero-subtitle">Hi, I'm De — decoding life one spreadsheet and passport stamp at a time.</p>
+            <p className="hero-tag">Risk • Technology • Business • Culture • Curiosity</p>
+            <h1>Making sense of risk, systems, and everyday life.</h1>
+            <p className="hero-subtitle">Hi, I'm De — asking questions, connecting ideas, and sharing what I notice.</p>
             <p className="hero-sub">
-              Brooklyn-based, Guyanese-rooted, finance graduate exploring applied AI,
-              audit-minded systems, Mandarin, global perspective,
-              and what it means to keep changing on purpose.
+              Brooklyn-based and Guyanese-rooted, I’m interested in how people and organizations
+              identify risk and make decisions across business, finance, cybersecurity, and IT.
+              Here, I connect that curiosity with culture, personal growth, and the technical skills I’m building.
             </p>
             <div className="hero-actions">
               <a href="#latest" className="btn btn-primary">Read the latest</a>
@@ -95,10 +96,10 @@ export default function Home() {
           <div className="hero-card">
             <div className="hero-pill">Currently</div>
             <ul>
-              <li>🎓 Finance degree: done. Now shaping the next learning chapter</li>
-              <li>🌏 Next global move: China</li>
+              <li>🎓 Building on my finance degree with a wider view of risk</li>
+              <li>🎬 The world of C-Drama: stories, culture, and new perspectives</li>
               <li>🤖 Studying AI implementation, data, and automation</li>
-              <li>🧾 Connecting finance, audit, risk, and AI implementation</li>
+              <li>🧩 Exploring how business decisions and technology shape risk</li>
             </ul>
           </div>
         </div>
@@ -110,7 +111,7 @@ export default function Home() {
         <div className="container learning-grid">
           <div className="learning-copy">
             <p className="learning-kicker">Currently Learning</p>
-            <h2>Building the technical toolkit behind the finance work.</h2>
+            <h2>Building the skills behind the questions.</h2>
             <p>
               I am tracking the skills I am learning in public: the code, systems,
               and data foundations that help me move from using AI tools to
@@ -156,7 +157,7 @@ export default function Home() {
               .slice(0, 3)
               .map((post) => (
                 <article key={post.slug} className="card">
-                  <div className="card-pill">{post.tag}</div>
+                  <div className="card-pill">{categoryLabel(post.tag)}</div>
                   <h3>{post.title}</h3>
                   <p>{post.description}</p>
                   <Link href={`/post/${post.slug}`} className="card-link">
@@ -266,16 +267,16 @@ export default function Home() {
       <section className="section" id="finance">
         <div className="container section-split finance-showcase">
           <div className="section-text">
-            <h2>De's Financial Takes</h2>
+            <h2>De's Takes</h2>
             <p>
-              Essays on markets, economic signals, internships, financial systems, and the
-              career lessons I keep collecting as I move between finance, AI, and business strategy.
+              My observations on what’s happening in the world: business decisions, technology,
+              markets, risk, and the questions that stay with me. A place to follow an idea across subjects.
             </p>
             <ul className="tag-list">
-              <li>Markets & macro signals</li>
-              <li>Internship breakdowns</li>
-              <li>Financial institutions</li>
-              <li>Career prep & recruiting lessons</li>
+              <li>Risk & emerging signals</li>
+              <li>Business & technology</li>
+              <li>Systems & institutions</li>
+              <li>Work & changing perspectives</li>
             </ul>
           </div>
           <div className="section-cards finance-article-grid">
@@ -315,7 +316,7 @@ export default function Home() {
           <div className="section-text">
             <h2>Global De</h2>
             <p>
-              Guyanese roots, Brooklyn hustle, Ghana lessons, China plans, and a growing love
+              Guyanese roots, Brooklyn life, Ghana lessons, C-drama discoveries, and a growing love
               for Mandarin and global systems. This is where my passport, curiosity, and career collide.
             </p>
             <ul className="tag-list">
@@ -414,7 +415,7 @@ export default function Home() {
             {spotlightPosts.map((post) => (
               <Link key={post.slug} href={`/post/${post.slug}`} className="block">
                 <article className="spotlight-card h-full">
-                  <p className="card-pill">{post.tag}</p>
+                  <p className="card-pill">{categoryLabel(post.tag)}</p>
                   <h3>{post.title}</h3>
                   <p>{post.description}</p>
                   <span className="card-link">Read this →</span>
@@ -438,18 +439,18 @@ export default function Home() {
           <div className="about-text">
             <h2 className="about-title">About Me</h2>
             <p className="about-intro">
-              For anyone curious about my background: I'm Dekena Wade, a Brooklyn-based finance graduate building toward applied AI, audit-minded systems, and clearer ways to explain complex work.
+              I’m Dekena Wade, a Brooklyn-based, Guyanese-rooted graduate drawn to a recurring question: what could go wrong, what signals matter, and how can we make a better decision? My interests span business and financial risk, cybersecurity, and IT.
             </p>
             <p className="about-body">
-              Shout out to the recruiters, mentors, and curious people who want the longer version.
+              My finance background is a starting point. Through analysis, project work, and learning to code, I’m building the technical skills to investigate systems and communicate what I find—across industries, rather than within one lane.
             </p>
             <Link href="/portfolio" className="btn btn-primary about-cta">See About Me & Portfolio</Link>
           </div>
           <div className="about-card">
             <h3>Quick background</h3>
             <ul>
-              <li>🎓 Finance graduate, class of 2026 — master's path next</li>
-              <li>🌍 Guyanese-American, Brooklyn-based, China-curious</li>
+              <li>🎓 Finance graduate, class of 2026 — building across disciplines</li>
+              <li>🌍 Guyanese-American, Brooklyn-based, curious about the world</li>
               <li>📈 Experience: JPMorgan, EY, PwC, Aon, Handshake & more</li>
               <li>🤖 Learning: Python, Git, databases, React, TypeScript, and AI systems</li>
             </ul>

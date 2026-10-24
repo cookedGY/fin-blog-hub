@@ -1,3 +1,4 @@
+import { categoryLabel } from "@/lib/categoryLabel";
 import { Link } from "wouter";
 import { POSTS, Post } from "@/data/posts";
 import { getRelatedPosts } from "@/data/relatedPosts";
@@ -50,7 +51,7 @@ export default function RelatedPosts({
           >
             <div className="flex flex-col gap-1 min-w-0">
               <span className="text-xs font-semibold tracking-widest uppercase text-primary opacity-70">
-                {post.tag}
+                {categoryLabel(post.tag)}
               </span>
               <span className="font-serif text-base leading-snug group-hover:text-primary transition-colors line-clamp-2">
                 {post.title}

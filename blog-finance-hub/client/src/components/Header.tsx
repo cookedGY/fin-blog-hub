@@ -1,3 +1,4 @@
+import { categoryLabel } from "@/lib/categoryLabel";
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Moon, Search, Sun, X } from "lucide-react";
@@ -93,7 +94,7 @@ export default function Header() {
         </div>
 
         <nav className={`nav-links ${isNavOpen ? 'nav-open' : ''}`} id="navLinks">
-          <a href="/#finance" onClick={closeNav}>De's Financial Takes</a>
+          <a href="/#finance" onClick={closeNav}>De's Takes</a>
           <a href="/#global" onClick={closeNav}>Global De</a>
           <Link href="/portfolio" onClick={closeNav}>About Me</Link>
           <Link href="/speaking" onClick={closeNav}>Speaking</Link>
@@ -142,7 +143,7 @@ export default function Header() {
                   <div className="grid gap-2">
                     {searchResults.map((post) => (
                       <Link key={post.slug} href={`/post/${post.slug}`} className="block p-3 hover:bg-muted rounded-lg transition-colors group">
-                        <div className="text-xs font-medium text-primary uppercase tracking-wider mb-1">{post.tag}</div>
+                        <div className="text-xs font-medium text-primary uppercase tracking-wider mb-1">{categoryLabel(post.tag)}</div>
                         <div className="font-serif font-semibold text-lg group-hover:text-primary transition-colors">{post.title}</div>
                         {post.description && <div className="text-sm text-muted-foreground line-clamp-1">{post.description}</div>}
                       </Link>

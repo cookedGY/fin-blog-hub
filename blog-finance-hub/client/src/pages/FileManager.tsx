@@ -1,3 +1,4 @@
+import { categoryLabel } from "@/lib/categoryLabel";
 import { useState } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
@@ -159,8 +160,8 @@ export default function FileManager() {
                 </SelectTrigger>
                 <SelectContent>
                   {PROJECT_CATEGORIES.map((cat) => (
-                    <SelectItem key={cat} value={cat}>
-                      {cat}
+                    <SelectItem key={categoryLabel(cat)} value={categoryLabel(cat)}>
+                      {categoryLabel(cat)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -219,7 +220,7 @@ export default function FileManager() {
                     <div className="flex-1 min-w-0">
                       <h3 className="font-medium text-foreground truncate">{file.filename}</h3>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
-                        <span>{file.projectCategory}</span>
+                        <span>{categoryLabel(file.projectCategory)}</span>
                         <span>•</span>
                         <span>{(file.fileSize / 1024).toFixed(2)} KB</span>
                         <span>•</span>

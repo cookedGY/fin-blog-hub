@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="footer-newsletter">
             <h3 className="font-serif text-lg font-semibold mb-2">Join the inner circle</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Get the latest on finance, travel, and navigating your 20s straight to your inbox. No spam, just vibes.
+              Get new observations on business, technology, culture, and navigating life straight to your inbox. No spam, just vibes.
             </p>
             
             {status === "success" ? (

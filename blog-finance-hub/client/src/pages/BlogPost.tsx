@@ -1,3 +1,4 @@
+import { categoryLabel } from "@/lib/categoryLabel";
 import { useEffect, useMemo } from "react";
 import { useRoute, Link } from "wouter";
 import { POSTS } from "@/data/posts";
@@ -88,7 +89,7 @@ export default function BlogPost() {
             <div className="editorial-header-meta">
               <Link href="/" className="editorial-back">← All Posts</Link>
               <span className="editorial-meta-sep">·</span>
-              <span className="editorial-category">{post.tag}</span>
+              <span className="editorial-category">{categoryLabel(post.tag)}</span>
               <span className="editorial-meta-sep">·</span>
               <span className="editorial-date">{post.date}</span>
               <span className="editorial-meta-sep">·</span>
@@ -128,7 +129,7 @@ export default function BlogPost() {
                 {/* Category + tags */}
                 <div className="sidebar-block">
                   <div className="sidebar-label">Category</div>
-                  <div className="sidebar-value">{post.tag}</div>
+                  <div className="sidebar-value">{categoryLabel(post.tag)}</div>
                 </div>
 
                 {post.seoKeywords && post.seoKeywords.length > 0 && (
@@ -157,7 +158,7 @@ export default function BlogPost() {
                 <div className="sidebar-block">
                   <div className="sidebar-label">Author</div>
                   <div className="sidebar-value">Dekena Wade</div>
-                  <div className="sidebar-author-sub">Finance student, Brooklyn</div>
+                  <div className="sidebar-author-sub">Risk, business & technology · Brooklyn</div>
                 </div>
 
                 {/* Share */}
@@ -196,7 +197,7 @@ export default function BlogPost() {
             description={post.seoDescription || post.description}
           />
           <AuthorBio />
-          <RelatedPosts currentSlug={post.slug} currentCategory={post.tag} />
+          <RelatedPosts currentSlug={post.slug} currentCategory={categoryLabel(post.tag)} />
           <NewsletterSignup source="blog-post" />
         </div>
 
