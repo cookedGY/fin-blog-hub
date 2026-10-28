@@ -45,6 +45,15 @@ const financeWork = [
 
 const techWork = [
   {
+    title: "Decode’s Studio",
+    subtitle: "Full-stack · Research & Publishing Sandbox",
+    description: "Write beside sources, save recoverable revisions, and publish an isolated Studio snapshot. Requires the Studio backend; live-blog publishing is not connected.",
+    href: "/studio",
+    emoji: "✍️",
+    skills: ["Editorial UI", "Server authorization", "Version conflicts"],
+    recruiterNote: "A local vertical slice with SQLite persistence, isolated visitor sessions, and an explicitly separate publication boundary. Includes implementation decisions and limitations.",
+  },
+  {
     title: "RAG Assistant",
     subtitle: "AI/LLM · Semantic Search",
     description: "Retrieval-Augmented Generation system for querying corporate financial reports with semantic search.",

@@ -1,4 +1,8 @@
 import "dotenv/config";
+import { createStudioRoutes } from "../studio/routes";
+import { StudioStore } from "../studio/store";
+import { sdk } from "./sdk";
+import path from "node:path";
 import express from "express";
 import { createServer } from "http";
 import net from "net";
@@ -44,6 +48,14 @@ async function startServer() {
     app.use(helmet());
   }
   
+  // Studio is a separate local/backend workflow; no connection to published blog data.
+  if (process.env.NODE_ENV !== "production" || process.env.STUDIO_ENABLED === "true") {
+    const studioStore = new StudioStore(process.env.STUDIO_DB_PATH || path.resolve(".cache/studio/studio.sqlite"));
+    app.use("/api/studio", createStudioRoutes({ store: studioStore, authenticate: req => sdk.authenticateRequest(req), ownerId: () => process.env.OWNER_OPEN_ID || "", secure: process.env.NODE_ENV === "production" }));
+  } else {
+    app.use("/api/studio", (_req, res) => res.status(503).set("Cache-Control", "no-store").json({ error: "Studio is not connected on this server. The live blog is unchanged." }));
+  }
+
   // CORS configuration - restrict to your domain
   const allowedOrigins = [
     'https://finbloghub.manus.space',

@@ -5,7 +5,7 @@ import FlowerAnimation from "@/components/FlowerAnimation";
 import InteractiveCursor from "@/components/InteractiveCursor";
 import NotFound from "@/pages/NotFound";
 import { Globe } from "lucide-react";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -21,11 +21,17 @@ import AnomalyDetection from "./pages/projects/AnomalyDetection";
 import LLMEvaluation from "./pages/projects/LLMEvaluation";
 import RiskTracker from "./pages/projects/RiskTracker";
 import WorkflowObservability from "./pages/projects/WorkflowObservability";
+const Studio = lazy(() => import("./pages/Studio"));
+function StudioRoute() {
+  return <Suspense fallback={<p role="status" className="container py-12">Loading Studio…</p>}><Studio /></Suspense>;
+}
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/studio/:mode/published/:id" component={StudioRoute} />
+      <Route path="/studio" component={StudioRoute} />
       <Route path="/projects" component={Projects} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/speaking" component={Speaking} />
