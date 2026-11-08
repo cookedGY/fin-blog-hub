@@ -26,8 +26,14 @@ export default function BlogPost() {
   const slug = params?.slug;
   const post = slug ? POSTS[slug] : null;
 
-  // Scroll to top when post changes
+  // Preserve section links when opening an article directly or reloading it.
   useEffect(() => {
+    const sectionId = window.location.hash.slice(1);
+    const section = sectionId ? document.getElementById(sectionId) : null;
+    if (section) {
+      section.scrollIntoView();
+      return;
+    }
     window.scrollTo(0, 0);
   }, [slug]);
 

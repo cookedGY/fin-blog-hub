@@ -2926,3 +2926,46 @@
 .dark .portfolio-page :is(.text-slate-700, .text-slate-600, .text-gray-600) {
   color: var(--text-muted);
 }
+
+/* Section navigation for long-form articles. */
+.editorial-content .article-toc {
+  margin: 2rem 0 3rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+}
+
+.editorial-content .article-toc h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.editorial-content .article-toc ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.editorial-content .article-toc li + li {
+  margin-top: 0.5rem;
+}
+
+.editorial-content .article-toc a {
+  display: inline-block;
+  padding-block: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+.editorial-content .article-toc a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.editorial-content .article-section-heading {
+  scroll-margin-top: 7rem;
+}
+
+.editorial-content .article-opinion-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}

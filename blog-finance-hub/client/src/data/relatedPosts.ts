@@ -5,6 +5,11 @@
  */
 
 export const relatedPostsMap: Record<string, string[]> = {
+  "growing-pains-of-technical-advancements": [
+    "training-models-waiting-for-job",
+    "ai-environmental-discrimination",
+    "from-tumblr-html-to-financial-technology",
+  ],
   "when-nsa-says-update-php-security-alert": [
     "from-tumblr-html-to-financial-technology",
     "taking-reins-cloned-website-harvard-python",

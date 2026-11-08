@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { isValidElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { POSTS } from '../client/src/data/posts';
 
 // Validate the current publication contract, not removed demonstration posts.
@@ -29,5 +30,19 @@ describe('Published articles', () => {
   it('preserves the existing Aon article content', () => {
     const content = JSON.stringify(POSTS['aon-internship'].content);
     for (const phrase of ['Aon', 'D&O', 'insurance']) expect(content).toContain(phrase);
+  });
+
+  it('provides unique section destinations for every link in the new article contents', () => {
+    const post = POSTS['growing-pains-of-technical-advancements'];
+    const html = renderToStaticMarkup(post.content);
+    const navigation = html.match(/<nav[^>]*aria-labelledby="article-toc-title"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+    expect(navigation).toBeDefined();
+    const targets = [...navigation!.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
+    const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
+    expect(targets).toHaveLength(10);
+    expect(new Set(ids).size).toBe(ids.length);
+    targets.forEach(id => expect(html).toContain(`<h2 id="${id}"`));
+    expect(html).toContain('Every technology boom comes with an invitation:');
+    expect(html).not.toContain('—');
   });
 });

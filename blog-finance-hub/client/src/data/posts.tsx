@@ -17,6 +17,125 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "growing-pains-of-technical-advancements": {
+    slug: "growing-pains-of-technical-advancements",
+    tag: "Life & Growth",
+    title: "The Growing Pains of Technical Advancements",
+    date: "November 8, 2026",
+    description: "An opinion essay on the cost of keeping up: education, unequal access to skills, AI, changing work, creative ownership, and environmental accountability.",
+    seoKeywords: ["technological change", "education access", "career development", "AI and jobs", "automation", "AI and copyright", "AI environmental impact"],
+    seoDescription: "Who can afford to adapt to technological change? A personal essay on education, AI, work, copyright, and the pressure to keep up.",
+    content: (
+      <>
+        <p className="article-opinion-label">Opinion · Work, education &amp; technology</p>
+        <p>Every technology boom comes with an invitation: learn these skills, earn this credential, and prepare for the future. What often goes unspoken is how much that preparation demands and how uncertain the return can be.</p>
+        <p>A certificate that opens doors in one region may carry little weight in another. A degree may satisfy an employer’s requirements while leaving its holder with debt and no clear entry point. For someone already balancing work, family, and financial pressure, “keeping up” can become another job.</p>
+        <p>These growing pains are often treated as individual shortcomings: you didn’t learn fast enough, choose the right program, or anticipate the next shift. But navigating an industry surge involves more than motivation. It involves geography, money, social connections, and the biases that influence who gets a chance.</p>
+        <p>The institutions offering preparation are also trying to keep pace. A new program may promise access to an emerging field while its curriculum struggles to meet changing workplace demands. Students must decide whether to invest, often without enough information to know where that investment will lead.</p>
+        <p>The question is not simply how to stay competitive. It is how to pursue opportunity without allowing the pursuit to consume your sense of worth.</p>
+        <nav className="article-toc" aria-labelledby="article-toc-title">
+          <h2 id="article-toc-title">On this page</h2>
+          <ol>
+            <li><a href="#preparing-for-a-moving-target">Preparing for a moving target</a></li>
+            <li><a href="#who-can-afford-to-adapt">Who can afford to adapt?</a></li>
+            <li><a href="#when-the-institutions-are-catching-up-too">When the institutions are catching up, too</a></li>
+            <li><a href="#appreciating-ai-while-questioning-its-costs">Appreciating AI while questioning its costs</a></li>
+            <li><a href="#am-i-helping-it-take-someone-s-job">Am I helping it take someone’s job?</a></li>
+            <li><a href="#the-changes-reach-beyond-the-workplace">The changes reach beyond the workplace</a></li>
+            <li><a href="#when-someone-else-s-work-becomes-a-shortcut">When someone else’s work becomes a shortcut</a></li>
+            <li><a href="#environmental-concern-deserves-a-specific-conversation">Environmental concern deserves a specific conversation</a></li>
+            <li><a href="#finding-a-pace-that-belongs-to-you">Finding a pace that belongs to you</a></li>
+            <li><a href="#sources">Sources</a></li>
+          </ol>
+        </nav>
+        <h2 id="preparing-for-a-moving-target" className="article-section-heading">Preparing for a moving target</h2>
+        <p>There is no shortage of advice about preparing for the future. Go to college. Get certified. Learn independently. Build a portfolio. Find a mentor.</p>
+        <p>What is harder to find is guidance that accounts for your circumstances.</p>
+        <p>Will employers in your region recognize the certificate you are considering? Does the program teach skills you can practice and demonstrate? Can you afford the time required to finish it? And if the opportunities are somewhere else, can you realistically relocate?</p>
+        <p>Access to an online course does not necessarily mean access to the career advertised alongside it. Someone may complete the training while still living far from employers offering entry positions. Remote work can expand the possibilities, but those positions can also come with location restrictions and considerable competition.</p>
+        <p>Even good advice has a context. A person describing how they entered an industry may have started under different hiring conditions. They may have had connections, financial support, or the freedom to accept an unpaid opportunity. Their experience can be useful without being a reliable map for everyone else.</p>
+        <p>That leaves people making consequential decisions with incomplete information. A learning path becomes a calculation involving money, time, hope, and the possibility of having to start again.</p>
+        <h2 id="who-can-afford-to-adapt" className="article-section-heading">Who can afford to adapt?</h2>
+        <p>The instruction to remain adaptable sounds straightforward until we consider what adaptation requires and how people are supposed to pay for it.</p>
+        <p>For students who depend on financial aid, changes to <a href="https://studentaid.gov/understand-aid/eligibility" target="_blank" rel="noopener noreferrer">eligibility rules</a>, funding, or the FAFSA application process can complicate an already difficult decision. Uncertainty about available assistance can affect whether someone pursues a degree, delays enrollment, or looks for another route into a field. Tax rules can add another layer when they affect household finances or <a href="https://www.irs.gov/credits-deductions/individuals/education-credits-aotc-and-llc" target="_blank" rel="noopener noreferrer">education benefits</a>.</p>
+        <p>A certificate program, free course, or installment payment option may become the more manageable choice. These paths can offer valuable training. But choosing one because it fits your goals is different from choosing it because a degree has become financially out of reach. A less expensive program may still leave someone facing employers who require a degree.</p>
+        <p>Tuition is only part of the calculation. Someone with savings may be able to reduce their working hours to study. Someone supporting a household may have to fit coursework around shifts and caregiving. Even a free program requires time, access to technology, and enough energy to learn.</p>
+        <p>Race, gender, and socioeconomic status can shape these experiences, too. They do not determine someone’s ability, but discrimination and unequal access to resources can influence whose qualifications are recognized and who gets an opportunity to demonstrate what they know.</p>
+        <p>Professional connections matter. So does having someone who can explain the unwritten rules of an industry. Even the freedom to make a mistake, choose an unhelpful course, or change direction is a resource.</p>
+        <p>When these differences disappear from the conversation, success becomes easy to explain as effort, and difficulty becomes easy to interpret as failure.</p>
+        <p>Many industries are telling people that new skills are necessary. We should pay equal attention to whether the pathways to acquiring them remain affordable, accessible, and recognized by the employers asking for them.</p>
+        <h2 id="when-the-institutions-are-catching-up-too" className="article-section-heading">When the institutions are catching up, too</h2>
+        <p>Educational institutions face their own pressure to respond to emerging industries. New programs can be a meaningful attempt to prepare students for changing work.</p>
+        <p>But introducing a program and supporting it well are different undertakings.</p>
+        <p>A curriculum needs thoughtful development and regular review. Instructors need time and resources to update their knowledge. Students need practical experience, appropriate equipment, and a clear understanding of what their education will prepare them to do.</p>
+        <p>There is a balance to maintain. A program focused too narrowly on a particular tool may lose relevance as that tool changes. A program that stays too far removed from workplace practices may leave students struggling to apply what they have learned.</p>
+        <p>Students bear the consequences when that balance falls short. They can finish a qualification only to discover that employers expect another credential, a stronger portfolio, or experience they have not had the opportunity to gain.</p>
+        <p>After investing in preparation, they are asked to prepare again.</p>
+        <p>No institution can predict every industry shift. Still, students deserve transparent claims about career outcomes and a curriculum that receives sustained attention. The responsibility to stay current cannot rest entirely on the person paying to learn.</p>
+        <h2 id="appreciating-ai-while-questioning-its-costs" className="article-section-heading">Appreciating AI while questioning its costs</h2>
+        <p>These pressures become especially personal for me in conversations about artificial intelligence.</p>
+        <p>I like what AI can help me do. I appreciate being able to explore an unfamiliar subject, organize questions, and find a starting point for gathering information. That access has value to me, even though the information still needs to be checked.</p>
+        <p>Yet admitting that appreciation can come with guilt.</p>
+        <p>I see posts predicting whose job will disappear next. I hear concerns about environmental damage. Within my own social circle, some people’s opposition to AI is strong enough that I struggle to know where to begin explaining my perspective.</p>
+        <p>I want to take those concerns seriously. I also want room to talk about why I find the technology useful.</p>
+        <p>Part of the difficulty is that “AI” has become an enormous container for different systems and applications. It encompasses computational approaches used to recognize patterns, <a href="https://oecd.ai/en/wonk/ai-system-definition-update" target="_blank" rel="noopener noreferrer">make predictions, generate content</a>, and perform other tasks associated with intelligence. The chatbot someone uses to explore a topic is one application within a much broader field.</p>
+        <p>In everyday conversation, that complexity can collapse into a single presence: AI. Something powerful, vaguely understood, and seemingly everywhere.</p>
+        <p>It begins to resemble a boogeyman. Meanwhile, the specific systems and the people deciding how to use them become harder to see.</p>
+        <h2 id="am-i-helping-it-take-someone-s-job" className="article-section-heading">Am I helping it take someone’s job?</h2>
+        <p>Sometimes I catch myself asking: Am I helping AI take someone’s job simply by using it?</p>
+        <p>Then I have to slow down and examine what I mean.</p>
+        <p>A job usually contains many tasks. <a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" target="_blank" rel="noopener noreferrer">Automating some of them can change the role</a> without replacing everything a person does. Those tasks might involve organizing information, processing documents, or completing repetitive steps. Automation can affect cognitive work as well as physical work.</p>
+        <p>Responsibilities may shift toward reviewing results, handling exceptions, maintaining systems, or making sure an automated process has accurate data, appropriate context, and a clear purpose. Someone still has to consider whether the output makes sense and whether the process serves the people it is supposed to serve.</p>
+        <p>But I cannot assume that every displaced task will become a better opportunity for the same worker.</p>
+        <p>An employer might invest in training, reduce staffing, or raise expectations for the employees who remain. New responsibilities can emerge without affected workers receiving a path into them.</p>
+        <p>That is why “AI will take your job” feels like an incomplete explanation. It leaves out decisions about staffing, training, ownership, and how financial gains will be distributed.</p>
+        <p>My use of a tool connects me to that larger economy, but it does not give me control over an employer’s decisions. I can appreciate its usefulness while asking whether workers have a meaningful voice in how their work changes.</p>
+        <h2 id="the-changes-reach-beyond-the-workplace" className="article-section-heading">The changes reach beyond the workplace</h2>
+        <p>Technological advancement also influences the legal and financial landscape around an industry.</p>
+        <p>It raises questions about who owns work, who is responsible for errors, how personal information is used, and what protections people need. It can change what businesses pay for, which skills they reward, and where investment flows.</p>
+        <p>Are we paying close enough attention to how those changes connect?</p>
+        <p>A person deciding whether to enroll in a program is also making a financial bet on an industry’s direction. A worker learning to use an automated system may need to understand responsibilities that their employer has not clearly explained. Someone experimenting with a creative tool may encounter disputed questions about ownership.</p>
+        <p>People are making everyday decisions within systems whose rules and incentives may be changing around them.</p>
+        <p>It is unreasonable to expect everyone to become an expert in computing, labor law, finance, and public policy just to understand their place in that transition. We need institutions that explain these changes clearly and give people meaningful ways to respond.</p>
+        <h2 id="when-someone-else-s-work-becomes-a-shortcut" className="article-section-heading">When someone else’s work becomes a shortcut</h2>
+        <p>There is another part of this transition that makes me uncomfortable: the ease with which someone can attempt to reproduce another person’s work.</p>
+        <p>A game, an app, or a tool can represent years of learning, experimentation, and revision. Seeing someone use new technology to imitate that work quickly, and potentially sell the result, raises questions about what we are rewarding.</p>
+        <p>Copying and imitation existed long before AI. What these tools can change is the speed, cost, and scale at which someone can attempt it.</p>
+        <p><a href="https://www.copyright.gov/help/faq/faq-protect.html" target="_blank" rel="noopener noreferrer">Building something with similar functionality is not automatically copyright infringement.</a> Copying protected code, artwork, or writing raises different legal questions. But when imitation can happen faster, I wonder whether the systems for protecting creators can respond quickly enough.</p>
+        <p>What does it take to identify copying, establish ownership, and pursue a remedy, especially for someone without the resources for a legal dispute?</p>
+        <p>Existing rules still matter. So does whether platforms, enforcement systems, and dispute processes can adequately address how the tools are being used. The ethical concern can be broader still: how much of another person’s effort is being treated as free material, and how honestly is the resulting work being presented?</p>
+        <p>This feels especially troubling alongside the constant instruction to develop new skills. People are encouraged to invest in their abilities and create something distinctive while tools can also be used to imitate what they produce.</p>
+        <p>I can appreciate AI’s usefulness and still find particular uses exploitative. Access to powerful tools matters, but so do attribution, permission, and creators’ ability to challenge misuse.</p>
+        <h2 id="environmental-concern-deserves-a-specific-conversation" className="article-section-heading">Environmental concern deserves a specific conversation</h2>
+        <p>The environmental concerns surrounding AI deserve that same clarity.</p>
+        <p>The infrastructure supporting these systems requires electricity and manufactured hardware. <a href="https://www.oecd.org/en/publications/oecd-digital-economy-outlook-2024-volume-2_3adf705b-en/full-report/digital-technologies-and-the-environment_c0701b0b.html" target="_blank" rel="noopener noreferrer">Some facilities also use substantial water for cooling.</a> Understanding the consequences means examining where infrastructure is built, how it is powered, what demands it places on local resources, and how equipment is produced and eventually discarded.</p>
+        <p>Those questions reach across local communities, national laws, and international supply chains. Countries have different energy systems, regulatory priorities, and enforcement capacities.</p>
+        <p><a href="https://www.oecd.org/en/publications/oecd-digital-economy-outlook-2024-volume-2_3adf705b-en/full-report/digital-technologies-and-the-environment_c0701b0b.html" target="_blank" rel="noopener noreferrer">These conversations are happening.</a> But the fact that a concern is being discussed does not tell us whether the response is adequate. We still need to examine whose concerns receive attention, what companies disclose, and whether commitments lead to enforceable protections.</p>
+        <p>The continuous development of technology makes accountability more necessary. It does not make every consequence inevitable or acceptable.</p>
+        <p>For me, appreciating a tool does not require dismissing its environmental costs. Concern about those costs also leaves room to distinguish between applications, question companies’ decisions, and consider what responsible use should involve.</p>
+        <p>That is the conversation I want to have, including with people who reach different conclusions from mine.</p>
+        <h2 id="finding-a-pace-that-belongs-to-you" className="article-section-heading">Finding a pace that belongs to you</h2>
+        <p>Underneath all these questions is the pressure to keep moving.</p>
+        <p>There is always another credential, another tool, another prediction about what will matter next. Other people’s promotions and certificates are visible. The support, setbacks, and financial circumstances behind them often are not.</p>
+        <p>It becomes easy to feel behind without ever deciding what you are trying to move toward.</p>
+        <p>I do not want curiosity to become a permanent state of panic. I want to learn because something is useful, meaningful, or worth understanding, without every announcement making me afraid that my future is disappearing.</p>
+        <p>That requires practical judgment. Before paying for training, we can investigate what accessible jobs require, ask about a program’s curriculum, and speak with people who have completed it. We can give learning a purpose and choose commitments that fit the rest of our lives.</p>
+        <p>But individual judgment has limits. Employers need to invest in workers. Educational institutions need to stand behind their promises. Governments need to examine whether protections and public resources match the changes taking place.</p>
+        <p>People need the material support to adapt, along with the freedom to question what they are adapting to.</p>
+        <p>I want to participate in technological progress without feeling obligated to applaud every use of it. I want to question its costs without feeling that curiosity itself is a betrayal. And I want people trying to find their footing to have more than another instruction to keep up.</p>
+        <p>Every technology boom comes with an invitation. We deserve enough information, support, and influence to decide how we answer it.</p>
+        <h2 id="sources" className="article-section-heading">Sources</h2>
+        <ul>
+          <li><a href="https://studentaid.gov/understand-aid/eligibility" target="_blank" rel="noopener noreferrer">Federal Student Aid: Financial Aid Eligibility</a></li>
+          <li><a href="https://www.irs.gov/credits-deductions/individuals/education-credits-aotc-and-llc" target="_blank" rel="noopener noreferrer">IRS: Education Credits</a></li>
+          <li><a href="https://oecd.ai/en/wonk/ai-system-definition-update" target="_blank" rel="noopener noreferrer">OECD: AI System Definition</a></li>
+          <li><a href="https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" target="_blank" rel="noopener noreferrer">ILO: Generative AI and Jobs</a></li>
+          <li><a href="https://www.copyright.gov/help/faq/faq-protect.html" target="_blank" rel="noopener noreferrer">U.S. Copyright Office: What Does Copyright Protect?</a></li>
+          <li><a href="https://www.oecd.org/en/publications/oecd-digital-economy-outlook-2024-volume-2_3adf705b-en/full-report/digital-technologies-and-the-environment_c0701b0b.html" target="_blank" rel="noopener noreferrer">OECD: Digital Technologies and the Environment</a></li>
+        </ul>
+      </>
+    ),
+  },
   "when-nsa-says-update-php-security-alert": {
     slug: "when-nsa-says-update-php-security-alert",
     tag: "Business Builder",
