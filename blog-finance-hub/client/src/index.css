@@ -852,7 +852,7 @@
     }
 
     .finance-showcase .section-text p {
-      color: rgba(36, 34, 32, 0.78);
+      color: var(--text-muted);
       font-weight: 500;
     }
 
