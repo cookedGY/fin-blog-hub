@@ -45,8 +45,8 @@ export default function FlowerAnimation({ layer = "back", scope = "hero" }: Flow
       flowersRef.current = [];
       const flowerCount =
         layer === "front"
-          ? Math.max(6, Math.floor(window.innerWidth / 240))
-          : Math.max(scope === "site" ? 10 : 12, Math.floor(window.innerWidth / (scope === "site" ? 150 : 115)));
+          ? Math.max(12, Math.floor(window.innerWidth / 120))
+          : Math.max(scope === "site" ? 20 : 24, Math.floor(window.innerWidth / (scope === "site" ? 75 : 57.5)));
 
       for (let i = 0; i < flowerCount; i++) {
         const typeRoll = Math.random();

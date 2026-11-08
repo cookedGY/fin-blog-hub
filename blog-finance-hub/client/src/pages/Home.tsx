@@ -7,33 +7,11 @@ import { Code2, Database, GitBranch, type LucideIcon } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { POSTS } from "@/data/posts";
 
-const learningPostPath = "/post/taking-reins-cloned-website-harvard-python";
-
-const learningSkills: Array<{
-  name: string;
-  focus: string;
-  Icon: LucideIcon;
-}> = [
-  {
-    name: "Python",
-    focus: "Harvard coursework, clear logic, and practical automation",
-    Icon: Code2,
-  },
-  {
-    name: "Git",
-    focus: "Version control, commits, pull/push flow, and repo hygiene",
-    Icon: GitBranch,
-  },
-  {
-    name: "Databases",
-    focus: "Schemas for posts, images, metadata, and portfolio records",
-    Icon: Database,
-  },
-  {
-    name: "React & TypeScript",
-    focus: "Understanding the components that power this site",
-    Icon: Code2,
-  },
+const learningSkills: Array<{ name: string; focus: string; Icon: LucideIcon }> = [
+  { name: "Legacy systems & integration", focus: "How new applications fit existing systems and everyday operations", Icon: GitBranch },
+  { name: "Data access & pipelines", focus: "Where data lives, how it moves, and who can use it", Icon: Database },
+  { name: "System administration & reliability", focus: "Configuration, permissions, testing, and what happens after launch", Icon: Code2 },
+  { name: "AI evaluation & governance", focus: "Useful outputs, human review, ownership, and accountability", Icon: Code2 },
 ];
 
 export default function Home() {
@@ -96,10 +74,10 @@ export default function Home() {
           <div className="hero-card">
             <div className="hero-pill">Currently</div>
             <ul>
-              <li>🎓 Building on my finance degree with a wider view of risk</li>
+              <li>🎓 Connecting my finance studies with business and technology</li>
               <li>🎬 The world of C-Drama: stories, culture, and new perspectives</li>
-              <li>🤖 Studying AI implementation, data, and automation</li>
-              <li>🧩 Exploring how business decisions and technology shape risk</li>
+              <li>🤖 Learning about enterprise systems modernization</li>
+              <li>🧩 Exploring legacy systems, data flows, and reliable AI adoption</li>
             </ul>
           </div>
         </div>
@@ -111,25 +89,24 @@ export default function Home() {
         <div className="container learning-grid">
           <div className="learning-copy">
             <p className="learning-kicker">Currently Learning</p>
-            <h2>Building the skills behind the questions.</h2>
+            <h2>Learning how enterprise systems evolve.</h2>
             <p>
-              I am tracking the skills I am learning in public: the code, systems,
-              and data foundations that help me move from using AI tools to
-              understanding how my portfolio actually works.
+              My current focus is enterprise systems modernization: how mature firms update legacy applications, connect data and workflows, and introduce AI while keeping everyday operations running.
             </p>
-            <Link href={learningPostPath} className="btn btn-ghost learning-cta">
-              Why I am learning these skills
-            </Link>
+            <p style={{ marginTop: "16px" }}>Building and troubleshooting smaller applications gives me a starting point. I’m now exploring the data access, system administration, testing, and governance needed at enterprise scale.</p>
+            <a href="/journey.html" className="btn btn-ghost learning-cta">
+              Follow my learning journey
+            </a>
           </div>
 
-          <div className="learning-panel" aria-label="Skills learning progress">
+          <div className="learning-panel" aria-label="Current learning topics">
             <div className="learning-panel-header">
-              <span>Skill Stack</span>
-              <Link href={learningPostPath}>Read why →</Link>
+              <span>Where my learning is heading</span>
+              <a href="/journey.html">See my journey →</a>
             </div>
             <div className="learning-skill-grid">
               {learningSkills.map(({ name, focus, Icon }) => (
-                <Link key={name} href={learningPostPath} className="learning-row">
+                <a key={name} href="/journey.html" className="learning-row">
                   <div className="learning-skill-title">
                     <span className="learning-icon" aria-hidden="true">
                       <Icon size={16} strokeWidth={1.8} />
@@ -137,10 +114,41 @@ export default function Home() {
                     <span>{name}</span>
                   </div>
                   <p>{focus}</p>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section section-alt" id="experience-foundation">
+        <div className="container">
+          <div className="section-header">
+            <p className="learning-kicker">The experience behind the curiosity</p>
+            <h2>What I’m building on.</h2>
+            <p>Application projects, AI evaluation, and a business perspective on how technology gets used.</p>
+          </div>
+          <div className="grid grid-3">
+            <article className="card">
+              <div className="card-pill">Hands-on projects</div>
+              <h3>Configuring & connecting</h3>
+              <p>Configured, deployed, and troubleshot this website with Vercel. During a team hackathon, helped build application-specific Supabase configuration and n8n workflows.</p>
+              <p style={{ marginTop: "12px" }}>My approach combines direct configuration with AI-assisted development, testing, and review.</p>
+            </article>
+            <article className="card">
+              <div className="card-pill">Evaluation & requirements</div>
+              <h3>From an idea to useful outputs</h3>
+              <p>Evaluate AI outputs for accuracy, source support, reasoning, instruction following, and edge cases.</p>
+              <p style={{ marginTop: "12px" }}>At MetLife, translate audit needs into application requirements, user stories, mockups, and development handoffs.</p>
+            </article>
+            <article className="card">
+              <div className="card-pill">Business & risk exposure</div>
+              <h3>Seeing the wider context</h3>
+              <p>Aon introduced me to cyber and operational-risk concerns following technology disruptions. EY added transaction research, due-diligence documentation, and regulatory exposure.</p>
+              <p style={{ marginTop: "12px" }}>Those experiences shape the questions I bring to technology.</p>
+            </article>
+          </div>
+          <div style={{ marginTop: "24px" }}><Link href="/portfolio" className="btn btn-ghost">Explore my background & projects →</Link></div>
         </div>
       </section>
 
