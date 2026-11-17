@@ -12,7 +12,7 @@ Create environment**. Select the existing GitHub repository and restrict access
 to yourself. If GitHub asks for a new grant, review its scope before authorizing.
 Do not add Vercel tokens or production database credentials just to build the site.
 
-Use Node 24 and the package manager declared in `package.json` (pnpm 10.4.1).
+Use Node 24 and the package manager declared in `package.json` (pnpm 10.34.9).
 From the repository root:
 
 ```sh

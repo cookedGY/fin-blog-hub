@@ -3,11 +3,13 @@ import { describe, it, expect, vi } from "vitest";
 // Mock resend module so we don't make real API calls in tests
 vi.mock("resend", () => {
   return {
-    Resend: vi.fn().mockImplementation(() => ({
-      emails: {
-        send: vi.fn().mockResolvedValue({ data: { id: "mock-email-id" }, error: null }),
-      },
-    })),
+    Resend: vi.fn().mockImplementation(function () {
+      return {
+        emails: {
+          send: vi.fn().mockResolvedValue({ data: { id: "mock-email-id" }, error: null }),
+        },
+      };
+    }),
   };
 });
 
