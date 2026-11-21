@@ -17,6 +17,37 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "maybe-we-do-need-a-mac-at-work": {
+    slug: "maybe-we-do-need-a-mac-at-work",
+    tag: "Business Builder",
+    title: "Maybe We Do Need a Mac at Work",
+    date: "November 21, 2026",
+    description: "What two weeks of outages made me ask about technology vendors, cost savings, and how much work we can still do offline.",
+    seoKeywords: ["technology vendor risk", "Microsoft 365 outages", "business continuity", "offline work", "cybersecurity budgets", "technology upgrades", "AI security"],
+    seoDescription: "A look at the cost of relying on one technology vendor and what businesses can still do when a critical service goes down.",
+    content: (
+      <>
+        <p><em>What two weeks of outages made me ask about technology vendors, cost savings, and how much work we can still do offline.</em></p>
+        <p>When Microsoft 365 goes down, how much of your job can you still do? Can you open the document you were working on? Can you reach your team? Can you find the instructions for what to do during an outage if those instructions are stored in the same place as everything else?</p>
+        <p>That’s what I kept thinking about in November, when disruptions hit Microsoft 365, JPMorgan Chase, and the FAA within days of one another. Microsoft traced its disruption to a <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-november-outage-cluster-correlated-fragili/" target="_blank" rel="noopener noreferrer">software defect</a>. Chase reported a software bug in systems it ran on its own premises. The FAA issued a ground stop after a communications failure. The timing invited speculation about AI and coordinated cyberattacks, but the <a href="https://www.reuters.com/world/us-official-says-recent-tech-woes-not-tied-cyberattacks-2026-11-17/" target="_blank" rel="noopener noreferrer">public accounts pointed to separate failures</a>. Each one made me ask how much of an ordinary day depends on systems most of us have no way to work around.</p>
+        <p>I understand why a company would want its Windows laptops, email, documents, and employee accounts to work together. One vendor can make those things easier to buy and manage. The price can look good in a strategy meeting. What I don’t understand is how you can approve that deal without asking someone to show you what employees will still be able to do when a service they all depend on goes down.</p>
+        <p>Twenty years ago, plenty of office work could continue for a while without a connection. You could open a file saved on your computer, finish what you were doing, and send it later. I’m thinking about that ordinary ability to keep working. If the company’s outage instructions now live behind the same sign-in as its email and shared files, where exactly are people supposed to go for help?</p>
+        <p>And yes, part of me thought, maybe we do need a Mac at work. But if I open the Mac and have to sign in through the same service that’s down, all I’ve got is a different laptop telling me I can’t work. That’s what I mean when I say companies need to diversify. Give people a second way to do the work that has to get done. A separate way to reach employees or an offline copy of the procedures they need can do more for them in that moment than another subscription.</p>
+        <p>There’s only so much money you can save on technology before you have to ask where the cost went. The discount on a contract is easy to put in a spreadsheet. How do you account for hours of work that stop, payments customers can’t make, or staff trying to piece together instructions while the usual channels are down? Vendor quality should include how the vendor tests updates, how quickly it tells you what went wrong, and whether it can show that its recovery plan works. I’d want the cost of keeping essential operations going on the same page as the vendor’s price.</p>
+        <p>Especially when technology is changing this quickly, I’d expect every major upgrade to come with a plan for what happens if it fails. That belongs in the strategy meeting with the CIO or CTO, while there’s still time and money to do something about it. Can we roll back the change? Which teams can work offline? Who has the authority to decide what stays open and what has to pause? A service outage and a suspected breach call for different decisions. In a breach, taking a system offline may be the right move. In either case, somebody inside the company needs to know what comes next.</p>
+        <p>I’m sure some version of that plan is already on somebody’s memo. What I want to know is whether anybody has tried it. Give a team an hour without its usual tools and see what happens. Can they reach the person who makes the decision? Can they get the procedures? Can they finish the work that has to go out that day?</p>
+        <p>That’s also where I think the conversation about AI gets too vague. When someone says these are the downsides of AI, what exactly do they mean? An attacker using AI to speed up work they could already do is one concern. A company giving a new AI tool access to systems it needs to protect is another. Organized attacks predate today’s AI tools, and critical infrastructure operators have been getting concrete advice on how to prepare for years. In 2024, federal agencies were already urging water utilities to <a href="https://www.cisa.gov/sites/default/files/2024-02/fact-sheet-top-cyber-actions-for-securing-water-systems.pdf" target="_blank" rel="noopener noreferrer">inventory their systems, back them up, and practice responding to incidents</a>.</p>
+        <p>I want companies to use AI where it makes sense. I also want them to put real money behind the people who defend their systems and help the business recover. An IT team already has a full-time job keeping things running. For a bank, an airline, or a public agency, cybersecurity needs dedicated staff and a budget. The people who run the business also need enough expertise in-house to make decisions while a vendor is still figuring out what happened.</p>
+        <p>The next time leadership says an upgrade is going to save money, I’d like them to show us the fallback at the same meeting. If a critical service goes down tomorrow morning, what can your team still do by noon?</p>
+        <h2 id="sources" className="article-section-heading">Sources</h2>
+        <ul>
+          <li><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-november-outage-cluster-correlated-fragili/" target="_blank" rel="noopener noreferrer">Cloud Security Alliance analysis of the November outages</a></li>
+          <li><a href="https://www.reuters.com/world/us-official-says-recent-tech-woes-not-tied-cyberattacks-2026-11-17/" target="_blank" rel="noopener noreferrer">Reuters reporting on the FAA and Chase disruptions</a></li>
+          <li><a href="https://www.cisa.gov/sites/default/files/2024-02/fact-sheet-top-cyber-actions-for-securing-water-systems.pdf" target="_blank" rel="noopener noreferrer">CISA, EPA, and FBI guidance for water systems</a></li>
+        </ul>
+      </>
+    ),
+  },
   "growing-pains-of-technical-advancements": {
     slug: "growing-pains-of-technical-advancements",
     tag: "Life & Growth",
