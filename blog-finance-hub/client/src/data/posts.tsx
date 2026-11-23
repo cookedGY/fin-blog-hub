@@ -449,7 +449,7 @@ export const POSTS: Record<string, Post> = {
     title: "Reading the Crosscurrents: AI, Oil, Inflation, and the Outlook for Q4 2026",
     date: "August 12, 2026",
     description: "A finance student's Q4 2026 outlook connecting July jobs data, CPI, oil disruptions, AI investment, Federal Reserve policy, and why uncertainty still leaves room for cautious optimism.",
-    seoTitle: "AI, Oil, Inflation, and the Q4 2026 Outlook | DeCodes Life",
+    seoTitle: "AI, Oil, and Inflation in Q4 2026",
     seoKeywords: ["Q4 2026 market outlook", "AI investment economy", "oil prices 2026", "July 2026 CPI", "July 2026 jobs report", "Federal Reserve 2026", "Kevin Warsh Fed Chair", "Strait of Hormuz oil", "EIA energy outlook", "cautiously optimistic markets"],
     seoDescription: "A finance student's Q4 2026 outlook connecting July jobs data, CPI, oil market disruption, AI capital spending, Federal Reserve policy, and cautious optimism.",
     content: (
@@ -741,6 +741,7 @@ export const POSTS: Record<string, Post> = {
     slug: "under-the-hood-dad-taught-me-systems",
     tag: "Life & Growth",
     title: "How My Dad Made Me Curious About Machines, Maps, and Money",
+    seoTitle: "What My Dad Taught Me About Machines, Maps, and Money",
     date: "July 15, 2026",
     description: "The first engineer I knew was my dad. His love of machines, maps, and explanation shaped how I now approach finance, technology, and systems.",
     seoKeywords: ["finance student technology journey", "mechanical engineering inspiration", "learning systems thinking", "Python for finance", "finance and technology", "father daughter engineering inspiration", "understanding finance systems", "GitHub learning journey", "financial intermediaries explained", "DeCodes Life"],
