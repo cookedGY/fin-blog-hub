@@ -41,7 +41,7 @@ export default function BlogPost() {
   useEffect(() => {
     if (!post || !post.seoKeywords) return;
 
-    const canonicalUrl = `https://finbloghub.space/post/${slug}`;
+    const canonicalUrl = `https://decodes.space/post/${slug}`;
     const metaTitle = post.seoTitle || post.title;
     const metaDescription = post.seoDescription || post.description || '';
     const metaImage = post.thumbnail || 'https://finbloghub.space/og-image.png';

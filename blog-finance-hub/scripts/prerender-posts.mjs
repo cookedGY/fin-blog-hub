@@ -7,7 +7,7 @@ const rootDir = join(__dirname, "..");
 const postsFile = join(rootDir, "client/src/data/posts.tsx");
 const templateFile = join(rootDir, "dist/public/index.html");
 const outputRoot = join(rootDir, "dist/public/post");
-const siteUrl = "https://finbloghub.space";
+const siteUrl = "https://decodes.space";
 const fallbackImage = `${siteUrl}/og-image.png`;
 
 const source = readFileSync(postsFile, "utf8");
