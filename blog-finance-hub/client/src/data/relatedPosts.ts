@@ -5,6 +5,10 @@
  */
 
 export const relatedPostsMap: Record<string, string[]> = {
+  "the-great-tech-deinvestment": [
+    "growing-pains-of-technical-advancements",
+    "ai-environmental-discrimination",
+  ],
   "cyberwar-critical-infrastructure-ai-governance": [
     "when-nsa-says-update-php-security-alert",
     "geopolitics-ai",
