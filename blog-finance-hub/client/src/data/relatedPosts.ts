@@ -5,6 +5,11 @@
  */
 
 export const relatedPostsMap: Record<string, string[]> = {
+  "cyberwar-critical-infrastructure-ai-governance": [
+    "when-nsa-says-update-php-security-alert",
+    "geopolitics-ai",
+    "growing-pains-of-technical-advancements",
+  ],
   "maybe-we-do-need-a-mac-at-work": [
     "when-nsa-says-update-php-security-alert",
     "growing-pains-of-technical-advancements",

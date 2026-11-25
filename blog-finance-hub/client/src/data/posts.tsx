@@ -17,6 +17,68 @@ export interface Post {
 }
 
 export const POSTS: Record<string, Post> = {
+  "cyberwar-critical-infrastructure-ai-governance": {
+    slug: "cyberwar-critical-infrastructure-ai-governance",
+    tag: "Global De",
+    title: "A Decade After Cyberwar, We’re Still Catching Up on Cybersecurity",
+    date: "November 25, 2026",
+    description: "Watching VICELAND’s Cyberwar a decade ago made me take online conflict seriously. What have we done since to protect critical infrastructure and govern frontier AI?",
+    seoTitle: "Cyberwar, Critical Infrastructure and AI Governance",
+    seoDescription: "A decade after VICELAND’s Cyberwar, what can the U.S. do to protect critical infrastructure, strengthen data privacy, and hold frontier AI labs accountable?",
+    seoKeywords: ["VICELAND Cyberwar", "critical infrastructure cybersecurity", "AI governance", "frontier AI safety testing", "data privacy", "Volt Typhoon"],
+    content: (
+      <>
+        <div className="grid min-w-0 gap-6 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p>I still remember watching VICELAND’s <em>Cyberwar</em> about ten years ago. I kept coming back to one idea: the next world war might be fought online. What stayed with me was how much of that conflict was already visible. Some people used hacking as a form of protest. Others used it to steal data, extort companies, or advance the interests of a government. Their motives varied, but the consequences could reach people who had no part in the conflict.</p>
+            <p>By the time COVID-19 pushed more of our lives online, I expected that dependence to make cybersecurity a bigger priority. Instead, it still felt as though it took a breach or an outage to get people to ask whether an institution had the staff, funding, and authority to fix weaknesses it already knew about.</p>
+          </div>
+          <figure className="m-0 min-w-0">
+            <iframe
+              className="aspect-video w-full rounded-lg border-0"
+              src="https://www.youtube-nocookie.com/embed/4JjEntH84L4"
+              title="Who Is Anonymous? — VICELAND Cyberwar, Season 1, Episode 1"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+            />
+            <figcaption className="mt-2 text-sm">
+              <em>Cyberwar</em>, Season 1, Episode 1. <a href="https://www.youtube.com/watch?v=4JjEntH84L4" target="_blank" rel="noopener noreferrer">Watch the full episode on YouTube</a>.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h2 className="article-section-heading">We knew critical infrastructure was a target</h2>
+        <p>In 2024, <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a">U.S. agencies warned that Volt Typhoon</a>, a group they attributed to the Chinese government, had gained access to networks in sectors including communications, energy, transportation, and water. The agencies assessed that the group was positioning itself to disrupt essential services in a future crisis. In some cases, they found indications that attackers had maintained access for at least five years.</p>
+        <p>On November 24, 2026, <a href="https://apnews.com/article/bfa6d3b02e3b0e2779dfb613c900bd77">the Associated Press reported a breach of an unclassified CIA system</a> used to handle intelligence from publicly available sources, citing a person familiar with the incident. <a href="https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/">The Washington Post reported other federal agency cyberattacks that month</a>, including at the FBI and Department of Agriculture. How quickly can an organization detect unauthorized access, figure out what was exposed, and keep operating while it responds?</p>
+        <p>For a water utility, that can mean keeping service running while a compromised system is isolated. For a bank, it can mean protecting customer records and keeping payments available at the same time. Those responsibilities take years of investment. A recovery plan needs to be rehearsed, and a small utility still needs enough people to put it into practice on a bad day.</p>
+
+        <h2 className="article-section-heading">AI security starts before release</h2>
+        <p>Working as a liaison with frontier AI companies made me pay closer attention to what happens before a model reaches the public. Employees, contractors, and outside evaluators may need access during development and testing. Who verifies their identity? How much access does each person need? Who can tell if access is being misused, and how quickly can the company revoke it?</p>
+        <p>OpenAI has described offering a cybersecurity-focused version of GPT‑5.4 through <a href="https://openai.com/index/scaling-trusted-access-for-cyber-defense/">a trusted-access program for defensive work</a>. A model can help defenders find and fix weaknesses, and some of the same capabilities can be misused. I want labs to explain how they test for misuse, what findings would delay a launch or limit access, and who has the authority to make that decision when a release is already on the calendar.</p>
+        <p>The pressure to ship is real. That makes it all the more important to decide, before testing starts, which findings would justify holding a release. Otherwise, the people reviewing the evidence have to make that call at the moment when the business has the most riding on the launch.</p>
+
+        <h2 className="article-section-heading">What Congress could require</h2>
+        <p>Listening to University of Ottawa law professor Michael Geist discuss <a href="https://www.michaelgeist.ca/2026/11/three-fixes-for-lawful-access-making-the-case-for-amending-bill-c-22-at-the-senate-national-security-committee/">Canada’s lawful access proposal</a> brought me back to the relationship between privacy and security. His Senate testimony asked how Canada could give investigators the tools they need while protecting privacy and taking the cybersecurity consequences seriously. That same scrutiny belongs in U.S. debates about who can access sensitive information, under what authority, and with what oversight.</p>
+        <p><a href="https://www.ised-isde.canada.ca/site/ised/en/voluntary-code-conduct-responsible-development-and-management-advanced-generative-ai-systems">Canada’s voluntary code for advanced generative AI</a> outlines practices companies can adopt. The <a href="https://digital-strategy.ec.europa.eu/en/faqs/guidelines-obligations-general-purpose-ai-providers">European Union’s AI Act imposes legal duties on providers of general-purpose models that pose systemic risk</a>, including model evaluations, serious incident reporting, and cybersecurity protections. The EU approach gives Congress a concrete example of how to tie stronger obligations to the risk a model poses.</p>
+        <p>I’d start with three obligations for developers of the highest-risk models. Require independent testing in secure environments before release, with documented criteria for delaying or limiting deployment. Require companies to show how they protect personal data and control access to unreleased models. And require timely reporting of serious incidents to a regulator that can demand corrective action. On the infrastructure side, Congress should pair security requirements with sustained funding for operators that lack the staff or budget to modernize systems and test how they’ll recover.</p>
+        <p>When I think back to <em>Cyberwar</em>, I remember wondering what it would take for people to treat these threats as urgent. A decade later, I’d ask a more specific question. Who has the money and authority to fix a problem when someone raises it, and who answers for the decision if it gets put off?</p>
+
+        <h2 className="article-section-heading">Sources</h2>
+        <ul>
+          <li><a href="https://www.vicetv.com/en_us/video/who-is-anonymous/5771776a4939b9e7078f1f55">VICE TV’s episode listing for Who Is Anonymous?</a></li>
+          <li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a">CISA’s joint advisory on Volt Typhoon</a></li>
+          <li><a href="https://apnews.com/article/bfa6d3b02e3b0e2779dfb613c900bd77">Associated Press reporting on the CIA breach</a></li>
+          <li><a href="https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/">The Washington Post’s reporting on federal cyberattacks</a></li>
+          <li><a href="https://openai.com/index/scaling-trusted-access-for-cyber-defense/">OpenAI’s trusted-access program for cyber defense</a></li>
+          <li><a href="https://www.michaelgeist.ca/2026/11/three-fixes-for-lawful-access-making-the-case-for-amending-bill-c-22-at-the-senate-national-security-committee/">Michael Geist’s Senate committee remarks</a></li>
+          <li><a href="https://www.ised-isde.canada.ca/site/ised/en/voluntary-code-conduct-responsible-development-and-management-advanced-generative-ai-systems">Canada’s voluntary AI code</a></li>
+          <li><a href="https://digital-strategy.ec.europa.eu/en/faqs/guidelines-obligations-general-purpose-ai-providers">European Commission guidance on general-purpose AI</a></li>
+        </ul>
+      </>
+    ),
+  },
   "maybe-we-do-need-a-mac-at-work": {
     slug: "maybe-we-do-need-a-mac-at-work",
     tag: "Business Builder",
