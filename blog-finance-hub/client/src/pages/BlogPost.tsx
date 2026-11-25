@@ -1,7 +1,7 @@
 import { categoryLabel } from "@/lib/categoryLabel";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRoute, Link } from "wouter";
-import { POSTS } from "@/data/posts";
+import { POSTS, type Post } from "@/data/posts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedPosts from "@/components/RelatedPosts";
@@ -21,10 +21,40 @@ function ReadingTime({ content }: { content: React.ReactNode }) {
   return <>{readingTime}</>;
 }
 
+function CitePost({ post, url }: { post: Post; url: string }) {
+  const [status, setStatus] = useState("");
+  const date = post.date ? `, ${post.date}` : "";
+  const citation = `Wade, Dekena. “${post.title}.” DeCodes Life${date}. ${url}`;
+
+  async function copyCitation() {
+    try {
+      await navigator.clipboard.writeText(citation);
+      setStatus("Citation copied.");
+    } catch {
+      setStatus("Select and copy the citation above.");
+    }
+  }
+
+  return (
+    <details className="mt-4 text-sm">
+      <summary className="w-fit cursor-pointer font-semibold underline underline-offset-4">
+        Cite me
+      </summary>
+      <p className="my-2 break-words">{citation}</p>
+      <button type="button" className="underline underline-offset-4" onClick={copyCitation}>
+        Copy citation
+      </button>
+      <p aria-live="polite">{status}</p>
+    </details>
+  );
+}
+
 export default function BlogPost() {
   const [match, params] = useRoute("/post/:slug");
   const slug = params?.slug;
   const post = slug ? POSTS[slug] : null;
+
+  const canonicalUrl = post ? `https://decodes.space/post/${post.slug}` : "";
 
   // Preserve section links when opening an article directly or reloading it.
   useEffect(() => {
@@ -41,7 +71,6 @@ export default function BlogPost() {
   useEffect(() => {
     if (!post || !post.seoKeywords) return;
 
-    const canonicalUrl = `https://decodes.space/post/${slug}`;
     const metaTitle = post.seoTitle || post.title;
     const metaDescription = post.seoDescription || post.description || '';
     const metaImage = post.thumbnail || 'https://finbloghub.space/og-image.png';
@@ -68,7 +97,7 @@ export default function BlogPost() {
       post.seoKeywords
     );
     injectStructuredData(schema);
-  }, [post, slug]);
+  }, [post, canonicalUrl]);
 
   if (!post) {
     return (
@@ -109,6 +138,7 @@ export default function BlogPost() {
             {post.description && (
               <p className="editorial-subtitle">{post.description}</p>
             )}
+            <CitePost key={post.slug} post={post} url={canonicalUrl} />
           </div>
         </div>
 
