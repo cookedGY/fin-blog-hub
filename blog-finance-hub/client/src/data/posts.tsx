@@ -36,7 +36,7 @@ export const POSTS: Record<string, Post> = {
           <figure className="m-0 min-w-0">
             <iframe
               className="aspect-video w-full rounded-lg border-0"
-              src="https://www.youtube-nocookie.com/embed/4JjEntH84L4"
+              src="https://www.youtube-nocookie.com/embed/6pzRww-4X30?start=3861&end=5153"
               title="Who Is Anonymous? — VICELAND Cyberwar, Season 1, Episode 1"
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -44,7 +44,7 @@ export const POSTS: Record<string, Post> = {
               allowFullScreen
             />
             <figcaption className="mt-2 text-sm">
-              <em>Cyberwar</em>, Season 1, Episode 1. <a href="https://www.youtube.com/watch?v=4JjEntH84L4" target="_blank" rel="noopener noreferrer">Watch the full episode on YouTube</a>.
+              <em>Cyberwar</em>, Season 1, Episode 1. <a href="https://www.youtube.com/watch?v=6pzRww-4X30&t=3861s" target="_blank" rel="noopener noreferrer">Watch the full episode on YouTube</a>.
             </figcaption>
           </figure>
         </div>
